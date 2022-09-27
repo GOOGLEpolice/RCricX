@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject
 {
     public GameObject PlayerCards;
+    public string PlayerType;
     public int playerBC;
     public int ball1;
     public int ball2;

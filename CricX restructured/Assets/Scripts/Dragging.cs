@@ -29,7 +29,7 @@ public class Dragging : MonoBehaviour
 
             if(Physics.Raycast(ray,out hit))
             {
-                if (hit.collider.tag == "cubee" || hit.collider.tag == "PlayerBatsman" || hit.collider.tag == "PlayerBowler" || hit.collider.tag == "OppBatsman" || hit.collider.tag == "OppBowler")
+                if (hit.collider.tag == "Player" || hit.collider.tag == "Opponent") 
                 {
                     toDrag = hit.transform;
                     dist = hit.transform.position.z - Camera.main.transform.position.z;

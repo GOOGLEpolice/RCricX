@@ -22,6 +22,7 @@ public class CardStats : MonoBehaviour
     #endregion;*/
 
     public PlayerStats playerStats;
+    public int playerTurnCount;
 
     void Start()
     {
@@ -31,5 +32,30 @@ public class CardStats : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void SwitchCases()
+    {
+        switch (playerStats.playerBC)
+        {
+            case 1:
+                playerTurnCount = playerStats.ball1;
+                break;
+            case 2:
+                playerTurnCount = playerStats.ball2;
+                break;
+            case 3:
+                playerTurnCount = playerStats.ball3;
+                break;
+            case 4:
+                playerTurnCount = playerStats.ball4;
+                break;
+            case 5:
+                playerTurnCount = playerStats.ball5;
+                break;
+            case 6:
+                playerTurnCount = playerStats.ball6;
+                break;
+        }
     }
 }
