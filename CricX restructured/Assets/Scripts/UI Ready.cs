@@ -16,12 +16,17 @@ public class UIReady : MonoBehaviour
         [SerializeField]
         public bool IsUIOverride { get; private set; }
 
+        
+        
         void Update()
         {
             // It will turn true if hovering any UI Elements
             IsUIOverride = EventSystem.current.IsPointerOverGameObject();
 
-            pRuns.text = playerRuns.ToString();
+            
+
+            pRuns.text = GameManager.instance.mScore.ToString();
+            oRuns.text = oppRuns.ToString();
         }
         void OnDisable()
         {

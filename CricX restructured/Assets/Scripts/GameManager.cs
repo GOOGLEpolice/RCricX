@@ -28,8 +28,10 @@ public class GameManager : MonoBehaviour
     public bool chase;
     public int mScore;
 
+
     void Start()
     {
+
         
     }
 

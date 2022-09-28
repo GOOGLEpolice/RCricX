@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerSnapPoint : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class PlayerSnapPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.transform.localPosition = playerCards.playerCardPositions[playerCards.playerCardPositions.Count - 1];
+            other.transform.localPosition = playerCards.playerCardPositions<Vector3>;
         }
     }
 }
