@@ -32,7 +32,7 @@ public class PlayerSnapPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.transform.localPosition = playerCards.playerCardPositions<Vector3>;
+            other.transform.localPosition = playerCards.playerCardPositions[playerCards.playerCardPositions.Count];
         }
     }
 }

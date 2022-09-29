@@ -22,31 +22,34 @@ public class GameManager : MonoBehaviour
     }
     #endregion;
 
-    
+    SetMode setMode;
     public CardStats cardStats;
     public bool set;
     public bool chase;
+    public bool playerReady;
+    public bool oppReady;
     public int mScore;
+    public int oppScore;
+    
 
 
     void Start()
     {
-
+        setMode = gameObject.GetComponent<SetMode>();
         
     }
 
     
     void Update()
     {
-        
+        StartCoroutine(SetGameMode());
     }
 
-    void SetScoreCalculation()
+    IEnumerator SetGameMode()
     {
-
+        if (playerReady && oppReady)
+        {
+            yield return null;
+        }
     }
-
-   
-
-    
 }
