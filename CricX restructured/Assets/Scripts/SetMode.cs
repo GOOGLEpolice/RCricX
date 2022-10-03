@@ -8,33 +8,42 @@ public class SetMode : MonoBehaviour
     public CardStats cardStats;
     public string typeOfPlayer;
     
-    void Start()
-    {
-        
-    }
+    
 
     
     void Update()
     {
-        typeOfPlayer = cardStats.playerStats.PlayerType;
+        
     }
 
     public void CalculateSetScore()
     {
-        if (GameManager.instance.set)
-        {
-            GameManager.instance.mScore = 0;
-            if (cardStats.playerStats.PlayerType == "Batsman" && GameManager.instance.playerReady)
+            if (gameObject.tag == "Player")
             {
 
+                if (GameManager.instance.typeOfPlayer == "Batsman")
+                {
+                    GameManager.instance.mScore = GameManager.instance.mScore + GameManager.instance.playerRuns;
+                }
+                else if (GameManager.instance.typeOfPlayer == "Bowler")
+                {
+                    GameManager.instance.mScore = GameManager.instance.oppScore - GameManager.instance.playerRuns;
+                }
             }
-        }
 
-        if (GameManager.instance.set)
-        {
-            GameManager.instance.oppScore = 0;
+            if (gameObject.tag == "Enemy")
+            {
 
-        }
+                if (GameManager.instance.typeOfPlayer == "Batsman")
+                {
+                    GameManager.instance.oppScore = GameManager.instance.oppScore + GameManager.instance.playerRuns;
+                }
+                else if (GameManager.instance.typeOfPlayer == "Bowler")
+                {
+                    GameManager.instance.mScore = GameManager.instance.mScore - GameManager.instance.playerRuns;
+                }
+            }
+        
     }
 
 }

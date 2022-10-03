@@ -20,9 +20,7 @@ public class UIReady : MonoBehaviour
         {
             // It will turn true if hovering any UI Elements
             IsUIOverride = EventSystem.current.IsPointerOverGameObject();
-
             
-
             pRuns.text = GameManager.instance.mScore.ToString();
             oRuns.text = GameManager.instance.oppScore.ToString();
             

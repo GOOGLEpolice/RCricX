@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerCards : MonoBehaviour
 {
 
     public List<Vector3> playerCardPositions;
+    public bool playerReady;
 
     void Start()
     {
@@ -22,4 +25,6 @@ public class PlayerCards : MonoBehaviour
     {
         
     }
+
+    
 }

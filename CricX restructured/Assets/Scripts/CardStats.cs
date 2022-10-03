@@ -4,22 +4,7 @@ using UnityEngine;
 
 public class CardStats : MonoBehaviour
 {
-   /* #region Singleton
-    public static CardStats instance;
-    //public bool cardSelected;
-
-    public void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-
-
-            return;
-        }
-        instance = this;
-    }
-    #endregion;*/
+   
 
     public PlayerStats playerStats;
     public int playerTurnCount;
@@ -39,22 +24,22 @@ public class CardStats : MonoBehaviour
         switch (playerStats.playerBC)
         {
             case 1:
-                playerTurnCount = playerStats.ball1;
+                GameManager.instance.playerRuns = playerStats.ball1;
                 break;
             case 2:
-                playerTurnCount = playerStats.ball2;
+                GameManager.instance.playerRuns = playerStats.ball2;
                 break;
             case 3:
-                playerTurnCount = playerStats.ball3;
+                GameManager.instance.playerRuns = playerStats.ball3;
                 break;
             case 4:
-                playerTurnCount = playerStats.ball4;
+                GameManager.instance.playerRuns = playerStats.ball4;
                 break;
             case 5:
-                playerTurnCount = playerStats.ball5;
+                GameManager.instance.playerRuns = playerStats.ball5;
                 break;
             case 6:
-                playerTurnCount = playerStats.ball6;
+                GameManager.instance.playerRuns = playerStats.ball6;
                 break;
         }
     }

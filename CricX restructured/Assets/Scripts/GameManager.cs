@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 
     #region Singleton
     public static GameManager instance;
-    public bool cardSelected;
 
     public void Awake()
     {
@@ -26,30 +25,42 @@ public class GameManager : MonoBehaviour
     public CardStats cardStats;
     public bool set;
     public bool chase;
+    public bool cardSelected;
     public bool playerReady;
-    public bool oppReady;
+    public bool opponentReady;
+    public bool readyToCalculate;
+    public int playerRuns;
     public int mScore;
     public int oppScore;
+    public string typeOfPlayer;
     
-
-
+    
     void Start()
     {
         setMode = gameObject.GetComponent<SetMode>();
-        
     }
 
     
     void Update()
     {
-        StartCoroutine(SetGameMode());
+        if (mScore < 0 || oppScore < 0)
+        {
+            mScore = 0;
+            oppScore = 0;
+        }
+        typeOfPlayer = cardStats.playerStats.PlayerType;
     }
 
-    IEnumerator SetGameMode()
+    void SetGameMode()
     {
-        if (playerReady && oppReady)
+        if (set)
         {
-            yield return null;
+            if (readyToCalculate)
+            {
+                setMode.CalculateSetScore();
+            }
         }
     }
+
+
 }

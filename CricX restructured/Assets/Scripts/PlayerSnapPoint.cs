@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class PlayerSnapPoint : MonoBehaviour
 {
     public PlayerCards playerCards;
+    
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class PlayerSnapPoint : MonoBehaviour
             Debug.Log("Player Entered");
             other.transform.localPosition = this.transform.localPosition;
             GameManager.instance.cardStats = other.gameObject.GetComponent<CardStats>();
+            GameManager.instance.cardSelected = true;
         }
     }
 
@@ -32,7 +35,7 @@ public class PlayerSnapPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.transform.localPosition = playerCards.playerCardPositions[playerCards.playerCardPositions.Count];
+           
         }
     }
 }
