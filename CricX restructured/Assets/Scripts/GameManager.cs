@@ -22,22 +22,27 @@ public class GameManager : MonoBehaviour
     #endregion;
 
     SetMode setMode;
-    public CardStats cardStats;
+    public CardStats playerCardStats;
+    public CardStats opponentCardStats;
+    //public PlayerCards playerCards;
     public bool set;
     public bool chase;
     public bool cardSelected;
     public bool playerReady;
     public bool opponentReady;
     public bool readyToCalculate;
+    public int runs;
     public int playerRuns;
+    public int opponentRuns;
     public int mScore;
     public int oppScore;
     public string typeOfPlayer;
+    public string typeOfOpponent;
     
     
     void Start()
     {
-        setMode = gameObject.GetComponent<SetMode>();
+        
     }
 
     
@@ -48,19 +53,28 @@ public class GameManager : MonoBehaviour
             mScore = 0;
             oppScore = 0;
         }
-        typeOfPlayer = cardStats.playerStats.PlayerType;
-    }
-
-    void SetGameMode()
-    {
-        if (set)
+        
+        if (playerReady && opponentReady)
         {
-            if (readyToCalculate)
-            {
-                setMode.CalculateSetScore();
-            }
+            readyToCalculate = true;
+            //setScoreCalculator.SetActive(true);
+            SetGameMode();
         }
     }
 
+    public void SetGameMode()
+    {
+        if (set)
+        {
+            setMode = gameObject.GetComponent<SetMode>();
+            if (readyToCalculate)
+            {
+                setMode.CalculateSetScore();
+                playerReady = false;
+                opponentReady = false;
+                readyToCalculate=false;
+            }
+        }
+    }
 
 }

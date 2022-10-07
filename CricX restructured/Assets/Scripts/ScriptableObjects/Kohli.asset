@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Kohli
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  PlayerType: Batsman
   playerBC: 0
-  ball1: 0
-  ball2: 0
+  ball1: 4
+  ball2: 2
   ball3: 0
-  ball4: 0
-  ball5: 0
-  ball6: 0
+  ball4: 6
+  ball5: 4
+  ball6: 1

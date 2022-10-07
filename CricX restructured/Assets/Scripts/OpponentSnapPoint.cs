@@ -1,15 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class PlayerSnapPoint : MonoBehaviour
+public class OpponentSnapPoint : MonoBehaviour
 {
-    public PlayerCards playerCards;
     
     
-
     void Start()
     {
         
@@ -23,20 +19,20 @@ public class PlayerSnapPoint : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("Player Entered");
+            Debug.Log("Opponent Entered");
             other.transform.localPosition = this.transform.localPosition;
-            GameManager.instance.playerCardStats = other.gameObject.GetComponent<CardStats>();
+            GameManager.instance.opponentCardStats= other.gameObject.GetComponent<CardStats>();
             GameManager.instance.cardSelected = true;
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Enemy")
         {
-            GameManager.instance.playerCardStats = null;
+            GameManager.instance.opponentCardStats = null;
             GameManager.instance.cardSelected = false;
             //GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.playerCardPositions[0];
         }
@@ -44,10 +40,10 @@ public class PlayerSnapPoint : MonoBehaviour
 
     public void OnReady()
     {
-        GameManager.instance.playerCardStats.IncreaseBallCount();
-        GameManager.instance.playerReady = true;
-        GameManager.instance.playerRuns = GameManager.instance.runs;
-        GameManager.instance.typeOfPlayer = GameManager.instance.playerCardStats.playerStats.PlayerType;
+        GameManager.instance.opponentCardStats.IncreaseBallCount();
+        GameManager.instance.opponentReady = true;
+        GameManager.instance.opponentRuns = GameManager.instance.runs;
+        GameManager.instance.typeOfOpponent = GameManager.instance.opponentCardStats.playerStats.PlayerType;
         //GameManager.instance.SetGameMode(cardStats.gameObject);
     }
 }

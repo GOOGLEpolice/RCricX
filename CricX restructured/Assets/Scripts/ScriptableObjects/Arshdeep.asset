@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
   PlayerType: Bowler
-  playerBC: 0
-  ball1: 0
+  playerBC: 1
+  ball1: -1
   ball2: 0
-  ball3: 0
-  ball4: 0
-  ball5: 0
+  ball3: 8
+  ball4: 4
+  ball5: 2
   ball6: 0

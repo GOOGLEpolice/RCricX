@@ -8,6 +8,7 @@ public class PlayerCards : MonoBehaviour
 {
 
     public List<Vector3> playerCardPositions;
+    public List<Vector3> opponentCardPositions;
     public bool playerReady;
 
     void Start()
@@ -17,6 +18,13 @@ public class PlayerCards : MonoBehaviour
         foreach (GameObject GO in objectsWithTag)
         {
             playerCardPositions.Add(GO.transform.position);
+        }
+
+        opponentCardPositions = new List<Vector3>(); 
+        GameObject[] enemyobjectsWithTag = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject GO in enemyobjectsWithTag)
+        {
+            opponentCardPositions.Add(GO.transform.position);
         }
     }
 
