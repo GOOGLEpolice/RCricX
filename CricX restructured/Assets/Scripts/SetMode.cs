@@ -4,35 +4,21 @@ using UnityEngine;
 
 public class SetMode : MonoBehaviour
 {
-    
-    //public CardStats cardStats;
-    //public string typeOfPlayer;
-    
-    
-
-    
-    void Update()
-    {
-        
-    }
-
-    
-
     public void CalculateSetScore()
     {
         if (GameManager.instance.opponentRuns < 0 && GameManager.instance.typeOfPlayer == "Batsman")
         {
             GameManager.instance.playerCardStats.gameObject.SetActive(false);
+            GameManager.instance.opponentCardStats.gameObject.transform.position = GameManager.instance.opponentCardStats.startPos;
             GameManager.instance.playerCardStats = null;
-            
             return;
         }
 
         if (GameManager.instance.playerRuns < 0 && GameManager.instance.typeOfOpponent == "Batsman")
         {
             GameManager.instance.opponentCardStats.gameObject.SetActive(false);
+            GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.startPos;
             GameManager.instance.opponentCardStats = null;
-            
             return;
         }
 
@@ -48,6 +34,7 @@ public class SetMode : MonoBehaviour
                 {
                     GameManager.instance.mScore = GameManager.instance.mScore + GameManager.instance.playerRuns;
                 }
+            GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.startPos;
             
         }
 
@@ -62,7 +49,7 @@ public class SetMode : MonoBehaviour
                 {
                     GameManager.instance.oppScore = GameManager.instance.oppScore + GameManager.instance.opponentRuns;
                 }
-            
+            GameManager.instance.opponentCardStats.gameObject.transform.position = GameManager.instance.opponentCardStats.startPos;
         }
     }
 

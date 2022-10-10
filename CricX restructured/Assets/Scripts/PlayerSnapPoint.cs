@@ -6,39 +6,37 @@ using UnityEngine.UIElements;
 
 public class PlayerSnapPoint : MonoBehaviour
 {
-    public PlayerCards playerCards;
-    
-    
-
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
+    public GameObject playerReady;
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Player Entered");
             other.transform.localPosition = this.transform.localPosition;
+            GameManager.instance.playerCardSelected = true;
+            if (GameManager.instance.playerReady)
+            {
+                playerReady.SetActive(false);
+            }
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
             GameManager.instance.playerCardStats = other.gameObject.GetComponent<CardStats>();
-            GameManager.instance.cardSelected = true;
+            playerReady.SetActive(true);
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
+
         if (other.gameObject.tag == "Player")
         {
-            GameManager.instance.playerCardStats = null;
-            GameManager.instance.cardSelected = false;
-            //GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.playerCardPositions[0];
+            GameManager.instance.playerCardSelected = false;
+            playerReady.SetActive(false);
         }
     }
 
@@ -48,6 +46,5 @@ public class PlayerSnapPoint : MonoBehaviour
         GameManager.instance.playerReady = true;
         GameManager.instance.playerRuns = GameManager.instance.runs;
         GameManager.instance.typeOfPlayer = GameManager.instance.playerCardStats.playerStats.PlayerType;
-        //GameManager.instance.SetGameMode(cardStats.gameObject);
     }
 }

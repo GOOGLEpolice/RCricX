@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class OpponentSnapPoint : MonoBehaviour
 {
-    
-    
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
-    {
-        
-    }
-
+    public GameObject opponentReady;
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("Opponent Entered");
             other.transform.localPosition = this.transform.localPosition;
-            GameManager.instance.opponentCardStats= other.gameObject.GetComponent<CardStats>();
-            GameManager.instance.cardSelected = true;
+            GameManager.instance.opponentCardSelected = true;
+        }
+
+        if (GameManager.instance.opponentReady)
+        {
+            opponentReady.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            GameManager.instance.opponentCardStats = other.gameObject.GetComponent<CardStats>();
+            opponentReady.SetActive(true);
         }
     }
 
@@ -32,9 +33,8 @@ public class OpponentSnapPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            GameManager.instance.opponentCardStats = null;
-            GameManager.instance.cardSelected = false;
-            //GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.playerCardPositions[0];
+            GameManager.instance.opponentCardSelected = false;
+            opponentReady.SetActive(false);
         }
     }
 
@@ -44,6 +44,5 @@ public class OpponentSnapPoint : MonoBehaviour
         GameManager.instance.opponentReady = true;
         GameManager.instance.opponentRuns = GameManager.instance.runs;
         GameManager.instance.typeOfOpponent = GameManager.instance.opponentCardStats.playerStats.PlayerType;
-        //GameManager.instance.SetGameMode(cardStats.gameObject);
     }
 }

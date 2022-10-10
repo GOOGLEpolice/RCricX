@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dragging : MonoBehaviour
 {
     private float dist;
-    private bool drag = false;
+    public static bool drag;
     private Vector3 offset;
     private Transform toDrag;
     
@@ -47,10 +47,9 @@ public class Dragging : MonoBehaviour
             toDrag.position = v3 + offset;
         }
 
-        if(drag&&(touch.phase==TouchPhase.Ended|| touch.phase == TouchPhase.Canceled))
+        if(drag&&(touch.phase==TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
         {
             drag = false;
         }
-
     }
 }

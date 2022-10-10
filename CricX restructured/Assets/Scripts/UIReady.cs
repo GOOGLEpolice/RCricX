@@ -6,7 +6,6 @@ using TMPro;
 
 public class UIReady : MonoBehaviour
 {
-
     public TMP_Text pRuns;
     public TMP_Text oRuns;
     // Start is called before the first frame update
@@ -23,7 +22,6 @@ public class UIReady : MonoBehaviour
             
             pRuns.text = GameManager.instance.mScore.ToString();
             oRuns.text = GameManager.instance.oppScore.ToString();
-            
         }
         void OnDisable()
         {
