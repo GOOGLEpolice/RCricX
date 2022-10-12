@@ -42,9 +42,10 @@ public class PlayerSnapPoint : MonoBehaviour
 
     public void OnReady()
     {
-        GameManager.instance.playerCardStats.IncreaseBallCount();
         GameManager.instance.playerReady = true;
+        GameManager.instance.playerCardStats.SwitchCases();
         GameManager.instance.playerRuns = GameManager.instance.runs;
         GameManager.instance.typeOfPlayer = GameManager.instance.playerCardStats.playerStats.PlayerType;
+        Debug.Log(GameManager.instance.runs);
     }
 }

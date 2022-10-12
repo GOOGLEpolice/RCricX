@@ -15,14 +15,14 @@ public class CardStats : MonoBehaviour
     }
     void Start()
     {
-        playerStats.playerBC = 0;
+        playerStats.playerBC = 1;
     }
 
     private void Update()
     {
         BackToPos();
 
-        if (playerStats.playerBC >= 6 && GameManager.instance.scoreCalculated)
+        if (playerStats.playerBC > 6 && GameManager.instance.scoreCalculated)
         {
             destroyTimer += 1 * Time.deltaTime;
             AllTurnsPlayed();
@@ -57,8 +57,6 @@ public class CardStats : MonoBehaviour
     public void IncreaseBallCount()
     {
         playerStats.playerBC += 1;
-        SwitchCases();
-        
     }
 
     void BackToPos()

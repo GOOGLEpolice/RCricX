@@ -40,8 +40,9 @@ public class OpponentSnapPoint : MonoBehaviour
 
     public void OnReady()
     {
-        GameManager.instance.opponentCardStats.IncreaseBallCount();
+        
         GameManager.instance.opponentReady = true;
+        GameManager.instance.opponentCardStats.SwitchCases();
         GameManager.instance.opponentRuns = GameManager.instance.runs;
         GameManager.instance.typeOfOpponent = GameManager.instance.opponentCardStats.playerStats.PlayerType;
     }

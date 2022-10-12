@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour
             setMode = gameObject.GetComponent<SetMode>();
             if (readyToCalculate)
             {
+                playerCardStats.IncreaseBallCount();
+                opponentCardStats.IncreaseBallCount();
                 setMode.CalculateSetScore();
                 scoreCalculated = true;
                 AllFalse();
