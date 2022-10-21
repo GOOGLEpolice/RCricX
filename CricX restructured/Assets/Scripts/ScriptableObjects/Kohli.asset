@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
   PlayerType: Batsman
-  playerBC: 0
+  playerBC: 1
   ball1: 4
   ball2: 2
-  ball3: 0
+  ball3: 6
   ball4: 6
   ball5: 4
   ball6: 1

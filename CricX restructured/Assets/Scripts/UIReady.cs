@@ -8,6 +8,7 @@ public class UIReady : MonoBehaviour
 {
     public TMP_Text pRuns;
     public TMP_Text oRuns;
+    //public TMP_Text ballOne;
     // Start is called before the first frame update
    
         [SerializeField]

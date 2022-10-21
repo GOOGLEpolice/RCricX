@@ -1,13 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CardStats : MonoBehaviour
 {
     public PlayerStats playerStats;
     public Vector3 startPos;
+    public TMP_Text ballOne;
+    public TMP_Text ballTwo;
+    public TMP_Text ballThree;
+    public TMP_Text ballFour;
+    public TMP_Text ballFive;
+    public TMP_Text ballSix;
     float destroyTimer;
-    
+
+
+    private void Awake()
+    {
+        /*ballOne = GetComponentInChildren<TMP_Text>();
+        ballTwo = GetComponentInChildren<TMP_Text>();
+        ballThree = GetComponentInChildren<TMP_Text>();
+        ballFour = GetComponentInChildren<TMP_Text>();
+        ballFive = GetComponentInChildren<TMP_Text>();
+        ballSix = GetComponentInChildren<TMP_Text>();*/
+        ShowText();
+        
+    }
 
     private void OnEnable()
     {
@@ -16,10 +35,12 @@ public class CardStats : MonoBehaviour
     void Start()
     {
         playerStats.playerBC = 1;
+        //ShowText();
     }
 
     private void Update()
     {
+
         BackToPos();
 
         if (playerStats.playerBC > 6 && GameManager.instance.scoreCalculated)
@@ -82,5 +103,15 @@ public class CardStats : MonoBehaviour
             Destroy(gameObject);
             destroyTimer = 0;
         }
+    }
+
+    public void ShowText()
+    {
+        ballOne.text = playerStats.ball1.ToString();
+        ballTwo.text = playerStats.ball2.ToString();
+        ballThree.text = playerStats.ball3.ToString();
+        ballFour.text = playerStats.ball4.ToString();
+        ballFive.text = playerStats.ball5.ToString();
+        ballSix.text = playerStats.ball6.ToString();
     }
 }
