@@ -19,15 +19,23 @@ public class GameManager : MonoBehaviour
 
             return;
         }
-        instance = this;
 
-         
-            //for(int i =0; i<playerCardPositions.Length; i++)
-            //{
-            //    inHandPcards[i].GetComponent<CardStats>().slot = playerCardPositions[i];
-            //}
-            
-         
+        inHandPcards = GameObject.FindGameObjectsWithTag("Player");
+        inHandOcards = GameObject.FindGameObjectsWithTag("Enemy");
+
+
+        for (int i = 0; i < playerCardPositions.Length; i++)
+        {
+            inHandPcards[i].transform.DOMove(playerCardPositions[i].position, 0.5f);
+        }
+
+
+        for (int i = 0; i < opponendCardPositions.Length; i++)
+        {
+            inHandOcards[i].transform.DOMove(opponendCardPositions[i].position, 0.5f);
+        }
+
+        instance = this;         
     }
     #endregion;
 
@@ -51,13 +59,13 @@ public class GameManager : MonoBehaviour
     public string typeOfPlayer;
     public string typeOfOpponent;
     public Transform[] playerCardPositions;
+    public Transform[] opponendCardPositions;
+    public GameObject[] inHandOcards;
     public GameObject[] inHandPcards;
-
-
-    
 
     void Update()
     {
+        BackToPos();
         if (mScore < 0 || oppScore < 0)
         {
             mScore = 0;
@@ -88,9 +96,9 @@ public class GameManager : MonoBehaviour
             setMode = gameObject.GetComponent<SetMode>();
             if (readyToCalculate)
             {
+                setMode.CalculateSetScore();
                 playerCardStats.IncreaseBallCount();
                 opponentCardStats.IncreaseBallCount();
-                setMode.CalculateSetScore();
                 scoreCalculated = true;
                 AllFalse();
             }
@@ -108,17 +116,29 @@ public class GameManager : MonoBehaviour
     {
         if (!playerCardSelected && !Dragging.drag && playerCardStats != null)
         {
-            //transform.position = startPos;
-            //GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.startPos;
-           // playerCardStats.gameObject.transform.DOMove(slot.position, 0.5f).SetEase(Ease.Linear);
-            Debug.Log(gameObject.name);
-            playerCardStats = null;
+            for (int i = 0; i < inHandPcards.Length; i++)
+            {
+                Debug.Log("Executing");
+                if (playerCardStats.gameObject == inHandPcards[i]) 
+                {
+                    playerCardStats.gameObject.transform.DOMove(playerCardPositions[i].position, 0.5f).SetEase(Ease.Linear);
+                    playerCardStats = null;
+                    break;
+                }
+            }
         }
 
-        if (!GameManager.instance.opponentCardSelected && !Dragging.drag && GameManager.instance.opponentCardStats != null)
+        if (!opponentCardSelected && !Dragging.drag && opponentCardStats != null)
         {
-            //GameManager.instance.opponentCardStats.gameObject.transform.position = GameManager.instance.opponentCardStats.startPos;
-            GameManager.instance.opponentCardStats = null;
+            for (int i = 0; i < inHandOcards.Length; i++)
+            {
+                if (opponentCardStats.gameObject == inHandOcards[i])
+                {
+                    opponentCardStats.gameObject.transform.DOMove(opponendCardPositions[i].position, 0.5f).SetEase(Ease.Linear);
+                    opponentCardStats = null;
+                    break;
+                }
+            }
         }
     }
 }
