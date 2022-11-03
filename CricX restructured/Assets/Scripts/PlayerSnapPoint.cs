@@ -12,7 +12,7 @@ public class PlayerSnapPoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.transform.localPosition = this.transform.localPosition;
-            GameManager.instance.playerCardSelected = true;
+            
             if (GameManager.instance.playerReady)
             {
                 playerReady.SetActive(false);
@@ -25,6 +25,7 @@ public class PlayerSnapPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            GameManager.instance.playerCardSelected = true;
             GameManager.instance.playerCardStats = other.gameObject.GetComponent<CardStats>();
             playerReady.SetActive(true);
         }
@@ -45,7 +46,7 @@ public class PlayerSnapPoint : MonoBehaviour
         GameManager.instance.playerReady = true;
         GameManager.instance.playerCardStats.SwitchCases();
         GameManager.instance.playerRuns = GameManager.instance.runs;
-        GameManager.instance.typeOfPlayer = GameManager.instance.playerCardStats.playerStats.PlayerType;
+        GameManager.instance.typeOfPlayer = GameManager.instance.playerCardStats.playerStats.playerType.ToString();
         Debug.Log(GameManager.instance.runs);
     }
 }

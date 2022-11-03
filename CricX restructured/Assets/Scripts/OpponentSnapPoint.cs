@@ -44,6 +44,6 @@ public class OpponentSnapPoint : MonoBehaviour
         GameManager.instance.opponentReady = true;
         GameManager.instance.opponentCardStats.SwitchCases();
         GameManager.instance.opponentRuns = GameManager.instance.runs;
-        GameManager.instance.typeOfOpponent = GameManager.instance.opponentCardStats.playerStats.PlayerType;
+        GameManager.instance.typeOfOpponent = GameManager.instance.opponentCardStats.playerStats.playerType.ToString();
     }
 }

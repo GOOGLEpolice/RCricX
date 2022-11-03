@@ -8,6 +8,7 @@ public class Dragging : MonoBehaviour
     public static bool drag;
     private Vector3 offset;
     private Transform toDrag;
+    public GameObject objectDragged;
     
     void Update()
     {
@@ -37,6 +38,7 @@ public class Dragging : MonoBehaviour
                     v3 = Camera.main.ScreenToWorldPoint(v3);
                     offset = toDrag.position - v3;
                     drag = true;
+                    objectDragged = hit.collider.gameObject;
                 }
             }
         }
@@ -50,6 +52,7 @@ public class Dragging : MonoBehaviour
         if(drag&&(touch.phase==TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
         {
             drag = false;
+            objectDragged = null;
         }
     }
 }

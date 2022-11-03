@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,24 +19,23 @@ public class CardStats : MonoBehaviour
 
     private void Awake()
     {
-        /*ballOne = GetComponentInChildren<TMP_Text>();
-        ballTwo = GetComponentInChildren<TMP_Text>();
-        ballThree = GetComponentInChildren<TMP_Text>();
-        ballFour = GetComponentInChildren<TMP_Text>();
-        ballFive = GetComponentInChildren<TMP_Text>();
-        ballSix = GetComponentInChildren<TMP_Text>();*/
+       
         ShowText();
         
     }
 
     private void OnEnable()
     {
-        startPos = transform.position;
+        //startPos = transform.position;
+        
+       // Debug.Log(slot.position + "  " + gameObject.name);
     }
     void Start()
     {
         playerStats.playerBC = 1;
-        //ShowText();
+        
+        
+        
     }
 
     private void Update()
@@ -81,19 +81,8 @@ public class CardStats : MonoBehaviour
     }
 
     void BackToPos()
-    {
-        if (!GameManager.instance.playerCardSelected && !Dragging.drag && GameManager.instance.playerCardStats != null)
-        {
-            transform.position = startPos;
-            GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.startPos;
-            GameManager.instance.playerCardStats = null;
-        }
-
-        if (!GameManager.instance.opponentCardSelected && !Dragging.drag && GameManager.instance.opponentCardStats != null)
-        {
-            GameManager.instance.opponentCardStats.gameObject.transform.position = GameManager.instance.opponentCardStats.startPos;
-            GameManager.instance.opponentCardStats = null;
-        }
+    {     
+       
     }
 
     public void AllTurnsPlayed()

@@ -1,5 +1,7 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -18,6 +20,14 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
+
+         
+            //for(int i =0; i<playerCardPositions.Length; i++)
+            //{
+            //    inHandPcards[i].GetComponent<CardStats>().slot = playerCardPositions[i];
+            //}
+            
+         
     }
     #endregion;
 
@@ -40,8 +50,12 @@ public class GameManager : MonoBehaviour
     public float resetTimer;
     public string typeOfPlayer;
     public string typeOfOpponent;
+    public Transform[] playerCardPositions;
+    public GameObject[] inHandPcards;
+
+
     
-    
+
     void Update()
     {
         if (mScore < 0 || oppScore < 0)
@@ -88,5 +102,23 @@ public class GameManager : MonoBehaviour
         playerReady = false;
         opponentReady = false;
         readyToCalculate = false;
+    }
+
+    void BackToPos()
+    {
+        if (!playerCardSelected && !Dragging.drag && playerCardStats != null)
+        {
+            //transform.position = startPos;
+            //GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.startPos;
+           // playerCardStats.gameObject.transform.DOMove(slot.position, 0.5f).SetEase(Ease.Linear);
+            Debug.Log(gameObject.name);
+            playerCardStats = null;
+        }
+
+        if (!GameManager.instance.opponentCardSelected && !Dragging.drag && GameManager.instance.opponentCardStats != null)
+        {
+            //GameManager.instance.opponentCardStats.gameObject.transform.position = GameManager.instance.opponentCardStats.startPos;
+            GameManager.instance.opponentCardStats = null;
+        }
     }
 }

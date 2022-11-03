@@ -325,6 +325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -356,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: d02cab0c62642324dbd8183c363c0085, type: 2}
   startPos: {x: 0, y: 0, z: 0}
+  slot: {fileID: 0}
   ballOne: {fileID: 1073071648}
   ballTwo: {fileID: 1600366349}
   ballThree: {fileID: 2032114410}
@@ -1191,6 +1197,14 @@ MonoBehaviour:
   resetTimer: 0
   typeOfPlayer: 
   typeOfOpponent: 
+  playerCardPositions:
+  - {fileID: 2025769721}
+  - {fileID: 317471910}
+  - {fileID: 1331476967}
+  inHandPcards:
+  - {fileID: 1776998340}
+  - {fileID: 2131635180}
+  - {fileID: 668894291}
 --- !u!4 &267516453
 Transform:
   m_ObjectHideFlags: 0
@@ -1353,6 +1367,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273957995}
   m_CullTransparentMesh: 1
+--- !u!1 &317471909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317471910}
+  m_Layer: 0
+  m_Name: slot2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317471910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317471909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.5, y: -12.9, z: -14.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,12 +2083,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3
+      value: -13.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: -6.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -2221,6 +2266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -2327,6 +2377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tendulkar
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -2998,6 +3053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 260932b1eb3a0384ba0280b277448e5b, type: 2}
   startPos: {x: 0, y: 0, z: 0}
+  slot: {fileID: 0}
   ballOne: {fileID: 1606026006}
   ballTwo: {fileID: 1296509576}
   ballThree: {fileID: 1358434158}
@@ -3417,6 +3473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: f7430cdd02d275f49b63f5204b6162c3, type: 2}
   startPos: {x: 0, y: 0, z: 0}
+  slot: {fileID: 0}
   ballOne: {fileID: 1246673089}
   ballTwo: {fileID: 533970362}
   ballThree: {fileID: 104994592}
@@ -4138,12 +4195,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.5
+      value: -13.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: -6.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -5728,6 +5785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 8a2a6c5d19597274fbc69f068b19686f, type: 2}
   startPos: {x: 0, y: 0, z: 0}
+  slot: {fileID: 0}
   ballOne: {fileID: 399041253}
   ballTwo: {fileID: 633501507}
   ballThree: {fileID: 1823177939}
@@ -6247,6 +6305,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1331476966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331476967}
+  m_Layer: 0
+  m_Name: slot3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1331476967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331476966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.3, y: -12.9, z: -14.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1333236014 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ba5231a7735e1045b1bf7f41578d85a,
@@ -7476,7 +7565,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: -6.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -7589,6 +7678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 92477ba6bb9fd3844b243d6f693c5868, type: 2}
   startPos: {x: 0, y: 0, z: 0}
+  slot: {fileID: 2025769721}
   ballOne: {fileID: 1311766396}
   ballTwo: {fileID: 710850288}
   ballThree: {fileID: 1411048388}
@@ -8890,6 +8980,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &2025769720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2025769721}
+  m_Layer: 0
+  m_Name: Slot1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2025769721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025769720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.7, y: -12.9, z: -14.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2032114408
 GameObject:
   m_ObjectHideFlags: 0
@@ -9288,6 +9409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 227204d8916bee043b7bff992a78a68d, type: 2}
   startPos: {x: 0, y: 0, z: 0}
+  slot: {fileID: 317471910}
   ballOne: {fileID: 364550077}
   ballTwo: {fileID: 627207539}
   ballThree: {fileID: 1964431148}
