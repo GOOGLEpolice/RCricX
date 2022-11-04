@@ -47,6 +47,6 @@ public class PlayerSnapPoint : MonoBehaviour
         GameManager.instance.playerCardStats.SwitchCases();
         GameManager.instance.playerRuns = GameManager.instance.runs;
         GameManager.instance.typeOfPlayer = GameManager.instance.playerCardStats.playerStats.playerType.ToString();
-        Debug.Log(GameManager.instance.runs);
+       // Debug.Log(GameManager.instance.runs);
     }
 }

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Rahul
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  PlayerType: Bowler
+  playerType: 1
+  rarity: 0
   playerBC: 1
-  ball1: 4
+  ball1: -1
   ball2: 0
   ball3: 2
   ball4: -1
