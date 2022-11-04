@@ -10,6 +10,7 @@ public enum PlayerType { Batsman, Bowler }
 public class PlayerStats : ScriptableObject
 {
     public GameObject PlayerCards;
+    public string playerName;
     public PlayerType playerType;
     public  Rarity rarity;
     public int playerBC;
