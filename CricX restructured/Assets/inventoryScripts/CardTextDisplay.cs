@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class CardTextDisplay : MonoBehaviour
 {   
+    //goes on individual card prefabs. those Prefabs must contain PCard tag on them.
+
     public Card_SO card_SO;
     public Text nameText;
     

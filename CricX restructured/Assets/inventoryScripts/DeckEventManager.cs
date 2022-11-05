@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//pulls info from card fucntions and Stores the game objects in a list
+
 public class DeckEventManager : MonoBehaviour
 {
     public static DeckEventManager instance;
@@ -14,7 +16,7 @@ public class DeckEventManager : MonoBehaviour
         instance = this;
     }
 
-    public event Action<int> onAddButtonPress;
+    public event Action<int> onAddButtonPress;//parameter int id. this int value should be different on all cards to be able to differentiate from each other.
     
 
     public void AddButtonPressed(int id)

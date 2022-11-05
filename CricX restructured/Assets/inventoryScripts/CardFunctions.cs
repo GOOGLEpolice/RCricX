@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+//Goes on individual cards. Used for Subscribing and un subscribing Deck events 
 
 public class CardFunctions : MonoBehaviour
 {
@@ -66,6 +67,8 @@ public class CardFunctions : MonoBehaviour
             {
                 gameObject.transform.SetParent(DeckEventManager.instance.DeckSlots[i]);
                 gameObject.transform.localPosition = Vector3.zero;
+                //gameObject[i+1].
+                // gameObject.transform.DOMove(Vector3.zero);
 
             }
 
@@ -103,12 +106,19 @@ public class CardFunctions : MonoBehaviour
                 AddButton.SetActive(false);
             }
 
-            for (int i = 0; i <= DeckEventManager.instance.DeckT.Count; i++)
-            {
-                gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[i]);
-                gameObject.transform.localPosition = Vector3.zero;
+            gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id-1]);
+            gameObject.transform.localPosition = Vector3.zero;
 
-            }
+
+
+        //    // for (int i = 0; i <= DeckEventManager.instance.DeckT.Count; i++)
+        //     for (int i = 0; i <= DeckEventManager.instance.DeckT.Count;)
+        //     // {
+        //     //     gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id]);
+        //     //     gameObject.transform.localPosition = Vector3.zero;
+        //     //     i++;
+
+        //     // }
 
 
 
@@ -126,4 +136,9 @@ public class CardFunctions : MonoBehaviour
 
         }   
     }
+
+    // public void SortCardsByName(int id)
+    // {
+    //     DeckEventManager.instance.DeckT
+    // }
 }

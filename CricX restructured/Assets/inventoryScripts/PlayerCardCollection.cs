@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Spawns all prefabs with PCard tag in resources folder in the empty slots. 
+
 public class PlayerCardCollection : MonoBehaviour
 {
     public static PlayerCardCollection Instance; //singleton
