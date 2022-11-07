@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 21
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Lassana\_Mwangi"
   playerType: 1
   rarity: 3
+  ethinicity: 2
   playerBC: 0
   ball1: 6
   ball2: 4

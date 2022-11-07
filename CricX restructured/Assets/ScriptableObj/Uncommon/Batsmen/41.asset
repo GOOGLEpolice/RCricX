@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: 41
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  playerName: 
+  playerName: "Arlo\_Selby"
   playerType: 0
   rarity: 1
+  ethinicity: 3
   playerBC: 0
-  ball1: 0
-  ball2: 0
-  ball3: 0
-  ball4: 0
-  ball5: 0
-  ball6: 0
+  ball1: 1
+  ball2: 1
+  ball3: 4
+  ball4: 6
+  ball5: 2
+  ball6: 4

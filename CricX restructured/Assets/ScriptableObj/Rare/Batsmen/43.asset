@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 43
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  playerName: 
+  playerName: "Neelam\_Vemulakonda"
   playerType: 0
   rarity: 2
+  ethinicity: 0
   playerBC: 0
   ball1: 6
   ball2: 4

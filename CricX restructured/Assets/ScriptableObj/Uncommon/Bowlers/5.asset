@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: Lei Fan
   playerType: 1
   rarity: 1
+  ethinicity: 1
   playerBC: 0
   ball1: 0
   ball2: 4

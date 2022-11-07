@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 44
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  playerName: 
+  playerName: Kefilwe Obama
   playerType: 0
   rarity: 2
+  ethinicity: 2
   playerBC: 0
   ball1: 0
   ball2: 6

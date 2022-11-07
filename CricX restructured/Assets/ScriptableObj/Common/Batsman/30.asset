@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 30
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Puneet\_Begam"
   playerType: 0
   rarity: 0
+  ethinicity: 0
   playerBC: 0
   ball1: 1
   ball2: 4

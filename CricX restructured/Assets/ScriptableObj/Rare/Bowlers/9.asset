@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 9
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Shiva\_Bhaskar"
   playerType: 1
   rarity: 2
+  ethinicity: 0
   playerBC: 0
   ball1: 0
   ball2: 4

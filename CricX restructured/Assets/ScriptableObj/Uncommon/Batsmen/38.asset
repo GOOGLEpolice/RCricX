@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: 38
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  playerName: 
+  playerName: "Swarna\_Misra"
   playerType: 0
   rarity: 1
+  ethinicity: 0
   playerBC: 0
   ball1: 0
-  ball2: 0
-  ball3: 0
-  ball4: 0
-  ball5: 0
-  ball6: 0
+  ball2: 2
+  ball3: 6
+  ball4: 6
+  ball5: 1
+  ball6: 1

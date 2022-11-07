@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 53
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  playerName: 
+  playerName: "Adeola\_Afolabi"
   playerType: 0
   rarity: 3
+  ethinicity: 2
   playerBC: 0
   ball1: 1
   ball2: 4

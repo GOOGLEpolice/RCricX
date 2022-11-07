@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 23
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Fulton\_Carter"
   playerType: 1
   rarity: 3
+  ethinicity: 3
   playerBC: 0
   ball1: 4
   ball2: 2

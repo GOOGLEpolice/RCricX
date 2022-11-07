@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 32
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Shekhar\_Kaur"
   playerType: 0
   rarity: 0
+  ethinicity: 0
   playerBC: 0
   ball1: 0
   ball2: 1

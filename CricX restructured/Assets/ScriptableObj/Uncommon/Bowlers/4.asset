@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Arata\_Yoshida"
   playerType: 1
   rarity: 1
+  ethinicity: 1
   playerBC: 0
   ball1: 1
   ball2: 1

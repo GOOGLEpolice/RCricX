@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 7
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Harsh\_Ahmed"
   playerType: 1
   rarity: 1
+  ethinicity: 0
   playerBC: 0
   ball1: -1
   ball2: 0

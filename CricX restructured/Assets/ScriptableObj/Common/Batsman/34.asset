@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 34
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Koji\_Haraguchi"
   playerType: 0
   rarity: 0
+  ethinicity: 1
   playerBC: 0
   ball1: 4
   ball2: 0

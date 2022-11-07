@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 26
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  playerName: 
+  playerName: "Kumar\_Neeraj"
   playerType: 1
   rarity: 4
+  ethinicity: 0
   playerBC: 0
   ball1: -1
   ball2: 1

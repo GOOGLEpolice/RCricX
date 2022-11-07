@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 33
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: Yuu Xiao
   playerType: 0
   rarity: 0
+  ethinicity: 1
   playerBC: 0
   ball1: 0
   ball2: 1

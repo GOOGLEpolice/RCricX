@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 16
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Ganizani\_Skywalker"
   playerType: 1
   rarity: 2
+  ethinicity: 2
   playerBC: 0
   ball1: 0
   ball2: 0

@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 25
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  playerName: "Orval\_Lawson"
   playerType: 1
   rarity: 3
+  ethinicity: 3
   playerBC: 0
   ball1: 6
   ball2: 2
