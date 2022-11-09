@@ -33,6 +33,9 @@ public class CardStats : MonoBehaviour
     void Start()
     {
         playerStats.playerBC = 1;
+        
+        
+        
     }
 
     private void Update()

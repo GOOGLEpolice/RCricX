@@ -8,8 +8,7 @@ public class Dragging : MonoBehaviour
     public static bool drag;
     private Vector3 offset;
     private Transform toDrag;
-    //public GameObject objectDragged;
-    
+    public GameObject objectDragged;
     
     void Update()
     {
@@ -31,7 +30,7 @@ public class Dragging : MonoBehaviour
 
             if(Physics.Raycast(ray,out hit))
             {
-                if (hit.collider.tag == "Player") 
+                if (hit.collider.tag == "Player" || hit.collider.tag == "Enemy") 
                 {
                     toDrag = hit.transform;
                     dist = hit.transform.position.z - Camera.main.transform.position.z;
@@ -39,18 +38,7 @@ public class Dragging : MonoBehaviour
                     v3 = Camera.main.ScreenToWorldPoint(v3);
                     offset = toDrag.position - v3;
                     drag = true;
-                    GameManager.instance.playerCardStats = hit.collider.gameObject.GetComponent<CardStats>();
-                }
-
-                if (hit.collider.tag == "Enemy")
-                {
-                    toDrag = hit.transform;
-                    dist = hit.transform.position.z - Camera.main.transform.position.z;
-                    v3 = new Vector3(pos.x, pos.y, dist);
-                    v3 = Camera.main.ScreenToWorldPoint(v3);
-                    offset = toDrag.position - v3;
-                    drag = true;
-                    GameManager.instance.opponentCardStats = hit.collider.gameObject.GetComponent<CardStats>();
+                    objectDragged = hit.collider.gameObject;
                 }
             }
         }
@@ -64,7 +52,7 @@ public class Dragging : MonoBehaviour
         if(drag&&(touch.phase==TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
         {
             drag = false;
-            
+            objectDragged = null;
         }
     }
 }
