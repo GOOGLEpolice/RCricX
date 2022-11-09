@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void AllFalse()
+    public void AllFalse()
     {
         playerReady = false;
         opponentReady = false;

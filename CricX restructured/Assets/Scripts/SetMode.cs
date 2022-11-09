@@ -9,25 +9,21 @@ public class SetMode : MonoBehaviour
     {
         if (GameManager.instance.opponentRuns < 0 && GameManager.instance.typeOfPlayer == "Batsman")
         {
-            //GameManager.instance.playerCardStats.gameObject.SetActive(false);
             GameManager.instance.playerCardStats.gameObject.transform.DOShakeRotation(1f,20f,50,80f,false).OnComplete(() =>
             {
             GameManager.instance.playerCardStats.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => { GameManager.instance.opponentCardSelected = false; Destroy(GameManager.instance.playerCardStats.gameObject); });
             
                 });
-                
-            //GameManager.instance.opponentCardStats.gameObject.transform.position = GameManager.instance.opponentCardStats.startPos;
-            //GameManager.instance.opponentCardStats.gameObject.transform.DOMove(GameManager.instance.opponendCardPositions[i].position, 0.5f).SetEase(Ease.Linear);
-            
             return;
         }
 
         if (GameManager.instance.playerRuns < 0 && GameManager.instance.typeOfOpponent == "Batsman")
         {
-            GameManager.instance.opponentCardStats.gameObject.SetActive(false);
-            GameManager.instance.playerCardSelected = false;
-            //GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.startPos;
-            GameManager.instance.opponentCardStats = null;
+            GameManager.instance.opponentCardStats.gameObject.transform.DOShakeRotation(1f, 20f, 50, 80f, false).OnComplete(() =>
+            {
+                GameManager.instance.opponentCardStats.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => { GameManager.instance.playerCardSelected = false; Destroy(GameManager.instance.opponentCardStats.gameObject); });
+
+            });
             return;
         }
 
@@ -44,7 +40,7 @@ public class SetMode : MonoBehaviour
                     GameManager.instance.mScore = GameManager.instance.mScore + GameManager.instance.playerRuns;
                 }
             //GameManager.instance.playerCardStats.gameObject.transform.position = GameManager.instance.playerCardStats.startPos;
-            //GameManager.instance.playerCardSelected = false;
+            GameManager.instance.playerCardSelected = false;
             
         }
 

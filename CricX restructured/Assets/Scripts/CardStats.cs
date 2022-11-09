@@ -17,6 +17,7 @@ public class CardStats : MonoBehaviour
     float destroyTimer;
 
 
+
     private void Awake()
     {
        
@@ -26,9 +27,7 @@ public class CardStats : MonoBehaviour
 
     private void OnEnable()
     {
-        //startPos = transform.position;
-        
-       // Debug.Log(slot.position + "  " + gameObject.name);
+        playerStats.balls = new int[6];
     }
     void Start()
     {
@@ -93,11 +92,28 @@ public class CardStats : MonoBehaviour
 
     public void ShowText()
     {
-        ballOne.text = playerStats.ball1.ToString();
-        ballTwo.text = playerStats.ball2.ToString();
-        ballThree.text = playerStats.ball3.ToString();
-        ballFour.text = playerStats.ball4.ToString();
-        ballFive.text = playerStats.ball5.ToString();
-        ballSix.text = playerStats.ball6.ToString();
+        if(playerStats.ball1 < 0){ ballOne.text = "Out".ToString(); }
+        else
+            ballOne.text = playerStats.ball1.ToString(); 
+
+        if(playerStats.ball2 < 0){ ballTwo.text = "Out".ToString();}
+        else 
+            ballTwo.text = playerStats.ball2.ToString(); 
+        
+        if(playerStats.ball3 < 0){ ballThree.text = "Out".ToString();}
+        else  
+            ballThree.text = playerStats.ball3.ToString(); 
+
+        if (playerStats.ball4 < 0){ballFour.text = "Out".ToString();}
+        else
+            ballFour.text = playerStats.ball4.ToString();
+        
+        if(playerStats.ball5 < 0){ ballFive.text = "Out".ToString(); }
+        else
+            ballFive.text = playerStats.ball5.ToString();
+
+        if(playerStats.ball6 < 0) { ballSix.text = "Out".ToString();}
+        else
+            ballSix.text = playerStats.ball6.ToString();
     }
 }
