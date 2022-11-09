@@ -11,7 +11,6 @@ public class OpponentSnapPoint : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             other.transform.localPosition = this.transform.localPosition;
-            GameManager.instance.opponentCardSelected = true;
         }
 
         if (GameManager.instance.opponentReady)
@@ -22,6 +21,7 @@ public class OpponentSnapPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        GameManager.instance.opponentCardSelected = true;
         if (other.gameObject.tag == "Enemy")
         {
             GameManager.instance.opponentCardStats = other.gameObject.GetComponent<CardStats>();
