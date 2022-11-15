@@ -38,11 +38,13 @@ public class CardFunctions : MonoBehaviour
     bool CSB10;*/
 
 
+
     public int id;
     private void Start()
     {
         DeckEventManager.instance.onAddButtonPress += AddToDeck;
         DeckEventManager.instance.onRemoveButtonPress += RemoveFromDeck;
+        RemoveButton.SetActive(false);
     }
 
     private void Update()
