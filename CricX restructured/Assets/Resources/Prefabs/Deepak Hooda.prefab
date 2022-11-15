@@ -1354,7 +1354,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5488948373307658992}
         m_TargetAssemblyTypeName: CardTextDisplay, Assembly-CSharp
-        m_MethodName: OnAddButtonClicked
+        m_MethodName: OnRemoveButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
