@@ -644,7 +644,7 @@ MonoBehaviour:
   statText4: {fileID: 81565230797541168}
   statText5: {fileID: 81565230598334422}
   statText6: {fileID: 81565231580273036}
-  id: 1
+  id: 0
 --- !u!114 &8953789498545050821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddButton: {fileID: 1072864448358959212}
   RemoveButton: {fileID: 4879189175010270398}
-  id: 1
+  id: 0
 --- !u!1 &81565231580273043
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,10 +801,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1087375793341744116, guid: 761056e77fb4226448821b864ced6433, type: 3}
-  - {fileID: -6305739319422074432, guid: 761056e77fb4226448821b864ced6433, type: 3}
-  - {fileID: 8659379793811629004, guid: 761056e77fb4226448821b864ced6433, type: 3}
-  - {fileID: -4023280982767234363, guid: 761056e77fb4226448821b864ced6433, type: 3}
+  - {fileID: 2100000, guid: 3d8888de4885f284b816786975d6fd3d, type: 2}
+  - {fileID: 2100000, guid: 67f2143407e9688448f948f431e296d0, type: 2}
+  - {fileID: 2100000, guid: fbbc52dd8200c9649bff39abc2e71011, type: 2}
+  - {fileID: 2100000, guid: 879bea34a394e014b90723d95a4d6d38, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -10,6 +10,8 @@ public class CardFunctions : MonoBehaviour
     bool Remove;
     public GameObject AddButton;
     public GameObject RemoveButton;
+    bool deckTFull;
+
 
     //DeckSlotBools False = slot empty
 
@@ -43,6 +45,11 @@ public class CardFunctions : MonoBehaviour
         DeckEventManager.instance.onRemoveButtonPress += RemoveFromDeck;
     }
 
+    private void Update()
+    {
+        DeckFull();
+    }
+
     public void AddToDeck(int id)
     {  
         if(id == this.id)
@@ -69,7 +76,6 @@ public class CardFunctions : MonoBehaviour
                 gameObject.transform.localPosition = Vector3.zero;
                 //gameObject[i+1].
                 // gameObject.transform.DOMove(Vector3.zero);
-
             }
 
         }
@@ -106,7 +112,7 @@ public class CardFunctions : MonoBehaviour
                 AddButton.SetActive(false);
             }
 
-            gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id-1]);
+            gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id]);
             gameObject.transform.localPosition = Vector3.zero;
 
 
@@ -135,6 +141,27 @@ public class CardFunctions : MonoBehaviour
 
 
         }   
+    }
+
+    public void DeckFull()
+    {
+
+        if (DeckEventManager.instance.DeckT.Count == 11)
+        {
+            deckTFull = true;
+            AddButton.SetActive(false);
+        }
+
+     /*   if(deckTFull == true)
+        {
+            AddButton.SetActive(false);
+        }*/
+
+        else
+        {
+            deckTFull = false;
+            AddButton.SetActive(true);
+        }
     }
 
     // public void SortCardsByName(int id)

@@ -53,8 +53,6 @@ public class DeckEventManager : MonoBehaviour
 
   
 
-
-
     /*public void DeckSceneLoad()
     {
         SceneManager.LoadScene(sceneName: "DeckScreen");
