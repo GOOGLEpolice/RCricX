@@ -10,34 +10,7 @@ public class CardFunctions : MonoBehaviour
     bool Remove;
     public GameObject AddButton;
     public GameObject RemoveButton;
-    bool deckTFull;
-
-
-    //DeckSlotBools False = slot empty
-
-    /*bool DSB1 = false;
-    bool DSB2 = false;
-    bool DSB3 = false;
-    bool DSB4 = false;
-    bool DSB5 = false;
-    bool DSB6 = false;
-    bool DSB7 = false;
-    bool DSB8 = false;*/
-
-    //CollectionSlotBools False = Slot empty
-
-    /*bool CSB1;
-    bool CSB2;
-    bool CSB3;
-    bool CSB4;
-    bool CSB5;
-    bool CSB6;
-    bool CSB7;
-    bool CSB8;
-    bool CSB9;
-    bool CSB10;*/
-
-
+    public SlotsManager slotsManager;
 
     public int id;
     private void Start()
@@ -57,7 +30,7 @@ public class CardFunctions : MonoBehaviour
         if(id == this.id)
         {
             DeckEventManager.instance.DeckT.Add(gameObject);
-           
+            
             
             AddButton.SetActive(false);
             Add = false;
@@ -72,29 +45,25 @@ public class CardFunctions : MonoBehaviour
                 RemoveButton.SetActive(false);
             }
 
-            for (int i = 0; i < DeckEventManager.instance.DeckT.Count; i++)
+
+            foreach (Transform slots in DeckEventManager.instance.DeckSlots)
             {
-                gameObject.transform.SetParent(DeckEventManager.instance.DeckSlots[i]);
-                gameObject.transform.localPosition = Vector3.zero;
-                //gameObject[i+1].
-                // gameObject.transform.DOMove(Vector3.zero);
+                for (int i = 0; i < DeckEventManager.instance.DeckT.Count; i++)
+                {
+                    if (DeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<SlotsManager>().childCard != null)
+                    {
+                        i++;                        
+                    }
+                    if (DeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<SlotsManager>().childCard == null)
+                    {
+                        gameObject.transform.SetParent(DeckEventManager.instance.DeckSlots[i]);
+                        gameObject.transform.localPosition = Vector3.zero;
+                    }
+                }
+                
             }
-
+            
         }
-
-       
-
-       /* for (int i = 0; i <= DeckEventManager.instance.DeckSlots.Count; i++)
-        {
-            Debug.Log(i);
-            *//*for (int j = 0; j < DeckEventManager.instance.DeckT.Count; j++)
-            {
-                DeckEventManager.instance.DeckT[j].transform.SetParent(DeckEventManager.instance.SpawnSlots[j]);
-                DeckEventManager.instance.DeckT[j].transform.localPosition = Vector3.zero;
-                //DeckEventManager.instance.DeckT[j].transform.localPosition = CardFunctions.startPos;
-            }*//*
-        }*/
-
     }
     public void RemoveFromDeck(int id)
     {
@@ -114,39 +83,19 @@ public class CardFunctions : MonoBehaviour
                 AddButton.SetActive(false);
             }
 
+
+            gameObject.GetComponentInParent<SlotsManager>().childCard = null;
+            
+
             gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id]);
             gameObject.transform.localPosition = Vector3.zero;
-
-
-
-        //    // for (int i = 0; i <= DeckEventManager.instance.DeckT.Count; i++)
-        //     for (int i = 0; i <= DeckEventManager.instance.DeckT.Count;)
-        //     // {
-        //     //     gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id]);
-        //     //     gameObject.transform.localPosition = Vector3.zero;
-        //     //     i++;
-
-        //     // }
-
-
-
-            /*for (int i = 0; i < DeckEventManager.instance.DeckT.Count; i++)
-             {
-
-                 for (int j = 0; j < DeckEventManager.instance.SpawnSlots.Count;j++)
-                 {
-                     DeckEventManager.instance.DeckT[i].transform.SetParent(DeckEventManager.instance.SpawnSlots[i].transform);
-                     DeckEventManager.instance.DeckT[i].transform.localPosition = Vector3.zero;
-                    // DeckEventManager.instance.DeckT[j].transform.localPosition = CardFunctions.startPos;
-                 }
-             }*/
-
-
+            
         }   
     }
 
     public void DeckFull()
     {
+        bool deckTFull;
 
         if (DeckEventManager.instance.DeckT.Count == 11)
         {
@@ -154,20 +103,11 @@ public class CardFunctions : MonoBehaviour
             AddButton.SetActive(false);
         }
 
-     /*   if(deckTFull == true)
-        {
-            AddButton.SetActive(false);
-        }*/
-
         else
         {
             deckTFull = false;
             AddButton.SetActive(true);
         }
     }
-
-    // public void SortCardsByName(int id)
-    // {
-    //     DeckEventManager.instance.DeckT
-    // }
+    
 }

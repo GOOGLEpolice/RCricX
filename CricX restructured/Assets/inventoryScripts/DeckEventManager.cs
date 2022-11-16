@@ -15,7 +15,8 @@ public class DeckEventManager : MonoBehaviour
     bool deck5;
 
     public static DeckEventManager instance;
-    public List<GameObject> DeckT = new List<GameObject>();
+    public List<GameObject> DeckT = new List<GameObject>(11);
+    
     public List<GameObject> Deck2 = new List<GameObject>();
     public List<GameObject> Deck3 = new List<GameObject>();
     public List<GameObject> Deck4 = new List<GameObject>();
@@ -28,7 +29,7 @@ public class DeckEventManager : MonoBehaviour
     }
 
     public event Action<int> onAddButtonPress;//parameter int id. this int value should be different on all cards to be able to differentiate from each other.
-    
+    public event Action onPlayer2Deck;
 
     public void AddButtonPressed(int id)
     {
@@ -51,6 +52,13 @@ public class DeckEventManager : MonoBehaviour
         SceneManager.LoadScene(sceneName: "SampleScene");
     }
 
+    public void Player2Deck()
+    {
+
+    }
+    
+
+   
   
 
     /*public void DeckSceneLoad()
