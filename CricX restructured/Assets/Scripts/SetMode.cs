@@ -11,7 +11,7 @@ public class SetMode : MonoBehaviour
         {
             GameManager.instance.playerCardStats.gameObject.transform.DOShakeRotation(1f,20f,50,80f,false).OnComplete(() =>
             {
-            GameManager.instance.playerCardStats.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => { GameManager.instance.opponentCardSelected = false; Destroy(GameManager.instance.playerCardStats.gameObject); GameManager.instance.playerCardSelected = false; });
+            GameManager.instance.playerCardStats.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => { GameManager.instance.opponentCardSelected = false; Destroy(GameManager.instance.playerCardStats.gameObject); GameManager.instance.playerCardSelected = false; GameManager.instance.newRoundPlayer(); });
             
                 });
             return;
@@ -22,7 +22,7 @@ public class SetMode : MonoBehaviour
         {
             GameManager.instance.opponentCardStats.gameObject.transform.DOShakeRotation(1f, 20f, 50, 80f, false).OnComplete(() =>
             {
-                GameManager.instance.opponentCardStats.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => { GameManager.instance.playerCardSelected = false; Destroy(GameManager.instance.opponentCardStats.gameObject); GameManager.instance.opponentCardSelected = false; });
+                GameManager.instance.opponentCardStats.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => { GameManager.instance.playerCardSelected = false; Destroy(GameManager.instance.opponentCardStats.gameObject); GameManager.instance.opponentCardSelected = false; GameManager.instance.newRoundOpponent(); });
 
             });
             return;

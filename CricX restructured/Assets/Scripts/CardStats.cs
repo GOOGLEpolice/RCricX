@@ -76,9 +76,9 @@ public class CardStats : MonoBehaviour
         playerStats.playerBC += 1;
     }
 
-    void BackToPos()
-    {     
-       
+    public void DecreaseBallCount()
+    {
+        playerStats.playerBC -= 1;
     }
 
     public void AllTurnsPlayed()

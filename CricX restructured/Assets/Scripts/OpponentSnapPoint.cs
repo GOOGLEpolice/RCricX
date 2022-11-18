@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class OpponentSnapPoint : MonoBehaviour
 {
-
-    public GameObject opponentReady;
-    public GameObject oppLockIcon;
-    public GameObject oppTickMark;
-
-    public void newRound()
-    {
-        oppLockIcon.SetActive(false);
-        opponentReady.SetActive(false);
-        oppTickMark.SetActive(false);
-    }
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -24,7 +13,7 @@ public class OpponentSnapPoint : MonoBehaviour
 
         if (GameManager.instance.opponentReady)
         {
-            opponentReady.SetActive(false);
+            GameManager.instance.opponentReadyIcon.SetActive(false);
         }
     }
 
@@ -34,7 +23,7 @@ public class OpponentSnapPoint : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             GameManager.instance.opponentCardStats = other.gameObject.GetComponent<CardStats>();
-            opponentReady.SetActive(true);
+            GameManager.instance.opponentReadyIcon.SetActive(true);
         }
     }
 
@@ -43,15 +32,14 @@ public class OpponentSnapPoint : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             GameManager.instance.opponentCardSelected = false;
-            opponentReady.SetActive(false);
+            GameManager.instance.newRoundOpponent();
         }
     }
 
     public void OnReady()
     {
-        oppLockIcon.SetActive(true);
-        oppTickMark.SetActive(true);
-        opponentReady.SetActive(false);
+        GameManager.instance.oppLockIcon.SetActive(true);
+        GameManager.instance.oppTickMark.SetActive(true);
         GameManager.instance.opponentReady = true;
         GameManager.instance.opponentCardStats.SwitchCases();
         GameManager.instance.opponentRuns = GameManager.instance.runs;

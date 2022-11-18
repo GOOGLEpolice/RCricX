@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Dragging : MonoBehaviour
 {
@@ -65,6 +66,15 @@ public class Dragging : MonoBehaviour
         {
             drag = false;
             
+        }
+    }
+
+
+    public void StopDrag(PointerEventData eventData)
+    {
+        if (GameManager.instance.playerReady)
+        {
+            return;
         }
     }
 }

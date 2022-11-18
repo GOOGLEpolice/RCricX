@@ -77,6 +77,13 @@ public class GameManager : MonoBehaviour
     public float startTime;
     public float currentTime;
 
+    public GameObject playerReadyIcon;
+    public GameObject pLockIcon;
+    public GameObject pTickMark;
+
+    public GameObject opponentReadyIcon;
+    public GameObject oppLockIcon;
+    public GameObject oppTickMark;
 
     public GameObject calmTimer;
     public GameObject agroTimer;
@@ -138,6 +145,23 @@ public class GameManager : MonoBehaviour
         opponentReady = false;
         readyToCalculate = false;
     }
+
+    public void newRoundPlayer()
+    {
+        pLockIcon.SetActive(false);
+        pTickMark.SetActive(false);
+        playerReadyIcon.SetActive(false);
+    }
+
+    public void newRoundOpponent()
+    {
+        oppLockIcon.SetActive(false);
+        opponentReadyIcon.SetActive(false);
+        oppTickMark.SetActive(false);
+    }
+
+    
+
 
     void BackToPos()
     {
