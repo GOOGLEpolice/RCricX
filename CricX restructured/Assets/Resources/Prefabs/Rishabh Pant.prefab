@@ -724,7 +724,7 @@ MonoBehaviour:
   statText4: {fileID: 4519366405764074215}
   statText5: {fileID: 4519366405434968984}
   statText6: {fileID: 4519366406998944488}
-  id: 9
+  id: 8
 --- !u!114 &-1635608299586402188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddButton: {fileID: 3011217415680312249}
   RemoveButton: {fileID: 6655504419420863575}
-  id: 9
+  id: 8
 --- !u!1 &4519366406998944489
 GameObject:
   m_ObjectHideFlags: 0
