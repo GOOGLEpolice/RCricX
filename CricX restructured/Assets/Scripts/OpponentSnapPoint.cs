@@ -6,6 +6,15 @@ public class OpponentSnapPoint : MonoBehaviour
 {
 
     public GameObject opponentReady;
+    public GameObject oppLockIcon;
+    public GameObject oppTickMark;
+
+    public void newRound()
+    {
+        oppLockIcon.SetActive(false);
+        opponentReady.SetActive(false);
+        oppTickMark.SetActive(false);
+    }
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -40,7 +49,9 @@ public class OpponentSnapPoint : MonoBehaviour
 
     public void OnReady()
     {
-        
+        oppLockIcon.SetActive(true);
+        oppTickMark.SetActive(true);
+        opponentReady.SetActive(false);
         GameManager.instance.opponentReady = true;
         GameManager.instance.opponentCardStats.SwitchCases();
         GameManager.instance.opponentRuns = GameManager.instance.runs;

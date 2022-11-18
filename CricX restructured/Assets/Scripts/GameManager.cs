@@ -40,8 +40,10 @@ public class GameManager : MonoBehaviour
     #endregion;
 
     SetMode setMode;
+
     public CardStats playerCardStats;
     public CardStats opponentCardStats;
+
     public bool set;                                                            //type of game mode
     public bool chase;                                                          //type of game mode
     public bool playerCardSelected;
@@ -50,18 +52,41 @@ public class GameManager : MonoBehaviour
     public bool opponentReady;
     public bool readyToCalculate;
     public bool scoreCalculated;
+
     public int runs;
     public int playerRuns;
     public int opponentRuns;
     public int mScore;
     public int oppScore;
+
     public float resetTimer;
+
     public string typeOfPlayer;
     public string typeOfOpponent;
+
+
     public Transform[] playerCardPositions;
     public Transform[] opponendCardPositions;
     public GameObject[] inHandOcards;
     public GameObject[] inHandPcards;
+    //public timer timer;
+
+    public bool timeStarted = false;
+
+
+    public float startTime;
+    public float currentTime;
+
+
+    public GameObject calmTimer;
+    public GameObject agroTimer;
+
+
+    private void Start()
+    {
+        startTime = 36;
+    }
+
 
     void Update()
     {
@@ -101,6 +126,8 @@ public class GameManager : MonoBehaviour
                 opponentCardStats.IncreaseBallCount();
                 scoreCalculated = true;
                 AllFalse();
+                timeStarted = true;
+                startTime = 36;
             }
         }
     }

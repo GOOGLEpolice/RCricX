@@ -12,7 +12,7 @@ public class ButtManager : MonoBehaviour
     public bool Music;
      public void OnPlay()
     {
-        SceneManager.LoadScene(sceneName: "GameScreen");
+        SceneManager.LoadScene(sceneName: "GameScene");
     }
 
     public void OnInven()
