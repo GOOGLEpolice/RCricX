@@ -6,36 +6,47 @@ using UnityEngine.UIElements;
 
 public class PlayerSnapPoint : MonoBehaviour
 {
-    public PlayerCards playerCards;
-    
-
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
+    public GameObject playerReady;
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Player Entered");
             other.transform.localPosition = this.transform.localPosition;
-            GameManager.instance.cardStats = other.gameObject.GetComponent<CardStats>();
-            GameManager.instance.cardSelected = true;
+            
+            if (GameManager.instance.playerReady)
+            {
+                playerReady.SetActive(false);
+            }
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            GameManager.instance.playerCardSelected = true;
+            GameManager.instance.playerCardStats = other.gameObject.GetComponent<CardStats>();
+            playerReady.SetActive(true);
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
+
         if (other.gameObject.tag == "Player")
         {
-           
+            GameManager.instance.playerCardSelected = false;
+            playerReady.SetActive(false);
         }
+    }
+
+    public void OnReady()
+    {
+        GameManager.instance.playerReady = true;
+        GameManager.instance.playerCardStats.SwitchCases();
+        GameManager.instance.playerRuns = GameManager.instance.runs;
+        GameManager.instance.typeOfPlayer = GameManager.instance.playerCardStats.playerStats.playerType.ToString();
+       // Debug.Log(GameManager.instance.runs);
     }
 }

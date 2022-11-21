@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Tendulkar
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
+  PlayerType: Batsman
   playerBC: 0
-  ball1: 0
-  ball2: 0
-  ball3: 0
-  ball4: 0
-  ball5: 0
-  ball6: 0
+  ball1: 6
+  ball2: 6
+  ball3: 6
+  ball4: 4
+  ball5: 2
+  ball6: 4

@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Arshdeep
   m_EditorClassIdentifier: 
   PlayerCards: {fileID: 0}
-  PlayerType: Bowler
-  playerBC: 0
-  ball1: 0
+  playerType: 1
+  rarity: 0
+  playerBC: 1
+  ball1: -1
   ball2: 0
-  ball3: 0
-  ball4: 0
-  ball5: 0
+  ball3: 4
+  ball4: 4
+  ball5: -1
   ball6: 0
