@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4519366406918797819}
-        m_TargetAssemblyTypeName: CardTextDisplay, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 6414785488616406218}
+        m_TargetAssemblyTypeName: OppCardTextDisplay, Assembly-CSharp
+        m_MethodName: OnAddButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1217,9 +1217,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4519366406918797819}
-        m_TargetAssemblyTypeName: CardTextDisplay, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 6414785488616406218}
+        m_TargetAssemblyTypeName: OppCardTextDisplay, Assembly-CSharp
+        m_MethodName: OnRemoveButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

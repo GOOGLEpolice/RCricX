@@ -30,7 +30,7 @@ public class OppCardFunctions : MonoBehaviour
         if(opId == this.opId)
         {
             OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
-            
+           
             
             AddButton.SetActive(false);
             Add = false;

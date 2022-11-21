@@ -46,8 +46,8 @@ public class DeckEventManager : MonoBehaviour
         }
     }
 
-    public void GameSceneLoad()
+    /*public void GameSceneLoad()
     {
         SceneManager.LoadScene(sceneName: "SampleScene");
-    }
+    }*/
 }

@@ -11,7 +11,7 @@ public class OppDeckEventManager : MonoBehaviour
 
     public static OppDeckEventManager instance;
     public List<GameObject> opponentDeck1 = new List<GameObject>(11);
-    
+        
     /*public List<GameObject> Deck2 = new List<GameObject>();
     public List<GameObject> Deck3 = new List<GameObject>();
     public List<GameObject> Deck4 = new List<GameObject>();
@@ -21,6 +21,8 @@ public class OppDeckEventManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(gameObject);
+        
     }
 
     public event Action<int> onAddButtonPress;//parameter int id. this int value should be different on all cards to be able to differentiate from each other.
@@ -30,6 +32,7 @@ public class OppDeckEventManager : MonoBehaviour
         if(onAddButtonPress != null)
         {
             onAddButtonPress(opId);
+            
         }
     }
     public event Action<int> onRemoveButtonPress;

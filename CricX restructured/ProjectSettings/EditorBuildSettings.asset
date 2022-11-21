@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DeckScreen.unity
     guid: cb1deca09c211ef4f986cb4e2725f81f
   - enabled: 1
+    path: Assets/Scenes/DeckScreenOpp.unity
+    guid: 24548eda9512cc443a5ee5ad01010ac5
+  - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: c6bd51ce27d92e746aed8b4a2c52d5d5
   m_configObjects: {}
