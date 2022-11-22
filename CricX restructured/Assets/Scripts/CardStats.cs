@@ -37,7 +37,7 @@ public class CardStats : MonoBehaviour
     private void Update()
     {
 
-        //BackToPos();
+        BackToPos();
 
         if (playerStats.playerBC > 6 && GameManager.instance.scoreCalculated)
         {
