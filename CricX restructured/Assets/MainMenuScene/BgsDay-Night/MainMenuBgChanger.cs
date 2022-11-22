@@ -13,7 +13,6 @@ public class MainMenuBgChanger : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("" + System.DateTime.Now.Hour);
         time = System.DateTime.Now.Hour;
         Day.SetActive(false);
         Eve.SetActive(false);
@@ -36,37 +35,5 @@ public class MainMenuBgChanger : MonoBehaviour
                 Night.SetActive(true);
                 break;
         }
-        /*
-        if (time <= 4||time>=0)
-        {
-            //Destroy(Day);
-            //Destroy(Eve);
-            Day.SetActive(false);
-            Eve.SetActive(false);
-            Night.SetActive(true);
-        }
-        if (time <= 15||time >=5)
-        {
-            //Destroy(Eve);
-            //Destroy(Night);
-            dae.enabled = true;
-            //Day.SetActive(true);
-            //Eve.SetActive(false);
-            //Night.SetActive(false);
-        }
-        if (time <= 19||time>=16)
-        {
-            //Destroy(Day);
-            //Destroy(Night);
-            Day.SetActive(false);
-            Eve.SetActive(true);
-            Night.SetActive(false);
-        }
-        if (System.DateTime.Now.Hour<=24 )
-        {
-            Day.SetActive(false);
-            Eve.SetActive(false);
-            Night.SetActive(true);
-        }*/
     }
 }
