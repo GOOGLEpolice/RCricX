@@ -10,8 +10,11 @@ public class CardFunctions : MonoBehaviour
     bool Remove;
     public GameObject AddButton;
     public GameObject RemoveButton;
+<<<<<<< HEAD
     bool deckTFull;
 
+=======
+>>>>>>> parent of 7ccd89b (created prefabs)
 
     //DeckSlotBools False = slot empty
 
@@ -37,19 +40,16 @@ public class CardFunctions : MonoBehaviour
     bool CSB9;
     bool CSB10;*/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 7ccd89b (created prefabs)
 
     public int id;
     private void Start()
     {
         DeckEventManager.instance.onAddButtonPress += AddToDeck;
         DeckEventManager.instance.onRemoveButtonPress += RemoveFromDeck;
-        RemoveButton.SetActive(false);
-    }
-
-    private void Update()
-    {
-        DeckFull();
     }
 
     public void AddToDeck(int id)
@@ -78,6 +78,10 @@ public class CardFunctions : MonoBehaviour
                 gameObject.transform.localPosition = Vector3.zero;
                 //gameObject[i+1].
                 // gameObject.transform.DOMove(Vector3.zero);
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 7ccd89b (created prefabs)
             }
 
         }
@@ -114,7 +118,11 @@ public class CardFunctions : MonoBehaviour
                 AddButton.SetActive(false);
             }
 
+<<<<<<< HEAD
             gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id]);
+=======
+            gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id-1]);
+>>>>>>> parent of 7ccd89b (created prefabs)
             gameObject.transform.localPosition = Vector3.zero;
 
 
@@ -145,6 +153,7 @@ public class CardFunctions : MonoBehaviour
         }   
     }
 
+<<<<<<< HEAD
     public void DeckFull()
     {
 
@@ -166,6 +175,8 @@ public class CardFunctions : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> parent of 7ccd89b (created prefabs)
     // public void SortCardsByName(int id)
     // {
     //     DeckEventManager.instance.DeckT
