@@ -13,6 +13,6 @@ public class fadeMainMenu : MonoBehaviour
         logo.DOFade(1, 3f);
 
         buttons.alpha = 0;
-        buttons.DOFade(1, 6f);
+        buttons.DOFade(1, 4f);
     }
 }

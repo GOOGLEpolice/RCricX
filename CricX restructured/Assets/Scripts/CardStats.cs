@@ -37,8 +37,6 @@ public class CardStats : MonoBehaviour
     private void Update()
     {
 
-        BackToPos();
-
         if (playerStats.playerBC > 6 && GameManager.instance.scoreCalculated)
         {
             destroyTimer += 1 * Time.deltaTime;

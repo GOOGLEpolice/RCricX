@@ -4781,7 +4781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f845bd987ce5d840babc9f777f15cf8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33d9ca505923d04498f3dff5791b87cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5551,7 +5551,6 @@ GameObject:
   - component: {fileID: 907926080}
   - component: {fileID: 907926082}
   - component: {fileID: 907926081}
-  - component: {fileID: 907926083}
   m_Layer: 5
   m_Name: CalmTime
   m_TagString: Untagged
@@ -5617,18 +5616,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907926079}
   m_CullTransparentMesh: 1
---- !u!114 &907926083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907926079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f419f8d03cb734aa2514d13d74c328, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &925873901
 GameObject:
   m_ObjectHideFlags: 0
@@ -13758,7 +13745,6 @@ GameObject:
   - component: {fileID: 2051460861}
   - component: {fileID: 2051460863}
   - component: {fileID: 2051460862}
-  - component: {fileID: 2051460864}
   m_Layer: 5
   m_Name: AgrTime
   m_TagString: Untagged
@@ -13824,18 +13810,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051460860}
   m_CullTransparentMesh: 1
---- !u!114 &2051460864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051460860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f419f8d03cb734aa2514d13d74c328, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2072879534
 GameObject:
   m_ObjectHideFlags: 0

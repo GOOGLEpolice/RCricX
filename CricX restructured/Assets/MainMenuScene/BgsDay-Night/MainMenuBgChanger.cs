@@ -26,10 +26,10 @@ public class MainMenuBgChanger : MonoBehaviour
             case <=4:
                 Night.SetActive(true);
                 break;
-            case <= 16:
+            case <= 13:
                 Day.SetActive(true);
                 break;
-            case <= 19:
+            case <= 14:
                 Eve.SetActive(true);
                 break;
             case <= 24:
