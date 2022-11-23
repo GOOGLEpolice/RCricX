@@ -18,7 +18,6 @@ public class CardTextDisplay : MonoBehaviour
     public static Vector3 startPos;
 
     public int id;
-
     
     void Start()
     {
@@ -34,12 +33,12 @@ public class CardTextDisplay : MonoBehaviour
     }
 
     public void OnAddButtonClicked()
-    {   
+    {
         DeckEventManager.instance.AddButtonPressed(id);
     }
 
     public void OnRemoveButtonClicked()
-    {   
+    {
         DeckEventManager.instance.RemoveButtonPressed(id);
     }
 }
