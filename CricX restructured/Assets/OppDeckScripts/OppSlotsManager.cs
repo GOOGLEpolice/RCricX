@@ -5,7 +5,6 @@ using UnityEngine;
 public class OppSlotsManager : MonoBehaviour
 {
     public GameObject childCard;
-
     void Start()
     {
         

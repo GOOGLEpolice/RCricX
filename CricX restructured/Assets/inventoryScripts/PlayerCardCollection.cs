@@ -39,7 +39,8 @@ public class PlayerCardCollection : MonoBehaviour
         {  
             for(int j = 0; j < Spawnpoints.Length;j++)
             {
-                Instantiate(playerCardList[i],Spawnpoints[j].position,transform.localRotation);
+                var CollectionCards = Instantiate(playerCardList[i],Spawnpoints[j].position,transform.localRotation);
+                CollectionCards.transform.parent = gameObject.transform;
                 i++;
             }                   
         }

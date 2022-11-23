@@ -17,6 +17,7 @@ public class OppCardTextDisplay : MonoBehaviour
     public Text statText6;
     public static Vector3 startPos;
 
+
     public int opId;
     
     void Start()
@@ -33,12 +34,12 @@ public class OppCardTextDisplay : MonoBehaviour
     }
 
     public void OnAddButtonClicked()
-    {
+    {   
         OppDeckEventManager.instance.AddButtonPressed(opId);
     }
 
     public void OnRemoveButtonClicked()
-    {
+    {   
         OppDeckEventManager.instance.RemoveButtonPressed(opId);
     }
 }
