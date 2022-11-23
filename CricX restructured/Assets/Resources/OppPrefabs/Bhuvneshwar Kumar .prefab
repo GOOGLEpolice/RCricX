@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8790760804307819197}
   - component: {fileID: 2198353557229931936}
   - component: {fileID: 3775592517333502304}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Add Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4837321800857243911}
   - component: {fileID: 3482569686055624222}
   - component: {fileID: 6771627343146783969}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Remove Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 2266520795465385056}
   - component: {fileID: 5204275282872238586}
   - component: {fileID: 7016185696802346232}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 7570190815812425900}
   - component: {fileID: 6079808053426300881}
   - component: {fileID: 4889037242907885655}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 8637822232040332637}
   - component: {fileID: 8637822232040332636}
   - component: {fileID: 8637822232040332639}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 8637822232094322520}
   - component: {fileID: -7019665585894637085}
   - component: {fileID: 5768706774914704936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Bhuvneshwar Kumar '
   m_TagString: PCard
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 8637822232377754938}
   - component: {fileID: 8637822232377754939}
   - component: {fileID: 8637822232377754936}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 8637822232380797217}
   - component: {fileID: 8637822232380797219}
   - component: {fileID: 8637822232380797216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: New_player_card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 8637822232424833171}
   - component: {fileID: 8637822232424833168}
   - component: {fileID: 8637822232424833169}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 8637822232566152167}
   - component: {fileID: 8637822232566152166}
   - component: {fileID: 8637822232566152169}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 8637822232791705211}
   - component: {fileID: 8637822232791705210}
   - component: {fileID: 8637822232791705213}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 8637822232929480487}
   - component: {fileID: 8637822232929480486}
   - component: {fileID: 8637822232929480489}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 8637822232952522455}
   - component: {fileID: 8637822232952522454}
   - component: {fileID: 8637822232952522457}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1295,7 @@ GameObject:
   - component: {fileID: 8637822233464753813}
   - component: {fileID: 8637822233464753812}
   - component: {fileID: 8637822233464753815}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

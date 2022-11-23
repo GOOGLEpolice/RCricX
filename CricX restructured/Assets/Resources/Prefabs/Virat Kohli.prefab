@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3031898769847744466}
   - component: {fileID: 2708358413391203420}
   - component: {fileID: 1370134795155590787}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 2789877478064987683}
   - component: {fileID: 5709254076533425582}
   - component: {fileID: 8575850962350608326}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 8841830931891184993}
   - component: {fileID: 1923083468161250359}
   - component: {fileID: 7508427597605207828}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 3433477545983163234}
   - component: {fileID: 3433477545983163235}
   - component: {fileID: 1898305251383281710}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Virat Kohli
   m_TagString: PCard
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 3433477546285827686}
   - component: {fileID: 3433477546285827685}
   - component: {fileID: 3433477546285827684}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 3433477546490101582}
   - component: {fileID: 3433477546490101580}
   - component: {fileID: 3433477546490101581}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: New_player_card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 3433477546565268032}
   - component: {fileID: 3433477546565268047}
   - component: {fileID: 3433477546565268046}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 3433477547314073816}
   - component: {fileID: 3433477547314073799}
   - component: {fileID: 3433477547314073798}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 3433477547742240024}
   - component: {fileID: 3433477547742240025}
   - component: {fileID: 3433477547742240026}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 3433477547779452137}
   - component: {fileID: 3433477547779452136}
   - component: {fileID: 3433477547779452695}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 3433477547961926423}
   - component: {fileID: 3433477547961926422}
   - component: {fileID: 3433477547961926421}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 3433477548110309593}
   - component: {fileID: 3433477548110309592}
   - component: {fileID: 3433477548110309575}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1133,7 @@ GameObject:
   - component: {fileID: 3433477548112309221}
   - component: {fileID: 3433477548112309222}
   - component: {fileID: 3433477548112309223}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1242,7 @@ GameObject:
   - component: {fileID: 6688825648874108510}
   - component: {fileID: 511371421847800856}
   - component: {fileID: 885483472553153047}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Add
   m_TagString: Untagged
   m_Icon: {fileID: 0}

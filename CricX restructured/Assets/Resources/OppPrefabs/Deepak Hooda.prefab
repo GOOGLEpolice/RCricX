@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2299596263704120505}
   - component: {fileID: 3047290206206410110}
   - component: {fileID: 5564511047377748938}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Add
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 8720567280985049216}
   - component: {fileID: 8355279847054307901}
   - component: {fileID: 7393443367079877578}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 633511034004652653}
   - component: {fileID: 7682248341247664147}
   - component: {fileID: 6703286111921494739}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 5488948372321495105}
   - component: {fileID: 5488948372321495104}
   - component: {fileID: 5488948372321495111}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 5488948372402711703}
   - component: {fileID: 5488948372402711696}
   - component: {fileID: 5488948372402711697}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 5488948372473454260}
   - component: {fileID: 5488948372473454219}
   - component: {fileID: 5488948372473454218}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 5488948372928145397}
   - component: {fileID: 5488948372928145355}
   - component: {fileID: 5488948372928145396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: New_player_card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 5488948372940010258}
   - component: {fileID: 5488948372940010257}
   - component: {fileID: 5488948372940010256}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 5488948373016456613}
   - component: {fileID: 5488948373016456612}
   - component: {fileID: 5488948373016456635}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   - component: {fileID: 5488948373163693974}
   - component: {fileID: 5488948373163693973}
   - component: {fileID: 5488948373163693972}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 5488948373307658999}
   - component: {fileID: 4998940830954782548}
   - component: {fileID: -3778617573107266818}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deepak Hooda
   m_TagString: PCard
   m_Icon: {fileID: 0}
@@ -1053,7 +1053,7 @@ GameObject:
   - component: {fileID: 5488948373990174257}
   - component: {fileID: 5488948373990174258}
   - component: {fileID: 5488948373990174259}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 5488948374134000501}
   - component: {fileID: 5488948374134000500}
   - component: {fileID: 5488948374134000459}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1242,7 @@ GameObject:
   - component: {fileID: 6959825733042067454}
   - component: {fileID: 3283138560476024382}
   - component: {fileID: 8065514146100145094}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}

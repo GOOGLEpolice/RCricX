@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1802740782731366946}
   - component: {fileID: 3433747122147563197}
   - component: {fileID: 2729436009609146378}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Add
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 2652024187250615339}
   - component: {fileID: 1410297606077769890}
   - component: {fileID: 1608014427346001415}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 4519366405434968990}
   - component: {fileID: 4519366405434968985}
   - component: {fileID: 4519366405434968984}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 4519366405764074213}
   - component: {fileID: 4519366405764074212}
   - component: {fileID: 4519366405764074215}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 4519366405856308070}
   - component: {fileID: 4519366405856308065}
   - component: {fileID: 4519366405856308064}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 4519366406452518886}
   - component: {fileID: 4519366406452518881}
   - component: {fileID: 4519366406452518880}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 4519366406889857441}
   - component: {fileID: 4519366406889857440}
   - component: {fileID: 4519366406889857443}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 4519366406918797813}
   - component: {fileID: -1101186219824053835}
   - component: {fileID: 6414785488616406218}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rishabh Pant
   m_TagString: PCard
   m_Icon: {fileID: 0}
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 4519366406998944490}
   - component: {fileID: 4519366406998944491}
   - component: {fileID: 4519366406998944488}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 4519366407057724829}
   - component: {fileID: 4519366407057724834}
   - component: {fileID: 4519366407057724835}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 4519366407074975264}
   - component: {fileID: 4519366407074975267}
   - component: {fileID: 4519366407074975266}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 4519366407196185274}
   - component: {fileID: 4519366407196185268}
   - component: {fileID: 4519366407196185269}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: New_player_card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   - component: {fileID: 6254533804646081041}
   - component: {fileID: 9028662562310559966}
   - component: {fileID: 366903869784043833}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   - component: {fileID: 4637741673224671387}
   - component: {fileID: 7038174977137011182}
   - component: {fileID: 3979209258962072072}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

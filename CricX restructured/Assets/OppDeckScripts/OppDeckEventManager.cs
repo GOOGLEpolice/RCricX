@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +12,9 @@ public class OppDeckEventManager : MonoBehaviour
 
     public static OppDeckEventManager instance;
     public List<GameObject> opponentDeck1 = new List<GameObject>(11);
-        
+    public List<int> oppIntId;
+    public List<GameObject> deck;
+    
     /*public List<GameObject> Deck2 = new List<GameObject>();
     public List<GameObject> Deck3 = new List<GameObject>();
     public List<GameObject> Deck4 = new List<GameObject>();
@@ -20,8 +23,10 @@ public class OppDeckEventManager : MonoBehaviour
     public List<Transform> SpawnSlots;
     private void Awake()
     {
+        
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        
+
         
     }
 
@@ -44,6 +49,31 @@ public class OppDeckEventManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        
+        
+    }
+
+    public void OnSceneChange()
+    {
+
+        opponentDeck1.Clear();
+        if(oppIntId.Count >0)
+        {
+            foreach(int oppId in oppIntId)
+            {
+                 
+                for(int i = 0; i < deck.Count; i++)
+                {
+                    if(oppId == deck[i].GetComponent<OppCardFunctions>().opId)
+                    {
+                        opponentDeck1.Add(deck[i]);
+                    }
+                }
+            }
+        }
+    }
     public void GameSceneLoad()
     {
         SceneManager.LoadScene(sceneName: "SampleScene");

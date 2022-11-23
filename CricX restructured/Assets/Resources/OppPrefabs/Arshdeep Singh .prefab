@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 81565230194199437}
   - component: {fileID: 81565230194199438}
   - component: {fileID: 81565230194199439}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 81565230563486170}
   - component: {fileID: 81565230563486169}
   - component: {fileID: 81565230563486168}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 81565230568326280}
   - component: {fileID: 81565230568326281}
   - component: {fileID: 81565230568326282}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 81565230598334420}
   - component: {fileID: 81565230598334421}
   - component: {fileID: 81565230598334422}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 81565230758416242}
   - component: {fileID: 81565230758416243}
   - component: {fileID: 81565230758416236}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 81565230797541174}
   - component: {fileID: 81565230797541175}
   - component: {fileID: 81565230797541168}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 81565230823108522}
   - component: {fileID: 81565230823108523}
   - component: {fileID: 81565230823108516}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 81565231487015399}
   - component: {fileID: -3504589917627155748}
   - component: {fileID: 758812944924176245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Arshdeep Singh '
   m_TagString: PCard
   m_Icon: {fileID: 0}
@@ -638,8 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddButton: {fileID: 1072864448358959212}
   RemoveButton: {fileID: 4879189175010270398}
-  slotsManager: {fileID: 0}
-  id: 0
+  opId: 0
 --- !u!114 &758812944924176245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +659,7 @@ MonoBehaviour:
   statText4: {fileID: 81565230797541168}
   statText5: {fileID: 81565230598334422}
   statText6: {fileID: 81565231580273036}
-  id: 0
+  opId: 0
 --- !u!1 &81565231580273043
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +671,7 @@ GameObject:
   - component: {fileID: 81565231580273038}
   - component: {fileID: 81565231580273037}
   - component: {fileID: 81565231580273036}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Stat6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +751,7 @@ GameObject:
   - component: {fileID: 81565231734913487}
   - component: {fileID: 81565231734913481}
   - component: {fileID: 81565231734913480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: New_player_card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -839,7 +838,7 @@ GameObject:
   - component: {fileID: 1870638140026567552}
   - component: {fileID: 8309546598410662247}
   - component: {fileID: 5596821225199963598}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Add Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +971,7 @@ GameObject:
   - component: {fileID: 4787849454901897547}
   - component: {fileID: 5846195982708917041}
   - component: {fileID: 6399217570607357914}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1109,7 @@ GameObject:
   - component: {fileID: 8573167963330080346}
   - component: {fileID: 7880922518996883972}
   - component: {fileID: 677186515993237572}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Remove Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1242,7 @@ GameObject:
   - component: {fileID: 601466927473777548}
   - component: {fileID: 8368324928586707452}
   - component: {fileID: 2545973770627044986}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
