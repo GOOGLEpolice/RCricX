@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6748af335a4ad44d870c282d687c373, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  PlayerCards: {fileID: 0}
+  PlayerCards: {fileID: 708165963155982489, guid: c7e6e0c1b48a13549b58aded77e30ee9,
+    type: 3}
   playerName: Kumar Sultana
   playerType: 1
   rarity: 0
+  ethinicity: 0
   playerBC: 0
   ball1: 0
   ball2: 0

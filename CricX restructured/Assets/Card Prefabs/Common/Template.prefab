@@ -179,6 +179,7 @@ MonoBehaviour:
   playerStats: {fileID: 0}
   playerId: 0
   startPos: {x: 0, y: 0, z: 0}
+  playerModel: {fileID: 0}
   cardName: {fileID: 3637564989004824323}
   ballOne: {fileID: 3637564988521284168}
   ballTwo: {fileID: 3637564989063279662}

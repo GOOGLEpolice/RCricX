@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6748af335a4ad44d870c282d687c373, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  PlayerCards: {fileID: 0}
+  PlayerCards: {fileID: 1936500002102271449, guid: 51e88a568dd6a684f8f52791a84b63b3,
+    type: 3}
   playerName: Praveen Das
   playerType: 1
   rarity: 0
-  playerBC: 0
+  ethinicity: 0
+  playerBC: 1
   ball1: 1
   ball2: -1
   ball3: 1
