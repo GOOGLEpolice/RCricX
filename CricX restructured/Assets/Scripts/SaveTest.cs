@@ -14,7 +14,7 @@ public class SaveTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SaveManager.Instance.State.OpponentDeck = OppDeckEventManager.instance.opponentDeck1;
+        SaveManager.Instance.State.OpponentDeck = OppDeckEventManager.instance.oppIntId;
     }
 
     public void Touch()
@@ -28,6 +28,6 @@ public class SaveTest : MonoBehaviour
     {
 
             SaveManager.Instance.Load();
-            Debug.Log("Game Loaded");
+            Debug.Log("Game Loaded" + SaveManager.Instance.State.OpponentDeck[2]);
     }
 }

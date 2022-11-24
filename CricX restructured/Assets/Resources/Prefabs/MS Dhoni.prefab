@@ -928,7 +928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6910091407922881570}
   - component: {fileID: 6910091407922881571}
-  - component: {fileID: -773488442315088113}
+  - component: {fileID: 4613807791050321040}
   m_Layer: 7
   m_Name: MS Dhoni
   m_TagString: PCard
@@ -974,7 +974,7 @@ MonoBehaviour:
   statText5: {fileID: 6910091407450913378}
   statText6: {fileID: 6910091407403099313}
   id: 6
---- !u!114 &-773488442315088113
+--- !u!114 &4613807791050321040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -983,12 +983,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6910091407922881572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AddButton: {fileID: 3422811406997693941}
-  RemoveButton: {fileID: 4002071258370367210}
-  id: 6
+  AddButton: {fileID: 0}
+  RemoveButton: {fileID: 0}
+  Id: 6
 --- !u!1 &6910091408121890825
 GameObject:
   m_ObjectHideFlags: 0

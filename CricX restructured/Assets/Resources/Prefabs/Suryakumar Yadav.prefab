@@ -819,7 +819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2340764065225805318}
   - component: {fileID: 2340764065225805321}
-  - component: {fileID: 5286068076217239190}
+  - component: {fileID: 5947002421431829728}
   m_Layer: 7
   m_Name: Suryakumar Yadav
   m_TagString: PCard
@@ -865,7 +865,7 @@ MonoBehaviour:
   statText5: {fileID: 2340764064184536395}
   statText6: {fileID: 2340764065297494315}
   id: 9
---- !u!114 &5286068076217239190
+--- !u!114 &5947002421431829728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -874,12 +874,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2340764065225805320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AddButton: {fileID: 33673737211089681}
-  RemoveButton: {fileID: 5048924071683083491}
-  id: 9
+  AddButton: {fileID: 0}
+  RemoveButton: {fileID: 0}
+  Id: 9
 --- !u!1 &2340764065297494314
 GameObject:
   m_ObjectHideFlags: 0

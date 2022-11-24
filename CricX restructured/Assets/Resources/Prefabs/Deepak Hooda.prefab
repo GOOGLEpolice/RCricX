@@ -980,7 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5488948373307658999}
   - component: {fileID: 5488948373307658992}
-  - component: {fileID: 4746491682920508432}
+  - component: {fileID: 5667813780005156897}
   m_Layer: 7
   m_Name: Deepak Hooda
   m_TagString: PCard
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   statText5: {fileID: 5488948372940010256}
   statText6: {fileID: 5488948372402711697}
   id: 3
---- !u!114 &4746491682920508432
+--- !u!114 &5667813780005156897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1035,12 +1035,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5488948373307658993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AddButton: {fileID: 1703812137415549411}
   RemoveButton: {fileID: 7527120334389155096}
-  id: 3
+  Id: 3
 --- !u!1 &5488948373990174269
 GameObject:
   m_ObjectHideFlags: 0

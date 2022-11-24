@@ -599,7 +599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81565231487015399}
   - component: {fileID: 81565231487015398}
-  - component: {fileID: 8953789498545050821}
+  - component: {fileID: 2077548836134728037}
   m_Layer: 7
   m_Name: 'Arshdeep Singh '
   m_TagString: PCard
@@ -645,7 +645,7 @@ MonoBehaviour:
   statText5: {fileID: 81565230598334422}
   statText6: {fileID: 81565231580273036}
   id: 0
---- !u!114 &8953789498545050821
+--- !u!114 &2077548836134728037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -654,12 +654,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 81565231487015397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AddButton: {fileID: 1072864448358959212}
   RemoveButton: {fileID: 4879189175010270398}
-  id: 0
+  Id: 0
 --- !u!1 &81565231580273043
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,6 @@ public class SlotsManager : MonoBehaviour
 
     public void FindCards()
     {
-        //childCard = GetComponentInChildren<CardFunctions>().gameObject;
+        childCard = GetComponentInChildren<CardFunctions>().gameObject;
     }
 }

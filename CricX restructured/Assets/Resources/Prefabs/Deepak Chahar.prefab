@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1710579978772430949}
   - component: {fileID: 7816302641219493829}
   m_Layer: 7
-  m_Name: Add Button (1)
+  m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1057,7 +1057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7305419613411802411}
   - component: {fileID: 7305419613411802410}
-  - component: {fileID: 1563396491169080374}
+  - component: {fileID: -4169252942800464025}
   m_Layer: 7
   m_Name: Deepak Chahar
   m_TagString: PCard
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   statText5: {fileID: 7305419613171544514}
   statText6: {fileID: 7305419612999551908}
   id: 2
---- !u!114 &1563396491169080374
+--- !u!114 &-4169252942800464025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1112,12 +1112,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7305419613411802409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AddButton: {fileID: 3612357652254842008}
   RemoveButton: {fileID: 2051259450591407777}
-  id: 2
+  Id: 2
 --- !u!1 &7305419613441214058
 GameObject:
   m_ObjectHideFlags: 0

@@ -550,7 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2240455006319641470}
   - component: {fileID: 2240455006319641471}
-  - component: {fileID: 938097653521530502}
+  - component: {fileID: -4293153551949407173}
   m_Layer: 7
   m_Name: Ravichandran Ashwin
   m_TagString: PCard
@@ -596,7 +596,7 @@ MonoBehaviour:
   statText5: {fileID: 2240455005963057700}
   statText6: {fileID: 2240455005827417326}
   id: 7
---- !u!114 &938097653521530502
+--- !u!114 &-4293153551949407173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -605,12 +605,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2240455006319641344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AddButton: {fileID: 1144940790295617823}
-  RemoveButton: {fileID: 2285105134420829601}
-  id: 7
+  AddButton: {fileID: 0}
+  RemoveButton: {fileID: 0}
+  Id: 7
 --- !u!1 &2240455006565238409
 GameObject:
   m_ObjectHideFlags: 0

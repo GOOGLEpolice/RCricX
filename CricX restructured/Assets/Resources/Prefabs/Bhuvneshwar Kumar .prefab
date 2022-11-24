@@ -628,7 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8637822232094322520}
   - component: {fileID: 8637822232094322521}
-  - component: {fileID: 8089803628006894562}
+  - component: {fileID: 5167662178864351619}
   m_Layer: 7
   m_Name: 'Bhuvneshwar Kumar '
   m_TagString: PCard
@@ -674,7 +674,7 @@ MonoBehaviour:
   statText5: {fileID: 8637822232040332639}
   statText6: {fileID: 8637822232377754936}
   id: 1
---- !u!114 &8089803628006894562
+--- !u!114 &5167662178864351619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -683,12 +683,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8637822232094322518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AddButton: {fileID: 3305905244854512328}
   RemoveButton: {fileID: 5660422765946642679}
-  id: 1
+  Id: 1
 --- !u!1 &8637822232377754937
 GameObject:
   m_ObjectHideFlags: 0

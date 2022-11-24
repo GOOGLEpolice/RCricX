@@ -763,7 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7241012571809097367}
   - component: {fileID: 7241012571809097366}
-  - component: {fileID: 4999924395012470913}
+  - component: {fileID: 7252187284998257984}
   m_Layer: 7
   m_Name: Dinesh Karthik
   m_TagString: PCard
@@ -809,7 +809,7 @@ MonoBehaviour:
   statText5: {fileID: 7241012572610445658}
   statText6: {fileID: 7241012572191562731}
   id: 4
---- !u!114 &4999924395012470913
+--- !u!114 &7252187284998257984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -818,12 +818,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7241012571809097361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f836886e194bd904ca8421df9f7b5beb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d9dbf540c2d194896b5e4ea58b0940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AddButton: {fileID: 2954664916998277221}
-  RemoveButton: {fileID: 8190616185514122284}
-  id: 4
+  AddButton: {fileID: 0}
+  RemoveButton: {fileID: 0}
+  Id: 4
 --- !u!1 &7241012571975575086
 GameObject:
   m_ObjectHideFlags: 0
