@@ -7,7 +7,9 @@ using UnityEngine;
 public class CardStats : MonoBehaviour
 {
     public PlayerStats playerStats;
+    public int playerId;
     public Vector3 startPos;
+    public TMP_Text cardName;
     public TMP_Text ballOne;
     public TMP_Text ballTwo;
     public TMP_Text ballThree;
@@ -15,7 +17,6 @@ public class CardStats : MonoBehaviour
     public TMP_Text ballFive;
     public TMP_Text ballSix;
     float destroyTimer;
-
 
 
     private void Awake()
@@ -27,15 +28,22 @@ public class CardStats : MonoBehaviour
 
     private void OnEnable()
     {
-        playerStats.balls = new int[6];
+        //startPos = transform.position;
+        
+       // Debug.Log(slot.position + "  " + gameObject.name);
     }
     void Start()
     {
         playerStats.playerBC = 1;
+        
+        
+        
     }
 
     private void Update()
     {
+
+        BackToPos();
 
         if (playerStats.playerBC > 6 && GameManager.instance.scoreCalculated)
         {
@@ -74,9 +82,9 @@ public class CardStats : MonoBehaviour
         playerStats.playerBC += 1;
     }
 
-    public void DecreaseBallCount()
-    {
-        playerStats.playerBC -= 1;
+    void BackToPos()
+    {     
+       
     }
 
     public void AllTurnsPlayed()
@@ -90,28 +98,12 @@ public class CardStats : MonoBehaviour
 
     public void ShowText()
     {
-        if(playerStats.ball1 < 0){ ballOne.text = "Out".ToString(); }
-        else
-            ballOne.text = playerStats.ball1.ToString(); 
-
-        if(playerStats.ball2 < 0){ ballTwo.text = "Out".ToString();}
-        else 
-            ballTwo.text = playerStats.ball2.ToString(); 
-        
-        if(playerStats.ball3 < 0){ ballThree.text = "Out".ToString();}
-        else  
-            ballThree.text = playerStats.ball3.ToString(); 
-
-        if (playerStats.ball4 < 0){ballFour.text = "Out".ToString();}
-        else
-            ballFour.text = playerStats.ball4.ToString();
-        
-        if(playerStats.ball5 < 0){ ballFive.text = "Out".ToString(); }
-        else
-            ballFive.text = playerStats.ball5.ToString();
-
-        if(playerStats.ball6 < 0) { ballSix.text = "Out".ToString();}
-        else
-            ballSix.text = playerStats.ball6.ToString();
+        cardName.text = playerStats.playerName;
+        ballOne.text = playerStats.ball1.ToString();
+        ballTwo.text = playerStats.ball2.ToString();
+        ballThree.text = playerStats.ball3.ToString();
+        ballFour.text = playerStats.ball4.ToString();
+        ballFive.text = playerStats.ball5.ToString();
+        ballSix.text = playerStats.ball6.ToString();
     }
 }

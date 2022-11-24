@@ -5,14 +5,17 @@ using UnityEngine;
 public enum Rarity { Common, Uncommon, Rare, VeryRare, Legendary }
 public enum PlayerType { Batsman, Bowler }
 
+public enum Ethinicity { Indian,China,Africa,White }
+
 [CreateAssetMenu(fileName = "PlayerCards", menuName = "PlayerCards/PlayerObjects")]
 
 public class PlayerStats : ScriptableObject
 {
     public GameObject PlayerCards;
-    public int[] balls;
+    public string playerName;
     public PlayerType playerType;
     public  Rarity rarity;
+    public Ethinicity ethinicity;
     public int playerBC;
     public int ball1;
     public int ball2;
