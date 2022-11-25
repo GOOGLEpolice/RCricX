@@ -12,7 +12,7 @@ public class CardFunctions : MonoBehaviour
     public GameObject RemoveButton;
     SlotsManager slotsManager;
 
-    public int id;
+    public int Id;
     private void Start()
     {
         DeckEventManager.instance.onAddButtonPress += AddToDeck;
@@ -25,12 +25,14 @@ public class CardFunctions : MonoBehaviour
         DeckFull();
     }
 
-    public void AddToDeck(int id)
+    public void AddToDeck(int Id)
     {  
-        if(id == this.id)
+        if(Id == this.Id)
         {
-            DeckEventManager.instance.DeckT.Add(gameObject);
-            
+            DeckEventManager.instance.playerDeck1.Add(gameObject);
+            //SaveManager.Instance.State.OpponentDeck.Add(gameObject);
+            DeckEventManager.instance.oppIntId.Add(Id);
+           
             
             AddButton.SetActive(false);
             Add = false;
@@ -48,7 +50,7 @@ public class CardFunctions : MonoBehaviour
 
             foreach (Transform slots in DeckEventManager.instance.DeckSlots)
             {
-                for (int i = 0; i < DeckEventManager.instance.DeckT.Count; i++)
+                for (int i = 0; i < DeckEventManager.instance.playerDeck1.Count; i++)
                 {
                     if (DeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<SlotsManager>().childCard != null)
                     {
@@ -65,11 +67,11 @@ public class CardFunctions : MonoBehaviour
             
         }
     }
-    public void RemoveFromDeck(int id)
+    public void RemoveFromDeck(int Id)
     {
-        if (id == this.id)
+        if (Id == this.Id)
         {
-            DeckEventManager.instance.DeckT.Remove(gameObject);
+            DeckEventManager.instance.playerDeck1.Remove(gameObject);
             RemoveButton.SetActive(false);
             Remove = false;
 
@@ -87,7 +89,7 @@ public class CardFunctions : MonoBehaviour
             gameObject.GetComponentInParent<SlotsManager>().childCard = null;
             
 
-            gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[id]);
+            gameObject.transform.SetParent(DeckEventManager.instance.SpawnSlots[Id]);
             gameObject.transform.localPosition = Vector3.zero;
             
         }   
@@ -95,9 +97,9 @@ public class CardFunctions : MonoBehaviour
 
     public void DeckFull()
     {
-        bool deckTFull;
+        bool deckTFull = false;
 
-        if (DeckEventManager.instance.DeckT.Count == 11)
+        if (DeckEventManager.instance.playerDeck1.Count == 11 && deckTFull == false)
         {
             deckTFull = true;
             AddButton.SetActive(false);

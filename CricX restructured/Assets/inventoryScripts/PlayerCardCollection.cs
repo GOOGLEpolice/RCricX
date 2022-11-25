@@ -7,13 +7,12 @@ using UnityEngine;
 public class PlayerCardCollection : MonoBehaviour
 {
     public static PlayerCardCollection Instance; //singleton
-    public float test = 99f;
+    
 
     public List<GameObject> playerCardList = new List<GameObject>();
+    
 
     public Transform[] Spawnpoints;
-    public GameObject Prefab;
-    public bool Sp1;
    
     
 
@@ -22,25 +21,30 @@ public class PlayerCardCollection : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
     }
 
     void Start()
     {  
         playerCardList = new List<GameObject>(Resources.LoadAll<GameObject>("Prefabs"));
-        Sp1 = false;
         SpawnCards();
+        
     }
     
    public void SpawnCards()
-    {   
+    {
+        DeckEventManager.instance.deck.Clear();
         for (int i = 0; i< playerCardList.Count;)
         {  
             for(int j = 0; j < Spawnpoints.Length;j++)
             {
-                Instantiate(playerCardList[i],Spawnpoints[j].position,transform.localRotation);
+                GameObject card = Instantiate(playerCardList[i],Spawnpoints[j].position,playerCardList[i].transform.localRotation);
+                card.transform.SetParent(Spawnpoints[j].transform);
+                DeckEventManager.instance.deck.Add(card);
                 i++;
+
+
             }                   
         }
     }

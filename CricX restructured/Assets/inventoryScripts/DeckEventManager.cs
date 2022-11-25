@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,46 +9,69 @@ using UnityEngine.SceneManagement;
 
 public class DeckEventManager : MonoBehaviour
 {
-    bool deck1;
-    bool deck2;
-    bool deck3;
-    bool deck4;
-    bool deck5;
 
     public static DeckEventManager instance;
-    public List<GameObject> DeckT = new List<GameObject>(11);
+    public List<GameObject> playerDeck1 = new List<GameObject>(11);
+    public List<int> oppIntId;
+    public List<GameObject> deck;
     
-    public List<GameObject> Deck2 = new List<GameObject>();
+    /*public List<GameObject> Deck2 = new List<GameObject>();
     public List<GameObject> Deck3 = new List<GameObject>();
     public List<GameObject> Deck4 = new List<GameObject>();
-    public List<GameObject> Deck5 = new List<GameObject>();
+    public List<GameObject> Deck5 = new List<GameObject>();*/
     public List<Transform> DeckSlots;
     public List<Transform> SpawnSlots;
     private void Awake()
     {
+        
         instance = this;
+        
+
+        
     }
 
     public event Action<int> onAddButtonPress;//parameter int id. this int value should be different on all cards to be able to differentiate from each other.
 
-    public void AddButtonPressed(int id)
+    public void AddButtonPressed(int opId)
     {
         if(onAddButtonPress != null)
         {
-            onAddButtonPress(id);
+            onAddButtonPress(opId);
+            
         }
     }
     public event Action<int> onRemoveButtonPress;
-    public void RemoveButtonPressed(int id)
+    public void RemoveButtonPressed(int opId)
     {
         if(onRemoveButtonPress != null)
         { 
-            onRemoveButtonPress(id);
+            onRemoveButtonPress(opId);
         }
     }
 
-    /*public void GameSceneLoad()
+    private void Start()
     {
-        SceneManager.LoadScene(sceneName: "SampleScene");
-    }*/
+        
+        
+    }
+
+    public void OnSceneChange()
+    {
+
+        playerDeck1.Clear();
+        if(oppIntId.Count >0)
+        {
+            foreach(int oppId in oppIntId)
+            {
+                 
+                for(int i = 0; i < deck.Count; i++)
+                {
+                    if(oppId == deck[i].GetComponent<OppCardFunctions>().opId)
+                    {
+                        playerDeck1.Add(deck[i]);
+                    }
+                }
+            }
+        }
+    }
 }

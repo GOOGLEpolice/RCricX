@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63111d2c8d8dfc43b6e33fcdaf87cda, type: 3}
+  m_Name: Arshdeep Singh
+  m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 81565231487015397, guid: 893f5480de8923a41a6bce9f707ddea7,
+    type: 3}
+  cardName: Arshdeep Singh
+  stat1: 0
+  stat2: 0
+  stat3: 0
+  stat4: 0
+  stat5: 0
+  stat6: 0
