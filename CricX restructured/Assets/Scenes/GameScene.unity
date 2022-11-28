@@ -519,7 +519,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -555,12 +555,16 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: d02cab0c62642324dbd8183c363c0085, type: 2}
   playerId: 0
   startPos: {x: 0, y: 0, z: 0}
+  playerModel: {fileID: 0}
+  cardName: {fileID: 0}
   ballOne: {fileID: 1073071648}
   ballTwo: {fileID: 1600366349}
   ballThree: {fileID: 2032114410}
   ballFour: {fileID: 1037995080}
   ballFive: {fileID: 1834067191}
   ballSix: {fileID: 1537194170}
+  ballImage: {fileID: 0}
+  batImage: {fileID: 0}
 --- !u!65 &94705006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1770,6 +1774,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  deckCardsId: 
+  cardPrefabsinResources: []
+  cardPrefabs: []
   timeStarted: 0
   startTime: 0
   currentTime: 0
@@ -2703,6 +2710,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
+        type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -2813,7 +2825,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -2927,7 +2939,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -3660,12 +3672,16 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 260932b1eb3a0384ba0280b277448e5b, type: 2}
   playerId: 0
   startPos: {x: 0, y: 0, z: 0}
+  playerModel: {fileID: 0}
+  cardName: {fileID: 0}
   ballOne: {fileID: 1606026006}
   ballTwo: {fileID: 1296509576}
   ballThree: {fileID: 1358434158}
   ballFour: {fileID: 545292921}
   ballFive: {fileID: 836007783}
   ballSix: {fileID: 1934478842}
+  ballImage: {fileID: 0}
+  batImage: {fileID: 0}
 --- !u!65 &619942105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4189,12 +4205,16 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: f7430cdd02d275f49b63f5204b6162c3, type: 2}
   playerId: 0
   startPos: {x: 0, y: 0, z: 0}
+  playerModel: {fileID: 0}
+  cardName: {fileID: 0}
   ballOne: {fileID: 1246673089}
   ballTwo: {fileID: 533970362}
   ballThree: {fileID: 104994592}
   ballFour: {fileID: 273957997}
   ballFive: {fileID: 528045621}
   ballSix: {fileID: 1805538014}
+  ballImage: {fileID: 0}
+  batImage: {fileID: 0}
 --- !u!65 &668894293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5268,6 +5288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kohli
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
@@ -8405,12 +8430,16 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 8a2a6c5d19597274fbc69f068b19686f, type: 2}
   playerId: 0
   startPos: {x: 0, y: 0, z: 0}
+  playerModel: {fileID: 0}
+  cardName: {fileID: 0}
   ballOne: {fileID: 399041253}
   ballTwo: {fileID: 633501507}
   ballThree: {fileID: 1823177939}
   ballFour: {fileID: 1187488307}
   ballFive: {fileID: 1001464101}
   ballSix: {fileID: 1683340965}
+  ballImage: {fileID: 0}
+  batImage: {fileID: 0}
 --- !u!65 &1278885149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11688,6 +11717,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9737894b3da55f84b95fba1f90a0c62a,
+        type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -11733,12 +11767,16 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 92477ba6bb9fd3844b243d6f693c5868, type: 2}
   playerId: 0
   startPos: {x: 0, y: 0, z: 0}
+  playerModel: {fileID: 0}
+  cardName: {fileID: 0}
   ballOne: {fileID: 1311766396}
   ballTwo: {fileID: 710850288}
   ballThree: {fileID: 1411048388}
   ballFour: {fileID: 141133823}
   ballFive: {fileID: 1236256318}
   ballSix: {fileID: 2140153180}
+  ballImage: {fileID: 0}
+  batImage: {fileID: 0}
 --- !u!1 &1799344464
 GameObject:
   m_ObjectHideFlags: 0
@@ -14275,12 +14313,16 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 227204d8916bee043b7bff992a78a68d, type: 2}
   playerId: 0
   startPos: {x: 0, y: 0, z: 0}
+  playerModel: {fileID: 0}
+  cardName: {fileID: 0}
   ballOne: {fileID: 364550077}
   ballTwo: {fileID: 627207539}
   ballThree: {fileID: 1964431148}
   ballFour: {fileID: 1408188422}
   ballFive: {fileID: 1817941618}
   ballSix: {fileID: 1860687979}
+  ballImage: {fileID: 0}
+  batImage: {fileID: 0}
 --- !u!65 &2131635182
 BoxCollider:
   m_ObjectHideFlags: 0

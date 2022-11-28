@@ -1,7 +1,9 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -20,7 +22,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        inHandPcards = GameObject.FindGameObjectsWithTag("Player");
+       /* inHandPcards = GameObject.FindGameObjectsWithTag("Player");
         inHandOcards = GameObject.FindGameObjectsWithTag("Enemy");
 
 
@@ -33,7 +35,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < opponendCardPositions.Length; i++)
         {
             inHandOcards[i].transform.DOMove(opponendCardPositions[i].position, 0.5f);
-        }
+        }*/
 
         instance = this;         
     }
@@ -69,6 +71,12 @@ public class GameManager : MonoBehaviour
     public Transform[] opponendCardPositions;
     public GameObject[] inHandOcards;
     public GameObject[] inHandPcards;
+    public List<int> deckCardsId;
+
+    public Object[] cardPrefabsinResources;
+    public List<GameObject> cardPrefabs = new List<GameObject>();
+
+
     //public timer timer;
 
     public bool timeStarted = false;
@@ -92,6 +100,27 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         startTime = 36;
+
+        SaveManager.Instance.Load();
+
+        deckCardsId = SaveManager.Instance.State.OpponentDeck;
+
+        cardPrefabsinResources = Resources.LoadAll("Prefabs", typeof(GameObject));
+
+        for (int i = 0; i < deckCardsId.Count; i++)
+        {
+            Debug.Log(deckCardsId[1]);
+            for (int j = 0; j < cardPrefabsinResources.Length; j++)
+            {
+                Debug.Log(cardPrefabsinResources[2].name);
+                if (deckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardFunctions>().id)
+                {
+                    Instantiate(cardPrefabsinResources[j].GetComponent<CardFunctions>().gameObject);
+                    
+                }
+            } 
+            
+        }
     }
 
 

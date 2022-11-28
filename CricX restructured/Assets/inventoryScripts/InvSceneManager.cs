@@ -18,6 +18,11 @@ public class InvSceneManager : MonoBehaviour
       
     }
 
+    public void GoToGameScene()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
     private void Start()
     {
         /*DontDestroyOnLoad();*/

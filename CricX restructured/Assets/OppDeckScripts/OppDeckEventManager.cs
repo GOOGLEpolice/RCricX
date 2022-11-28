@@ -12,7 +12,7 @@ public class OppDeckEventManager : MonoBehaviour
 
     public static OppDeckEventManager instance;
     public List<GameObject> opponentDeck1 = new List<GameObject>(11);
-    public List<int> oppIntId;
+    public List<int> oppId;
     public List<GameObject> deck;
     
     /*public List<GameObject> Deck2 = new List<GameObject>();
@@ -59,9 +59,9 @@ public class OppDeckEventManager : MonoBehaviour
     {
 
         opponentDeck1.Clear();
-        if(oppIntId.Count >0)
+        if(oppId.Count >0)
         {
-            foreach(int oppId in oppIntId)
+            foreach(int oppId in oppId)
             {
                  
                 for(int i = 0; i < deck.Count; i++)

@@ -31,7 +31,7 @@ public class OppCardFunctions : MonoBehaviour
         {
             OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
             //SaveManager.Instance.State.OpponentDeck.Add(gameObject);
-            OppDeckEventManager.instance.oppIntId.Add(opId);
+            OppDeckEventManager.instance.oppId.Add(opId);
            
             
             AddButton.SetActive(false);
