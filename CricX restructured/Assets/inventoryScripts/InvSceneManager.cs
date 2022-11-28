@@ -14,6 +14,7 @@ public class InvSceneManager : MonoBehaviour
     public void GoToOppDeck()
     {
         SceneManager.LoadScene("DeckScreenOpp");
+
       
     }
 

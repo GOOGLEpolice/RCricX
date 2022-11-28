@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardStats : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CardStats : MonoBehaviour
     public TMP_Text ballFour;
     public TMP_Text ballFive;
     public TMP_Text ballSix;
+    public Image ballImage;
+    public Image batImage;
     float destroyTimer;
 
 

@@ -10,6 +10,7 @@ public class OppPlayerCardCollection : MonoBehaviour
     
 
     public List<GameObject> playerCardList = new List<GameObject>();
+    
 
     public Transform[] Spawnpoints;
    
@@ -20,7 +21,7 @@ public class OppPlayerCardCollection : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -28,15 +29,19 @@ public class OppPlayerCardCollection : MonoBehaviour
     {  
         playerCardList = new List<GameObject>(Resources.LoadAll<GameObject>("OppPrefabs"));
         SpawnCards();
+        
     }
     
    public void SpawnCards()
-    {   
+    {
+        OppDeckEventManager.instance.deck.Clear();
         for (int i = 0; i< playerCardList.Count;)
         {  
             for(int j = 0; j < Spawnpoints.Length;j++)
             {
-                Instantiate(playerCardList[i],Spawnpoints[j].position,transform.localRotation);
+                GameObject card= Instantiate(playerCardList[i],Spawnpoints[j].position,transform.localRotation);
+                card.transform.SetParent(Spawnpoints[j].transform);
+                OppDeckEventManager.instance.deck.Add(card);
                 i++;
             }                   
         }
