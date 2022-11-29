@@ -8,46 +8,74 @@ using UnityEngine.SceneManagement;
 
 public class DeckEventManager : MonoBehaviour
 {
-    bool deck1;
-    bool deck2;
-    bool deck3;
-    bool deck4;
-    bool deck5;
-
     public static DeckEventManager instance;
-    public List<GameObject> DeckT = new List<GameObject>(11);
-    
-    public List<GameObject> Deck2 = new List<GameObject>();
+    public List<GameObject> playerDeck1 = new List<GameObject>(11);
+    public List<int> pId;
+    public List<GameObject> deck;
+
+    /*public List<GameObject> Deck2 = new List<GameObject>();
     public List<GameObject> Deck3 = new List<GameObject>();
     public List<GameObject> Deck4 = new List<GameObject>();
-    public List<GameObject> Deck5 = new List<GameObject>();
+    public List<GameObject> Deck5 = new List<GameObject>();*/
     public List<Transform> DeckSlots;
     public List<Transform> SpawnSlots;
     private void Awake()
     {
+
         instance = this;
+
+
+
     }
 
     public event Action<int> onAddButtonPress;//parameter int id. this int value should be different on all cards to be able to differentiate from each other.
 
-    public void AddButtonPressed(int id)
+    public void AddButtonPressed(int pId)
     {
-        if(onAddButtonPress != null)
+        if (onAddButtonPress != null)
         {
-            onAddButtonPress(id);
+            onAddButtonPress(pId);
+
+
+
         }
     }
     public event Action<int> onRemoveButtonPress;
-    public void RemoveButtonPressed(int id)
+    public void RemoveButtonPressed(int pId)
     {
-        if(onRemoveButtonPress != null)
-        { 
-            onRemoveButtonPress(id);
+        if (onRemoveButtonPress != null)
+        {
+            onRemoveButtonPress(pId);
         }
     }
 
-    /*public void GameSceneLoad()
+    private void Start()
+    {
+
+
+    }
+
+    public void OnSceneChange()
+    {
+
+        playerDeck1.Clear();
+        if (pId.Count > 0)
+        {
+            foreach (int pId in pId)
+            {
+
+                for (int i = 0; i < deck.Count; i++)
+                {
+                    if (pId == deck[i].GetComponent<CardStats>().playerId && deck[i] != null)
+                    {
+                        playerDeck1.Add(deck[i]);
+                    }
+                }
+            }
+        }
+    }
+    public void GameSceneLoad()
     {
         SceneManager.LoadScene(sceneName: "SampleScene");
-    }*/
+    }
 }

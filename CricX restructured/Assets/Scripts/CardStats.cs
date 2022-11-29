@@ -18,40 +18,44 @@ public class CardStats : MonoBehaviour
     public TMP_Text ballFour;
     public TMP_Text ballFive;
     public TMP_Text ballSix;
+    public TMP_Text[] balls = new TMP_Text[6];
     public Image ballImage;
     public Image batImage;
     float destroyTimer;
 
+    bool Add;
+    bool Remove;
+
+    SlotsManager slotsManager;
+
+
+    public GameObject AddButton;
+    public GameObject RemoveButton;
 
     private void Awake()
     {
-       
         ShowText();
-       
-        
     }
-
-    private void OnEnable()
-    {
-        //startPos = transform.position;
-        
-       // Debug.Log(slot.position + "  " + gameObject.name);
-    }
+    
     void Start()
     {
         playerStats.playerBC = 1;
+        AddToArray();
+        OppDeckEventManager.instance.onAddButtonPress += AddToDeck;
+        OppDeckEventManager.instance.onRemoveButtonPress += RemoveFromDeck;
+        RemoveButton.SetActive(false);
     }
 
     private void Update()
     {
-
-        BackToPos();
 
         if (playerStats.playerBC > 6 && GameManager.instance.scoreCalculated)
         {
             destroyTimer += 1 * Time.deltaTime;
             AllTurnsPlayed();
         }
+
+        DeckFull();
 
     }
     public void SwitchCases()
@@ -60,21 +64,30 @@ public class CardStats : MonoBehaviour
         {
             case 1:
                 GameManager.instance.runs = playerStats.ball1;
+                ballOne.gameObject.SetActive(true);
                 break;
             case 2:
                 GameManager.instance.runs = playerStats.ball2;
+                ballTwo.gameObject.SetActive(true);
                 break;
             case 3:
-                GameManager.instance.runs = playerStats.ball3;
+                GameManager.instance.runs = playerStats.ball3; 
+                ballThree.gameObject.SetActive(true);
                 break;
             case 4:
                 GameManager.instance.runs = playerStats.ball4;
+                ballFour.gameObject.SetActive(true);
                 break;
             case 5:
                 GameManager.instance.runs = playerStats.ball5;
+                ballFive.gameObject.SetActive(true);
                 break;
             case 6:
                 GameManager.instance.runs = playerStats.ball6;
+                ballSix.gameObject.SetActive(true);
+                break;
+            case 7:
+                Destroy(gameObject);
                 break;
         }
     }
@@ -82,11 +95,6 @@ public class CardStats : MonoBehaviour
     public void IncreaseBallCount()
     {
         playerStats.playerBC += 1;
-    }
-
-    void BackToPos()
-    {     
-       
     }
 
     public void AllTurnsPlayed()
@@ -97,6 +105,8 @@ public class CardStats : MonoBehaviour
             destroyTimer = 0;
         }
     }
+
+   
 
     public void ShowText()
     {
@@ -114,7 +124,9 @@ public class CardStats : MonoBehaviour
             ballTwo.text = "w".ToString();
         }
         else
+        {
             ballTwo.text = playerStats.ball2.ToString();
+        }
 
         if (playerStats.ball3 < 0)
         {
@@ -143,9 +155,166 @@ public class CardStats : MonoBehaviour
         }
         else
             ballSix.text = playerStats.ball6.ToString();
-            
-        
-        
         
     }
+
+    public void AddToArray()
+    {
+        TextMeshProUGUI[] textObjects = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
+        for (int i = 0; i < balls.Length; i++)
+        {
+            balls[i] = textObjects[i];
+        }
+    }
+
+    public void RemoveStats()
+    {
+        for (int i = 0; i < playerStats.playerBC - 1; i++)
+        {
+            balls[i].gameObject.SetActive(false);
+        }
+    }
+
+    public void AddToDeck(int id)
+    {
+        if (id == this.playerId)
+        {
+            if (gameObject.tag == "Player")
+            {
+                OppDeckEventManager.instance.pid.Add(id);
+            }
+
+            if (gameObject.tag == "Enemy")
+            {
+                OppDeckEventManager.instance.oppId.Add(id);
+            }
+
+            OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
+
+
+            AddButton.SetActive(false);
+            Add = false;
+
+            if (Add == false)
+            {
+                RemoveButton.SetActive(true);
+            }
+
+            else if (Add == true)
+            {
+                RemoveButton.SetActive(false);
+            }
+
+            gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
+
+            foreach (Transform slots in OppDeckEventManager.instance.DeckSlots)
+            {
+                for (int i = 0; i < OppDeckEventManager.instance.opponentDeck1.Count; i++)
+                {
+                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard != null)
+                    {
+                        i++;
+                    }
+                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard == null)
+                    {
+                        gameObject.transform.SetParent(OppDeckEventManager.instance.DeckSlots[i]);
+                        gameObject.transform.localPosition = Vector3.zero;
+                    }
+                }
+
+            }
+        }
+       /* else if (id == this.playerId && gameObject.tag == "Enemy")
+        {
+            
+            OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
+            OppDeckEventManager.instance.oppId.Add(id);
+
+
+            AddButton.SetActive(false);
+            Add = false;
+
+            if (Add == false)
+            {
+                RemoveButton.SetActive(true);
+            }
+
+            else if (Add == true)
+            {
+                RemoveButton.SetActive(false);
+            }
+
+            gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
+
+            foreach (Transform slots in OppDeckEventManager.instance.DeckSlots)
+            {
+                for (int i = 0; i < OppDeckEventManager.instance.opponentDeck1.Count; i++)
+                {
+                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<SlotsManager>().childCard != null)
+                    {
+                        i++;
+                    }
+                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<SlotsManager>().childCard == null)
+                    {
+                        gameObject.transform.SetParent(DeckEventManager.instance.DeckSlots[i]);
+                        gameObject.transform.localPosition = Vector3.zero;
+                    }
+                }
+
+            }
+        }*/
+    }
+
+    public void RemoveFromDeck(int id)
+    {
+        if (id == this.playerId)
+        {
+            OppDeckEventManager.instance.opponentDeck1.Remove(gameObject);
+            RemoveButton.SetActive(false);
+            Remove = false;
+
+            if (Remove == false)
+            {
+                AddButton.SetActive(true);
+            }
+
+            else if (Remove == true)
+            {
+                AddButton.SetActive(false);
+            }
+            gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
+
+            for (int i = 0; i<OppDeckEventManager.instance.SpawnSlots.Count; i++)
+            {
+                if (OppDeckEventManager.instance.SpawnSlots [i].gameObject.GetComponent<OppSlotsManager>().childCard != null)
+                {
+                    i++;
+                }
+                if (OppDeckEventManager.instance.SpawnSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard == null)
+                {
+                    gameObject.transform.SetParent(OppDeckEventManager.instance.SpawnSlots[i]);
+                    gameObject.transform.localPosition = Vector3.zero;
+                }
+            }
+
+        }
+    }
+
+    public void DeckFull()
+    {
+        
+
+        if (OppDeckEventManager.instance.opponentDeck1.Count > 10)
+        {
+            
+            AddButton.SetActive(false);
+        }
+
+        else
+        {
+            
+            AddButton.SetActive(true);
+        }
+    }
+
 }

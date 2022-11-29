@@ -22,11 +22,11 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-       /* inHandPcards = GameObject.FindGameObjectsWithTag("Player");
+        inHandPcards = GameObject.FindGameObjectsWithTag("Player");
         inHandOcards = GameObject.FindGameObjectsWithTag("Enemy");
 
 
-        for (int i = 0; i < playerCardPositions.Length; i++)
+        /*for (int i = 0; i < playerCardPositions.Length; i++)
         {
             inHandPcards[i].transform.DOMove(playerCardPositions[i].position, 0.5f);
         }
@@ -37,12 +37,15 @@ public class GameManager : MonoBehaviour
             inHandOcards[i].transform.DOMove(opponendCardPositions[i].position, 0.5f);
         }*/
 
+
+
         instance = this;         
     }
     #endregion;
 
     SetMode setMode;
 
+    //public CardStats cardStats;
     public CardStats playerCardStats;
     public CardStats opponentCardStats;
 
@@ -71,11 +74,17 @@ public class GameManager : MonoBehaviour
     public Transform[] opponendCardPositions;
     public GameObject[] inHandOcards;
     public GameObject[] inHandPcards;
-    public List<int> deckCardsId;
+    public List<int> pdeckCardsId;
+    public List<int> oppdeckCardsId;
+
+    public List<GameObject> playerCards;
+    public List<GameObject> enemyCards;
 
     public Object[] cardPrefabsinResources;
-    public List<GameObject> cardPrefabs = new List<GameObject>();
+    
 
+    public List<Transform> playerSlots;
+    public List<Transform> enemySlots;
 
     //public timer timer;
 
@@ -100,27 +109,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         startTime = 36;
-
-        SaveManager.Instance.Load();
-
-        deckCardsId = SaveManager.Instance.State.OpponentDeck;
-
-        cardPrefabsinResources = Resources.LoadAll("Prefabs", typeof(GameObject));
-
-        for (int i = 0; i < deckCardsId.Count; i++)
+        SpawnCards();
+        
+        for (int i = 0; i < enemySlots.Count; i++)
         {
-            Debug.Log(deckCardsId[1]);
-            for (int j = 0; j < cardPrefabsinResources.Length; j++)
-            {
-                Debug.Log(cardPrefabsinResources[2].name);
-                if (deckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardFunctions>().id)
-                {
-                    Instantiate(cardPrefabsinResources[j].GetComponent<CardFunctions>().gameObject);
-                    
-                }
-            } 
-            
+            GameObject.FindGameObjectsWithTag("Enemy")[i].transform.position = enemySlots[i].transform.position;
         }
+
     }
 
 
@@ -162,9 +157,60 @@ public class GameManager : MonoBehaviour
                 opponentCardStats.IncreaseBallCount();
                 scoreCalculated = true;
                 AllFalse();
+                playerCardStats.RemoveStats();
+                opponentCardStats.RemoveStats();
                 timeStarted = true;
                 startTime = 36;
             }
+        }
+    }
+
+    public void SpawnCards()
+    {
+        
+
+        SaveManager.Instance.Load();
+
+        pdeckCardsId = SaveManager.Instance.State.PlayerDeck;
+
+        oppdeckCardsId = SaveManager.Instance.State.OpponentDeck;
+
+        cardPrefabsinResources = Resources.LoadAll("Prefabs", typeof(GameObject));
+
+        /*for (int i = 0; i < pdeckCardsId.Count; i++)
+        {
+            
+            for (int j = 0; j < cardPrefabsinResources.Length; j++)
+            {
+                //Debug.Log(cardPrefabsinResources[2].name);
+                if (pdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
+                {
+                    playerCards[i] = Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
+                    foreach (var card in enemyCards)
+                    {
+                        card.tag = "Player";
+                    }
+
+                }
+            }
+
+        } */
+        for (int i = 0; i < oppdeckCardsId.Count; i++)
+        {
+            
+            for (int j = 0; j < cardPrefabsinResources.Length; j++)
+            {
+                if (oppdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
+                {
+                    Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
+                   /* foreach (var card in enemyCards)
+                    {
+                        card.tag = "Enemy";
+                    }*/
+
+                }
+            }
+
         }
     }
 

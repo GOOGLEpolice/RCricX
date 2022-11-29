@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 //Spawns all prefabs with PCard tag in resources folder in the empty slots. 
@@ -27,7 +28,7 @@ public class OppPlayerCardCollection : MonoBehaviour
 
     void Start()
     {  
-        playerCardList = new List<GameObject>(Resources.LoadAll<GameObject>("OppPrefabs"));
+        playerCardList = new List<GameObject>(Resources.LoadAll<GameObject>("Prefabs"));
         SpawnCards();
         
     }
@@ -39,7 +40,8 @@ public class OppPlayerCardCollection : MonoBehaviour
         {  
             for(int j = 0; j < Spawnpoints.Length;j++)
             {
-                GameObject card= Instantiate(playerCardList[i],Spawnpoints[j].position,transform.localRotation);
+                GameObject card= Instantiate(playerCardList[i],Spawnpoints[j].position, transform.rotation * Quaternion.Euler(-90f, 180f, 0f));
+                card.tag = "Enemy";
                 card.transform.SetParent(Spawnpoints[j].transform);
                 OppDeckEventManager.instance.deck.Add(card);
                 i++;

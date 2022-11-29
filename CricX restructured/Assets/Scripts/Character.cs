@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    
-    
-    void Start()
+    public static Character character;
+
+    public List<int> playerID;
+    public List<int> enemyID;
+
+    private void Awake()
     {
-        
+        character = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    
-    void Update()
+
+    public void Update()
     {
-        Quaternion deviceRotation = DeviceRotation.Get();
-        
-        transform.rotation = deviceRotation;
+        playerID = OppDeckEventManager.instance.pid;
+        enemyID = OppDeckEventManager.instance.oppId;
     }
+
+
+
 }

@@ -7,41 +7,44 @@ using UnityEngine;
 public class PlayerCardCollection : MonoBehaviour
 {
     public static PlayerCardCollection Instance; //singleton
-    public float test = 99f;
+
 
     public List<GameObject> playerCardList = new List<GameObject>();
 
+
     public Transform[] Spawnpoints;
-    public GameObject Prefab;
-    public bool Sp1;
-   
-    
+
+
 
     void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
     }
 
     void Start()
-    {  
+    {
         playerCardList = new List<GameObject>(Resources.LoadAll<GameObject>("Prefabs"));
-        Sp1 = false;
         SpawnCards();
+
     }
-    
-   public void SpawnCards()
-    {   
-        for (int i = 0; i< playerCardList.Count;)
-        {  
-            for(int j = 0; j < Spawnpoints.Length;j++)
+
+    public void SpawnCards()
+    {
+        OppDeckEventManager.instance.deck.Clear();
+        for (int i = 0; i < playerCardList.Count;)
+        {
+            for (int j = 0; j < Spawnpoints.Length; j++)
             {
-                Instantiate(playerCardList[i],Spawnpoints[j].position,transform.localRotation);
+                GameObject card = Instantiate(playerCardList[i], Spawnpoints[j].position, transform.rotation * Quaternion.Euler(-90f, 180f, 0f));
+                card.tag = "Player";
+                card.transform.SetParent(Spawnpoints[j].transform);
+                OppDeckEventManager.instance.deck.Add(card);
                 i++;
-            }                   
+            }
         }
     }
 }

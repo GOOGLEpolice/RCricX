@@ -19,6 +19,6 @@ public class OppSlotsManager : MonoBehaviour
 
     public void FindCards()
     {
-        //childCard = GetComponentInChildren<OppCardFunctions>().gameObject;
+        childCard = GetComponentInChildren<CardStats>().gameObject;
     }
 }

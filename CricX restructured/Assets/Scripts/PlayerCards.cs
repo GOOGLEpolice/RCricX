@@ -29,10 +29,7 @@ public class PlayerCards : MonoBehaviour
     }
 
     
-    void Update()
-    {
-        
-    }
+    
 
     
 }

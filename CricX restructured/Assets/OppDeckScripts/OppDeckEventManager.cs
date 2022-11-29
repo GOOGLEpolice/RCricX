@@ -12,6 +12,7 @@ public class OppDeckEventManager : MonoBehaviour
 
     public static OppDeckEventManager instance;
     public List<GameObject> opponentDeck1 = new List<GameObject>(11);
+    public List<int> pid;
     public List<int> oppId;
     public List<GameObject> deck;
     
@@ -38,6 +39,8 @@ public class OppDeckEventManager : MonoBehaviour
         {
             onAddButtonPress(opId);
             
+            
+
         }
     }
     public event Action<int> onRemoveButtonPress;
@@ -48,12 +51,7 @@ public class OppDeckEventManager : MonoBehaviour
             onRemoveButtonPress(opId);
         }
     }
-
-    private void Start()
-    {
-        
-        
-    }
+    
 
     public void OnSceneChange()
     {
@@ -66,7 +64,7 @@ public class OppDeckEventManager : MonoBehaviour
                  
                 for(int i = 0; i < deck.Count; i++)
                 {
-                    if(oppId == deck[i].GetComponent<OppCardFunctions>().opId)
+                    if(oppId == deck[i].GetComponent<CardStats>().playerId && deck[i] != null)
                     {
                         opponentDeck1.Add(deck[i]);
                     }
