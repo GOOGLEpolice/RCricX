@@ -12,21 +12,24 @@ public class SaveTest : MonoBehaviour
     void Update()
     {
        SaveManager.Instance.State.PlayerDeck = Character.character.playerID;
-       SaveManager.Instance.State.OpponentDeck = Character.character.enemyID;
+       SaveManager.Instance.EState.OpponentDeck = Character.character.enemyID;
         
     }
 
-    public void Touch()
+    public void PlayerTouch()
     {
-        SaveManager.Instance.Save();
-        Debug.Log("GameSaved");       
+        SaveManager.Instance.PlayerSave();
+    }
 
+    public void EnemyTouch()
+    {
+        SaveManager.Instance.EnemySave();
     }
 
     public void TouchLoad()
     {
-        SaveManager.Instance.Load();
-        Debug.Log("Game Loaded" + SaveManager.Instance.State.OpponentDeck[2]);
+        SaveManager.Instance.PlayerLoad();
+        SaveManager.Instance.EnemyLoad();
     }
 
 }

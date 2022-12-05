@@ -1045,9 +1045,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 758578211}
-        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
-        m_MethodName: Save
+      - m_Target: {fileID: 758578210}
+        m_TargetAssemblyTypeName: SaveTest, Assembly-CSharp
+        m_MethodName: PlayerTouch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2871,6 +2871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savefileName: savedata.CricX
+  esavefileName: opponentdata.CricX
   loadOnStart: 1
 --- !u!1 &761893232
 GameObject:

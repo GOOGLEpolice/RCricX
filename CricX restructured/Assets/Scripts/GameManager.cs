@@ -169,32 +169,35 @@ public class GameManager : MonoBehaviour
     {
         
 
-        SaveManager.Instance.Load();
+        SaveManager.Instance.PlayerLoad();
+        SaveManager.Instance.EnemyLoad();
 
         pdeckCardsId = SaveManager.Instance.State.PlayerDeck;
 
-        oppdeckCardsId = SaveManager.Instance.State.OpponentDeck;
+        oppdeckCardsId = SaveManager.Instance.EState.OpponentDeck;
 
         cardPrefabsinResources = Resources.LoadAll("Prefabs", typeof(GameObject));
 
-        /*for (int i = 0; i < pdeckCardsId.Count; i++)
+        for (int i = 0; i < pdeckCardsId.Count; i++)
         {
-            
+
             for (int j = 0; j < cardPrefabsinResources.Length; j++)
             {
-                //Debug.Log(cardPrefabsinResources[2].name);
+                
                 if (pdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
                 {
-                    playerCards[i] = Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
+                    Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
+                    i++; j++;
+
                     foreach (var card in enemyCards)
                     {
                         card.tag = "Player";
                     }
-
                 }
             }
 
-        } */
+        }
+
         for (int i = 0; i < oppdeckCardsId.Count; i++)
         {
             
@@ -203,10 +206,10 @@ public class GameManager : MonoBehaviour
                 if (oppdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
                 {
                     Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
-                   /* foreach (var card in enemyCards)
+                    foreach (var card in enemyCards)
                     {
                         card.tag = "Enemy";
-                    }*/
+                    }
 
                 }
             }

@@ -10,7 +10,7 @@ public class SaveState
     
 
     public List<int> PlayerDeck {set; get;}
-    public List<int> OpponentDeck { set; get; }
+    
 
     public DateTime LastSaveTime { set; get;}
 }

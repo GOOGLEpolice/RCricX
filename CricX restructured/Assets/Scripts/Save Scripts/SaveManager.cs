@@ -32,6 +32,7 @@ public class SaveManager : MonoBehaviour
     #endregion
 
     [SerializeField] string savefileName = "savedata.CricX";
+    [SerializeField] string esavefileName = "opponentdata.CricX";
     [SerializeField]bool loadOnStart = true;
     BinaryFormatter formatter;
 
@@ -40,15 +41,18 @@ public class SaveManager : MonoBehaviour
     private SaveState state;
     public SaveState State { get => state; set => state = value; }
 
+    private EnemySaveState estate;
+    public EnemySaveState EState { get => estate; set => estate = value; }
+
     void Start()
     {
         formatter = new BinaryFormatter();
         DontDestroyOnLoad(this.gameObject);
 
-        if (loadOnStart) { Load(); }
+        if (loadOnStart) { PlayerLoad(); EnemyLoad(); }
     }
 
-    public void Save()
+    public void PlayerSave()
     {
         if (state == null)
             state = new SaveState();
@@ -60,7 +64,17 @@ public class SaveManager : MonoBehaviour
         file.Close();
     }
 
-    public void Load()
+    public void EnemySave()
+    {
+        if (estate == null)
+            estate = new EnemySaveState();
+
+        var file = new FileStream(esavefileName, FileMode.OpenOrCreate, FileAccess.Write);
+        formatter.Serialize(file, estate);
+        file.Close();
+    }
+
+    public void PlayerLoad()
     {
         try
         {
@@ -71,9 +85,24 @@ public class SaveManager : MonoBehaviour
         catch
         {
             Debug.Log("No save file found, Creating a new entry!");
-            Save();
+            PlayerSave();
         }
 
+    }
+
+    public void EnemyLoad()
+    {
+        try
+        {
+            var file = new FileStream(esavefileName, FileMode.Open, FileAccess.Read);
+            estate = (EnemySaveState)formatter.Deserialize(file);
+            file.Close();
+        }
+        catch
+        {
+            Debug.Log("No save file found, Creating a new entry!");
+            EnemySave();
+        }
     }
     
 }
