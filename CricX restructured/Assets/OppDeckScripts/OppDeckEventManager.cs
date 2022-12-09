@@ -15,18 +15,17 @@ public class OppDeckEventManager : MonoBehaviour
     public List<int> pid;
     public List<int> oppId;
     public List<GameObject> deck;
+
+    public bool deckScene;
     
-    /*public List<GameObject> Deck2 = new List<GameObject>();
-    public List<GameObject> Deck3 = new List<GameObject>();
-    public List<GameObject> Deck4 = new List<GameObject>();
-    public List<GameObject> Deck5 = new List<GameObject>();*/
+    
     public List<Transform> DeckSlots;
     public List<Transform> SpawnSlots;
     private void Awake()
     {
         
         instance = this;
-        
+        deckScene = true;
 
         
     }

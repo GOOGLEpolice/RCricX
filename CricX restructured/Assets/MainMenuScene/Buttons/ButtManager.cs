@@ -17,7 +17,7 @@ public class ButtManager : MonoBehaviour
 
     public void OnInven()
     {
-        SceneManager.LoadScene(sceneName: "DeckScreen");
+        SceneManager.LoadScene(sceneName: "PlayerDeck");
     }
 
     public void OnQuit()

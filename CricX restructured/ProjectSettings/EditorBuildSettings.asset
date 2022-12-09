@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: c6bd51ce27d92e746aed8b4a2c52d5d5
   - enabled: 1
-    path: Assets/Scenes/DeckScreen.unity
+    path: Assets/Scenes/PlayerDeck.unity
     guid: 20670829c0c6d8d40a519d94b3493307
   - enabled: 1
-    path: Assets/Scenes/DeckScreenOpp.unity
+    path: Assets/Scenes/EnemyDeck.unity
     guid: f31144508d99c6745ba7520dc441e524
   - enabled: 1
     path: Assets/Scenes/GameScene.unity

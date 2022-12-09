@@ -1,4 +1,5 @@
 using DG.Tweening;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,22 +23,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        inHandPcards = GameObject.FindGameObjectsWithTag("Player");
-        inHandOcards = GameObject.FindGameObjectsWithTag("Enemy");
-
-
-        /*for (int i = 0; i < playerCardPositions.Length; i++)
-        {
-            inHandPcards[i].transform.DOMove(playerCardPositions[i].position, 0.5f);
-        }
-
-
-        for (int i = 0; i < opponendCardPositions.Length; i++)
-        {
-            inHandOcards[i].transform.DOMove(opponendCardPositions[i].position, 0.5f);
-        }*/
-
-
+        gameScene = true;
 
         instance = this;         
     }
@@ -57,6 +43,8 @@ public class GameManager : MonoBehaviour
     public bool opponentReady;
     public bool readyToCalculate;
     public bool scoreCalculated;
+    public bool gameScene;
+    
 
     public int runs;
     public int playerRuns;
@@ -71,9 +59,9 @@ public class GameManager : MonoBehaviour
 
 
     public Transform[] playerCardPositions;
-    public Transform[] opponendCardPositions;
-    public GameObject[] inHandOcards;
-    public GameObject[] inHandPcards;
+    public Transform[] opponentCardPositions;
+    public List<GameObject> inHandOcards;
+    public List<GameObject> inHandPcards;
     public List<int> pdeckCardsId;
     public List<int> oppdeckCardsId;
 
@@ -110,18 +98,14 @@ public class GameManager : MonoBehaviour
     {
         startTime = 36;
         SpawnCards();
-        
-        for (int i = 0; i < enemySlots.Count; i++)
-        {
-            GameObject.FindGameObjectsWithTag("Enemy")[i].transform.position = enemySlots[i].transform.position;
-        }
-
     }
 
 
     void Update()
     {
         BackToPos();
+        FullD();
+
         if (mScore < 0 || oppScore < 0)
         {
             mScore = 0;
@@ -186,17 +170,23 @@ public class GameManager : MonoBehaviour
                 
                 if (pdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
                 {
-                    Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
-                    i++; j++;
-
-                    foreach (var card in enemyCards)
+                    GameObject card= Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
+                    playerCards.Add(card);
+                    foreach (var pcard in playerCards)
                     {
-                        card.tag = "Player";
+                        pcard.tag = "Player";
                     }
+                    
                 }
             }
 
         }
+            for (int i = 0; i < playerCards.Count; i++)
+            {
+                playerCards[i].transform.SetParent(playerSlots[i].transform);
+                playerCards[i].transform.DOLocalMove(Vector3.zero, 0.5f);
+                playerCards[i].transform.DOScale(new Vector3(30f, 30f, 30f), 0.1f);
+            }
 
         for (int i = 0; i < oppdeckCardsId.Count; i++)
         {
@@ -205,15 +195,23 @@ public class GameManager : MonoBehaviour
             {
                 if (oppdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
                 {
-                    Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
-                    foreach (var card in enemyCards)
+                    GameObject card = Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
+                     enemyCards.Add(card);
+                    foreach(var ecard in enemyCards)
                     {
-                        card.tag = "Enemy";
+                        ecard.tag = "Enemy";
                     }
 
                 }
             }
 
+        }
+
+        for (int i = 0; i < enemyCards.Count; i++)
+        {
+            enemyCards[i].transform.SetParent(enemySlots[i].transform);
+            enemyCards[i].transform.DOLocalMove(Vector3.zero, 0.5f);
+            enemyCards[i].transform.DOScale(new Vector3(30f, 30f, 30f), 0.1f);
         }
     }
 
@@ -238,14 +236,24 @@ public class GameManager : MonoBehaviour
         oppTickMark.SetActive(false);
     }
 
-    
+    //Panel refrences
+    public GameObject PlayerPanel;
+    public GameObject EnemyPanel;
 
+    public void ClosePlayerPanel()
+    {
+        PlayerPanel.SetActive(false);
+    }
+    public void CloseEnemyPanel()
+    {
+        EnemyPanel.SetActive(false);
+    }
 
     void BackToPos()
     {
         if (!playerCardSelected && !Dragging.drag && playerCardStats != null)
         {
-            for (int i = 0; i < inHandPcards.Length; i++)
+            for (int i = 0; i < inHandPcards.Count; i++)
             {
                 Debug.Log("Executing");
                 if (playerCardStats.gameObject == inHandPcards[i]) 
@@ -259,15 +267,43 @@ public class GameManager : MonoBehaviour
 
         if (!opponentCardSelected && !Dragging.drag && opponentCardStats != null)
         {
-            for (int i = 0; i < inHandOcards.Length; i++)
+            for (int i = 0; i < inHandOcards.Count; i++)
             {
                 if (opponentCardStats.gameObject == inHandOcards[i])
                 {
-                    opponentCardStats.gameObject.transform.DOMove(opponendCardPositions[i].position, 0.5f).SetEase(Ease.Linear);
+                    opponentCardStats.gameObject.transform.DOMove(opponentCardPositions[i].position, 0.5f).SetEase(Ease.Linear);
                     opponentCardStats = null;
                     break;
                 }
             }
         }
     }
+
+
+    void FullD()
+    {
+        for (int i = 0; i<playerCards.Count; i++)
+        {
+                if (GameManager.instance.inHandPcards.Count > 2)
+                {
+                    playerCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(false);
+                }
+                else
+                    playerCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(true);
+        }
+        
+        for (int i = 0; i<enemyCards.Count; i++)
+        {
+            
+            if (GameManager.instance.inHandOcards.Count > 2)
+            {
+                enemyCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(false);
+            }
+            else
+                enemyCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(true);
+        }
+
+    }
+    
+
 }

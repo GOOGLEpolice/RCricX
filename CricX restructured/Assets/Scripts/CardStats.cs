@@ -23,6 +23,7 @@ public class CardStats : MonoBehaviour
     public Image batImage;
     float destroyTimer;
 
+    
     bool Add;
     bool Remove;
 
@@ -189,114 +190,126 @@ public class CardStats : MonoBehaviour
                 OppDeckEventManager.instance.oppId.Add(id);
             }
 
-            OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
-
-
-            AddButton.SetActive(false);
-            Add = false;
-
-            if (Add == false)
+            if (OppDeckEventManager.instance.deckScene == true)
             {
-                RemoveButton.SetActive(true);
-            }
 
-            else if (Add == true)
-            {
-                RemoveButton.SetActive(false);
-            }
+                OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
 
-            gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
 
-            foreach (Transform slots in OppDeckEventManager.instance.DeckSlots)
-            {
-                for (int i = 0; i < OppDeckEventManager.instance.opponentDeck1.Count; i++)
+                AddButton.SetActive(false);
+                Add = false;
+
+                if (Add == false)
                 {
-                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard != null)
-                    {
-                        i++;
-                    }
-                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard == null)
-                    {
-                        gameObject.transform.SetParent(OppDeckEventManager.instance.DeckSlots[i]);
-                        gameObject.transform.localPosition = Vector3.zero;
-                    }
+                    RemoveButton.SetActive(true);
                 }
 
+                else if (Add == true)
+                {
+                    RemoveButton.SetActive(false);
+                }
+
+                gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
+
+                foreach (Transform slots in OppDeckEventManager.instance.DeckSlots)
+                {
+                    for (int i = 0; i < OppDeckEventManager.instance.opponentDeck1.Count; i++)
+                    {
+                        if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard != null)
+                        {
+                            i++;
+                        }
+                        if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard == null)
+                        {
+                            gameObject.transform.SetParent(OppDeckEventManager.instance.DeckSlots[i]);
+                            gameObject.transform.localPosition = Vector3.zero;
+                        }
+                    }
+
+                }
+            }
+
+            if (GameManager.instance.gameScene == true)
+            {
+                RemoveButton.SetActive(false);
+
+                if (gameObject.tag == "Player")
+                {
+                    GameManager.instance.inHandPcards.Add(gameObject);
+                    for (int i = 0; i < GameManager.instance.playerCardPositions.Length;)
+                    {
+                        if (GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card != null)
+                        {
+                            i++;
+                        }
+
+                        else if (GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card == null)
+                        {
+                            GameManager.instance.inHandPcards[i].gameObject.transform.SetParent(GameManager.instance.playerCardPositions[i].transform);
+                            GameManager.instance.inHandPcards[i].gameObject.transform.DOLocalMove(GameManager.instance.playerCardPositions[i].transform.position, 0.5f).SetEase(Ease.Linear);
+                            GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card = GameManager.instance.inHandPcards[i].gameObject;
+                        }
+                    }
+
+                }
+                
+                if (gameObject.tag == "Enemy")
+                {
+                    GameManager.instance.inHandOcards.Add(gameObject);
+                    for (int i = 0; i < GameManager.instance.opponentCardPositions.Length;)
+                    {
+                        if (GameManager.instance.opponentCardPositions[i].GetComponent<SlotManager>().card != null)
+                        {
+                            i++;
+                        }
+
+                        else if (GameManager.instance.opponentCardPositions[i].GetComponent<SlotManager>().card == null)
+                        {
+                            gameObject.transform.SetParent(GameManager.instance.opponentCardPositions[i].transform);
+                            gameObject.transform.DOLocalMove(GameManager.instance.opponentCardPositions[i].transform.position, 0.5f).SetEase(Ease.Linear);
+                            GameManager.instance.opponentCardPositions[i].GetComponent<SlotManager>().card = GameManager.instance.inHandOcards[i].gameObject;
+                        }
+                    }
+                }
             }
         }
-       /* else if (id == this.playerId && gameObject.tag == "Enemy")
-        {
-            
-            OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
-            OppDeckEventManager.instance.oppId.Add(id);
-
-
-            AddButton.SetActive(false);
-            Add = false;
-
-            if (Add == false)
-            {
-                RemoveButton.SetActive(true);
-            }
-
-            else if (Add == true)
-            {
-                RemoveButton.SetActive(false);
-            }
-
-            gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
-
-            foreach (Transform slots in OppDeckEventManager.instance.DeckSlots)
-            {
-                for (int i = 0; i < OppDeckEventManager.instance.opponentDeck1.Count; i++)
-                {
-                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<SlotsManager>().childCard != null)
-                    {
-                        i++;
-                    }
-                    if (OppDeckEventManager.instance.DeckSlots[i].gameObject.GetComponent<SlotsManager>().childCard == null)
-                    {
-                        gameObject.transform.SetParent(DeckEventManager.instance.DeckSlots[i]);
-                        gameObject.transform.localPosition = Vector3.zero;
-                    }
-                }
-
-            }
-        }*/
+       
     }
 
     public void RemoveFromDeck(int id)
     {
         if (id == this.playerId)
         {
-            OppDeckEventManager.instance.opponentDeck1.Remove(gameObject);
-            RemoveButton.SetActive(false);
-            Remove = false;
-
-            if (Remove == false)
+            if (OppDeckEventManager.instance.deckScene == true)
             {
-                AddButton.SetActive(true);
-            }
+                OppDeckEventManager.instance.opponentDeck1.Remove(gameObject);
+                RemoveButton.SetActive(false);
+                Remove = false;
 
-            else if (Remove == true)
-            {
-                AddButton.SetActive(false);
-            }
-            gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
-
-            for (int i = 0; i<OppDeckEventManager.instance.SpawnSlots.Count; i++)
-            {
-                if (OppDeckEventManager.instance.SpawnSlots [i].gameObject.GetComponent<OppSlotsManager>().childCard != null)
+                if (Remove == false)
                 {
-                    i++;
+                    AddButton.SetActive(true);
                 }
-                if (OppDeckEventManager.instance.SpawnSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard == null)
+
+                else if (Remove == true)
                 {
-                    gameObject.transform.SetParent(OppDeckEventManager.instance.SpawnSlots[i]);
-                    gameObject.transform.localPosition = Vector3.zero;
+                    AddButton.SetActive(false);
+                }
+                gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
+
+                for (int i = 0; i < OppDeckEventManager.instance.SpawnSlots.Count; i++)
+                {
+                    if (OppDeckEventManager.instance.SpawnSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard != null)
+                    {
+                        i++;
+                    }
+                    if (OppDeckEventManager.instance.SpawnSlots[i].gameObject.GetComponent<OppSlotsManager>().childCard == null)
+                    {
+                        gameObject.transform.SetParent(OppDeckEventManager.instance.SpawnSlots[i]);
+                        gameObject.transform.localPosition = Vector3.zero;
+                    }
                 }
             }
-
         }
     }
 

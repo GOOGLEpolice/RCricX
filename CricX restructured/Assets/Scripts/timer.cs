@@ -22,7 +22,7 @@ public class timer : MonoBehaviour
     }
     void Start()
     {
-        GameManager.instance.timeStarted = true;
+        
         GameManager.instance.startTime = 36;
         
         GameManager.instance.calmTimer.SetActive(true);
