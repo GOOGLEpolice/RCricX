@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 6169392924732997478}
   - component: {fileID: 8226525418632514959}
   - component: {fileID: 7267214365850253444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sam 6 fin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1248,7 +1248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6241967254787329803}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1687,7 +1687,7 @@ GameObject:
   - component: {fileID: 3137308410933984680}
   - component: {fileID: 4304245830540552658}
   - component: {fileID: 5734695506278687370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goatee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1876,7 +1876,7 @@ GameObject:
   - component: {fileID: 8331670818068317751}
   - component: {fileID: 4393554067917718658}
   - component: {fileID: 8950082585693108222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2231,7 +2231,7 @@ GameObject:
   - component: {fileID: 6960893712632018534}
   - component: {fileID: 7533181539568543184}
   - component: {fileID: 3374889801948617374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8079638580382252323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ravi Joshi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2350,7 +2350,7 @@ GameObject:
   - component: {fileID: 705243000073733600}
   - component: {fileID: 2860349106471991210}
   - component: {fileID: 5576643650728721747}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

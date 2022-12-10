@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2363611839488902437}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   - component: {fileID: 6625878858839550202}
   - component: {fileID: 5038936854927858732}
   - component: {fileID: 495971593211450007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Arun\_Korrapati"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1824,7 @@ GameObject:
   - component: {fileID: 9052783030491176506}
   - component: {fileID: 8760215050929359188}
   - component: {fileID: 2913415920824676065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Arun\_Korrapati eyes"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2011,7 +2011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4368099067630906798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Arun\_Korrapati"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,7 +2181,7 @@ GameObject:
   - component: {fileID: 2207928156382234662}
   - component: {fileID: 4776959540971844644}
   - component: {fileID: 2127415476379897012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}

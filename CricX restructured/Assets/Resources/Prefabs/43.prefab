@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4625907404017720641}
   - component: {fileID: 4517157170761263515}
   - component: {fileID: 6449663538951502325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 2520171401409376879}
   - component: {fileID: 2408251628881270860}
   - component: {fileID: 4376677882376966506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Neelam\_Vemulakonda eyes"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4666025071473807585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 5853115811402996626}
   - component: {fileID: 3506677800497338505}
   - component: {fileID: 7084753396573042494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Neelam\_Vemulakonda"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5953847574464874047}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Neelam\_Vemulakonda"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

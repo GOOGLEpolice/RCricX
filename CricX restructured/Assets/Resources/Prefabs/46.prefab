@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6366208114881244377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 8444773998582814148}
   - component: {fileID: 6560311738364523327}
   - component: {fileID: 7361500682349437226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Aryan\_Patel eyes"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5271646872377362814}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Aryan\_Patel"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 5424895938898788591}
   - component: {fileID: 4828030561437511393}
   - component: {fileID: 3471153160854663034}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1130,7 @@ GameObject:
   - component: {fileID: 6781549963210130566}
   - component: {fileID: 1668769106795036355}
   - component: {fileID: 518525439172778103}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Aryan\_Patel"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

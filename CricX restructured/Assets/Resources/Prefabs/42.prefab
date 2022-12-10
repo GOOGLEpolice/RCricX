@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8511487281603189445}
   - component: {fileID: 5956651049642956182}
   - component: {fileID: 7635363118471187716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1279,7 +1279,7 @@ GameObject:
   - component: {fileID: 8564683056002130729}
   - component: {fileID: 2746669417647256455}
   - component: {fileID: 4780067631594134631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Mani\_Jain eyes"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7200405972688018455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Mani\_Jain"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1533,7 +1533,7 @@ GameObject:
   - component: {fileID: 4357351266933776706}
   - component: {fileID: 5688390058087242842}
   - component: {fileID: 7745947755196754925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Mani\_Jain"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1616,7 +1616,7 @@ GameObject:
   - component: {fileID: 6309094510415125957}
   - component: {fileID: 1733421487814801466}
   - component: {fileID: 2256427705050595344}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2045,7 +2045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2154329178150567680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}

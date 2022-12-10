@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 1280687466456204849}
   - component: {fileID: 7964130853883492781}
   - component: {fileID: 7267937639178956578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 3797749163747255285}
   - component: {fileID: 812681352302585101}
   - component: {fileID: 4698379080539521977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kefilwe_Obama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 6443658588360005254}
   - component: {fileID: 3788449757481307934}
   - component: {fileID: 5083050490355962572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2024,7 +2024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4721094352206584808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kefilwe_Obama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2058,7 +2058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4526569240227422854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}

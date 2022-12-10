@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5495780228534593039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Akshay\_Chaudhari"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1946594926181820263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 8552375192432951461}
   - component: {fileID: 728339210545404988}
   - component: {fileID: 5140004113881581477}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Akshay\_Chaudhari eyes"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 1818522756206126257}
   - component: {fileID: 1067666401771757457}
   - component: {fileID: 8394705933030365763}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1804,7 +1804,7 @@ GameObject:
   - component: {fileID: 5881928659856876301}
   - component: {fileID: 5186367831517373834}
   - component: {fileID: 2854061895899498713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Beard w/ stache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2159,7 +2159,7 @@ GameObject:
   - component: {fileID: 4175501260764417641}
   - component: {fileID: 16176624970854080}
   - component: {fileID: 3041639262717816226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Akshay\_Chaudhari"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

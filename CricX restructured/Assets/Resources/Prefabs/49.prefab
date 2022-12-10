@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 6212790597755398346}
   - component: {fileID: 1351213251128644268}
   - component: {fileID: 7881186011915838258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8261237044106967695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3D Char
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 1011118050377469255}
   - component: {fileID: 8671104994375080855}
   - component: {fileID: 5234310631102413743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sam 4 fin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954578935396024710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Wolf\_Sowards"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1566,7 +1566,7 @@ GameObject:
   - component: {fileID: 1957861569558608811}
   - component: {fileID: 5647251394295345256}
   - component: {fileID: 4964425739418383740}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 8316034754367937480}
   - component: {fileID: 5009810455357925178}
   - component: {fileID: 6273833549142628974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goatee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
