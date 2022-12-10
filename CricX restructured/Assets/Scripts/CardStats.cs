@@ -246,7 +246,7 @@ public class CardStats : MonoBehaviour
                         else if (GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card == null)
                         {
                             GameManager.instance.inHandPcards[i].gameObject.transform.SetParent(GameManager.instance.playerCardPositions[i].transform);
-                            GameManager.instance.inHandPcards[i].gameObject.transform.DOLocalMove(GameManager.instance.playerCardPositions[i].transform.position, 0.5f).SetEase(Ease.Linear);
+                            GameManager.instance.inHandPcards[i].gameObject.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.Linear);
                             GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card = GameManager.instance.inHandPcards[i].gameObject;
                         }
                     }
@@ -265,8 +265,8 @@ public class CardStats : MonoBehaviour
 
                         else if (GameManager.instance.opponentCardPositions[i].GetComponent<SlotManager>().card == null)
                         {
-                            gameObject.transform.SetParent(GameManager.instance.opponentCardPositions[i].transform);
-                            gameObject.transform.DOLocalMove(GameManager.instance.opponentCardPositions[i].transform.position, 0.5f).SetEase(Ease.Linear);
+                            GameManager.instance.inHandOcards[i].gameObject.transform.SetParent(GameManager.instance.opponentCardPositions[i].transform);
+                            GameManager.instance.inHandOcards[i].gameObject.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.Linear);
                             GameManager.instance.opponentCardPositions[i].GetComponent<SlotManager>().card = GameManager.instance.inHandOcards[i].gameObject;
                         }
                     }
