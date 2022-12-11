@@ -462,7 +462,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2806845392051450363}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -473,7 +473,7 @@ RectTransform:
   - {fileID: 8763908195406183205}
   - {fileID: 7833014531260967269}
   m_Father: {fileID: 4126540967042045199}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -787,6 +787,7 @@ GameObject:
   - component: {fileID: 5249489940352011952}
   - component: {fileID: 7718626098545064143}
   - component: {fileID: 7939989972784840908}
+  - component: {fileID: 2583691128088581560}
   m_Layer: 6
   m_Name: 48
   m_TagString: Untagged
@@ -898,6 +899,19 @@ MonoBehaviour:
   batImage: {fileID: 1747001958039600682}
   AddButton: {fileID: 6570165030474459571}
   RemoveButton: {fileID: 6931596614329799448}
+--- !u!65 &2583691128088581560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297552552373827594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6000018, y: 0.14000203, z: 5.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5344780073808720946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,7 +2057,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4126540967042045199}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2262,8 +2276,8 @@ RectTransform:
   m_LocalScale: {x: 0.9999996, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3073566673034440800}
   - {fileID: 2298210312618976156}
+  - {fileID: 3073566673034440800}
   - {fileID: 5541396203499023423}
   - {fileID: 2078039638790139476}
   - {fileID: 634025076945651063}

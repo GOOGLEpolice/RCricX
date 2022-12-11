@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 1807317869000143258}
   - component: {fileID: 4535148255216452944}
   - component: {fileID: 7144328297144747188}
+  - component: {fileID: 8575298343061486094}
   m_Layer: 6
   m_Name: 18
   m_TagString: Untagged
@@ -784,6 +785,19 @@ MonoBehaviour:
   batImage: {fileID: 6337169314926868037}
   AddButton: {fileID: 936531261403372778}
   RemoveButton: {fileID: 5382065036590157386}
+--- !u!65 &8575298343061486094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2733941432305280133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6000018, y: 0.14000203, z: 5.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2968420559069854008
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +823,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2968420559069854008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -820,7 +834,7 @@ RectTransform:
   - {fileID: 1640059725615547621}
   - {fileID: 4848108780368054931}
   m_Father: {fileID: 8231663293903370331}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -877,12 +891,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3049790455231312671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8231663293903370331}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2075,8 +2089,8 @@ RectTransform:
   m_LocalScale: {x: 0.9999996, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1641097044393612963}
   - {fileID: 6570817368940553190}
+  - {fileID: 1641097044393612963}
   - {fileID: 3575702851969285580}
   - {fileID: 1989639604878842117}
   - {fileID: 4681892794842772169}

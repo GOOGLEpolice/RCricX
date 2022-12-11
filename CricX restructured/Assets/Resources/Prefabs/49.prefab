@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1133020750588370468}
   - component: {fileID: 7166174132291616165}
   - component: {fileID: 1743732460391052990}
+  - component: {fileID: 3829648484480622203}
   m_Layer: 6
   m_Name: 49
   m_TagString: Untagged
@@ -123,6 +124,19 @@ MonoBehaviour:
   batImage: {fileID: 2932714468960376830}
   AddButton: {fileID: 532180039016947987}
   RemoveButton: {fileID: 6624217636311502860}
+--- !u!65 &3829648484480622203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32495932327007214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6000018, y: 0.14000203, z: 5.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &417313467502600302
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +623,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259911120371355935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -620,7 +634,7 @@ RectTransform:
   - {fileID: 722542792470761938}
   - {fileID: 1767235462773317821}
   m_Father: {fileID: 2738518049834009789}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1208,8 +1222,8 @@ RectTransform:
   m_LocalScale: {x: 0.9999996, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5616724182445445171}
   - {fileID: 3174859344804665354}
+  - {fileID: 5616724182445445171}
   - {fileID: 5655558050004332498}
   - {fileID: 1964537199659725661}
   - {fileID: 1254781321025587114}
@@ -1450,7 +1464,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2738518049834009789}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

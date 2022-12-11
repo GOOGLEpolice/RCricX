@@ -550,6 +550,7 @@ GameObject:
   - component: {fileID: 5969846975913033876}
   - component: {fileID: 8448154182517290078}
   - component: {fileID: 2947617555567687098}
+  - component: {fileID: 6334076037578474368}
   m_Layer: 6
   m_Name: 17
   m_TagString: Untagged
@@ -661,6 +662,19 @@ MonoBehaviour:
   batImage: {fileID: 7756027903461349414}
   AddButton: {fileID: 3325418123349116815}
   RemoveButton: {fileID: 2580807825134026051}
+--- !u!65 &6334076037578474368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7943543835924354443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6000018, y: 0.14000203, z: 5.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3721228375805249202
 PrefabInstance:
   m_ObjectHideFlags: 0

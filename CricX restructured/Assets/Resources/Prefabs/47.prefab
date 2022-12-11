@@ -464,7 +464,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678835774113267533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -475,7 +475,7 @@ RectTransform:
   - {fileID: 7833223487615104699}
   - {fileID: 1342713666323586800}
   m_Father: {fileID: 9078874449034043126}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1027,7 +1027,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9078874449034043126}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1220,6 +1220,7 @@ GameObject:
   - component: {fileID: 2502027189838949157}
   - component: {fileID: 8290211513882151867}
   - component: {fileID: 3799791475871532412}
+  - component: {fileID: 5313004691396868428}
   m_Layer: 6
   m_Name: 47
   m_TagString: Untagged
@@ -1331,6 +1332,19 @@ MonoBehaviour:
   batImage: {fileID: 2560561963792430659}
   AddButton: {fileID: 6825706508022053913}
   RemoveButton: {fileID: 8843526937531096879}
+--- !u!65 &5313004691396868428
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666772947740745062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6000018, y: 0.14000203, z: 5.000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6825706508022053913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,8 +1941,8 @@ RectTransform:
   m_LocalScale: {x: 0.9999996, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4813073941049158383}
   - {fileID: 5926046513158391024}
+  - {fileID: 4813073941049158383}
   - {fileID: 5307631434768794652}
   - {fileID: 7709708944869661442}
   - {fileID: 2866392203175311252}

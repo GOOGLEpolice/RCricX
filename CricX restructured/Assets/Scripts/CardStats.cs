@@ -239,7 +239,7 @@ public class CardStats : MonoBehaviour
                         else if (GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card == null)
                         {
                             GameManager.instance.inHandPcards[i].gameObject.transform.SetParent(GameManager.instance.playerCardPositions[i].transform);
-                            GameManager.instance.inHandPcards[i].gameObject.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.Linear);
+                            GameManager.instance.inHandPcards[i].gameObject.transform.DOMove(Vector3.zero, 0.5f).SetEase(Ease.Linear);
                             GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card = GameManager.instance.inHandPcards[i].gameObject;
                         }
                     }

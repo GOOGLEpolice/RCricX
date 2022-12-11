@@ -85,7 +85,9 @@ public class GameManager : MonoBehaviour
     public GameObject playerReadyIcon;
     public GameObject pLockIcon;
     public GameObject pTickMark;
+    public GameObject[] playerAddButtons = new GameObject[3];
 
+    public GameObject[] enemyAddButtons = new GameObject[3];
     public GameObject opponentReadyIcon;
     public GameObject oppLockIcon;
     public GameObject oppTickMark;
@@ -105,6 +107,7 @@ public class GameManager : MonoBehaviour
     {
         BackToPos();
         FullD();
+        AddButtonF();
 
         if (mScore < 0 || oppScore < 0)
         {
@@ -127,6 +130,11 @@ public class GameManager : MonoBehaviour
                 resetTimer = 0;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        RemoveChildren();
     }
 
     public void SetGameMode()
@@ -304,6 +312,37 @@ public class GameManager : MonoBehaviour
                 enemyCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(true);
         }
 
+    }
+
+    void AddButtonF()
+    {
+        for (int i = 0; i < inHandPcards.Count; i++)
+        {
+            if (inHandPcards[i] != null)
+            {
+                playerAddButtons[i].SetActive(false);
+            }
+            else if (inHandPcards[i] == null)
+            {
+                playerAddButtons[i].SetActive(true);
+            }
+        }
+    }
+
+    void RemoveChildren()
+    {
+        if (timeStarted)
+        {
+            for (int i = 0; i < inHandPcards.Count; i++)
+            {
+                inHandPcards[i].transform.SetParent(null);
+            }
+
+            for (int i = 0; i < inHandOcards.Count; i++)
+            {
+                inHandOcards[i].transform.SetParent(null);
+            }
+        }
     }
     
 
