@@ -24,8 +24,8 @@ public class CardStats : MonoBehaviour
     float destroyTimer;
 
     
-    bool Add;
-    bool Remove;
+     bool Add ;
+     bool Remove;
 
     SlotsManager slotsManager;
 
@@ -194,19 +194,13 @@ public class CardStats : MonoBehaviour
             {
 
                 OppDeckEventManager.instance.opponentDeck1.Add(gameObject);
-
-
-                AddButton.SetActive(false);
                 Add = false;
+                AddButton.SetActive(false);
+                
 
                 if (Add == false)
                 {
                     RemoveButton.SetActive(true);
-                }
-
-                else if (Add == true)
-                {
-                    RemoveButton.SetActive(false);
                 }
 
                 gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
@@ -231,7 +225,6 @@ public class CardStats : MonoBehaviour
 
             if (GameManager.instance.gameScene == true)
             {
-                RemoveButton.SetActive(false);
 
                 if (gameObject.tag == "Player")
                 {
@@ -283,17 +276,13 @@ public class CardStats : MonoBehaviour
             if (OppDeckEventManager.instance.deckScene == true)
             {
                 OppDeckEventManager.instance.opponentDeck1.Remove(gameObject);
+                Add=true;
                 RemoveButton.SetActive(false);
                 Remove = false;
 
-                if (Remove == false)
+                if (Add == true)
                 {
                     AddButton.SetActive(true);
-                }
-
-                else if (Remove == true)
-                {
-                    AddButton.SetActive(false);
                 }
                 gameObject.GetComponentInParent<OppSlotsManager>().childCard = null;
 
@@ -316,18 +305,17 @@ public class CardStats : MonoBehaviour
     public void DeckFull()
     {
         
-
-        if (OppDeckEventManager.instance.opponentDeck1.Count > 10)
-        {
-            
+        if (OppDeckEventManager.instance.opponentDeck1.Count > 10 )
+        {   
+            Add = false;
             AddButton.SetActive(false);
         }
 
-        else
-        {
-            
+        if(OppDeckEventManager.instance.opponentDeck1.Count <= 10 && Remove == false)
+        {   
             AddButton.SetActive(true);
         }
+
     }
 
 }

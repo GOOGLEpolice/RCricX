@@ -236,18 +236,18 @@ public class GameManager : MonoBehaviour
         oppTickMark.SetActive(false);
     }
 
-    //Panel refrences
-    public GameObject PlayerPanel;
-    public GameObject EnemyPanel;
+    // //Panel refrences
+    // public GameObject PlayerPanel;
+    // public GameObject EnemyPanel;
 
-    public void ClosePlayerPanel()
-    {
-        PlayerPanel.SetActive(false);
-    }
-    public void CloseEnemyPanel()
-    {
-        EnemyPanel.SetActive(false);
-    }
+    // public void ClosePlayerPanel()
+    // {
+    //     PlayerPanel.SetActive(false);
+    // }
+    // public void CloseEnemyPanel()
+    // {
+    //     EnemyPanel.SetActive(false);
+    // }
 
     void BackToPos()
     {
