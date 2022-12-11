@@ -212,6 +212,7 @@ public class GameManager : MonoBehaviour
             enemyCards[i].transform.SetParent(enemySlots[i].transform);
             enemyCards[i].transform.DOLocalMove(Vector3.zero, 0.5f);
             enemyCards[i].transform.DOScale(new Vector3(30f, 30f, 30f), 0.1f);
+            enemyCards[i].transform.DORotate(new Vector3(90f, 0f, 0f), 0.1f);
         }
     }
 
