@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 1980145536357457051}
   - component: {fileID: 225205218717076893}
   - component: {fileID: 7936426407541564481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}

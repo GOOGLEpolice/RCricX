@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7455321060856089200}
   - component: {fileID: 7001413837099423371}
   - component: {fileID: 9119167640289811532}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Add
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 8889954505161416219}
   - component: {fileID: 1217196158433912341}
   - component: {fileID: 398519515353309838}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 1177028179948194558}
   - component: {fileID: 716785092103612993}
   - component: {fileID: 7416961590795454812}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 5479923268287641756}
   - component: {fileID: 1686642734260162964}
   - component: {fileID: 5079823548900053649}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 4918200982292123650}
   - component: {fileID: 7179866960336725192}
   - component: {fileID: 4499613902225696044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,6 +668,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8353946587783815079}
     m_Modifications:
+    - target: {fileID: 629754042126133509, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 669934722261183929, guid: a6309e5d6c4141d4496232ea8488a640,
         type: 3}
       propertyPath: m_Pivot.x
@@ -783,10 +788,60 @@ PrefabInstance:
       propertyPath: m_OverrideSorting
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5305271150413683856, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410098534405065504, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6133955016019587159, guid: a6309e5d6c4141d4496232ea8488a640,
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133955016019587159, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366175138104760575, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562355562036078147, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051351003348633402, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515287215029615804, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609493771990978543, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721937070978841047, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554325369267576145, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6309e5d6c4141d4496232ea8488a640, type: 3}
@@ -958,6 +1013,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 3D Char
+      objectReference: {fileID: 0}
+    - target: {fileID: 8710229479622855269, guid: 868ea12fde184c949bf1b70a17484529,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868ea12fde184c949bf1b70a17484529, type: 3}

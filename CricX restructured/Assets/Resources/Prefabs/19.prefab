@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3997362533733402662}
   - component: {fileID: 987393798508984779}
   - component: {fileID: 6478586762623631606}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Add
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 6824973983446357541}
   - component: {fileID: 7021346785520447794}
   - component: {fileID: 358989043943221094}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 5075005751277146219}
   - component: {fileID: 8487626169181079288}
   - component: {fileID: 2762833672271556927}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 6348656048086294102}
   - component: {fileID: 9222811577600797340}
   - component: {fileID: 2462298803822930808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 3100984940184678840}
   - component: {fileID: 7747629280319652608}
   - component: {fileID: 5507924699591146130}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,6 +762,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8049391170593133043}
     m_Modifications:
+    - target: {fileID: 629754042126133509, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 669934722261183929, guid: a6309e5d6c4141d4496232ea8488a640,
         type: 3}
       propertyPath: m_Pivot.x
@@ -877,10 +882,60 @@ PrefabInstance:
       propertyPath: m_OverrideSorting
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5305271150413683856, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410098534405065504, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6133955016019587159, guid: a6309e5d6c4141d4496232ea8488a640,
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133955016019587159, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366175138104760575, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562355562036078147, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051351003348633402, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515287215029615804, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609493771990978543, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721937070978841047, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554325369267576145, guid: a6309e5d6c4141d4496232ea8488a640,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6309e5d6c4141d4496232ea8488a640, type: 3}
