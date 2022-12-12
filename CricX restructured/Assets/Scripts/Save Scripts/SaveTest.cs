@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SaveTest : MonoBehaviour
@@ -11,25 +12,27 @@ public class SaveTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       SaveManager.Instance.State.PlayerDeck = Character.character.playerID;
-       SaveManager.Instance.EState.OpponentDeck = Character.character.enemyID;
+       
         
     }
 
     public void PlayerTouch()
     {
-        SaveManager.Instance.PlayerSave();
+       SaveState.state.PlayerDeck = OppDeckEventManager.instance.pid;
+        SaveManager.Instance.PlayerSave(SaveState.state);
+        //Debug.Log(SaveManager.Instance.State);
     }
 
     public void EnemyTouch()
     {
-        SaveManager.Instance.EnemySave();
+        EnemySaveState.estate.OpponentDeck = OppDeckEventManager.instance.oppId;
+        SaveManager.Instance.EnemySave(EnemySaveState.estate);
     }
 
     public void TouchLoad()
     {
-        SaveManager.Instance.PlayerLoad();
-        SaveManager.Instance.EnemyLoad();
+        SaveManager.PlayerLoad(path: Application.persistentDataPath + "/saves" + SaveManager.Instance.savefileName);
+        SaveManager.EnemyLoad(path: Application.persistentDataPath + "/saves" + SaveManager.Instance.esavefileName);
     }
 
 }

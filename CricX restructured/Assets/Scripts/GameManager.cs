@@ -25,15 +25,16 @@ public class GameManager : MonoBehaviour
 
         gameScene = true;
 
-        instance = this;         
+        instance = this;
     }
     #endregion;
 
     SetMode setMode;
 
-    //public CardStats cardStats;
+
     public CardStats playerCardStats;
     public CardStats opponentCardStats;
+    
 
     public bool set;                                                            //type of game mode
     public bool chase;                                                          //type of game mode
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
     public bool readyToCalculate;
     public bool scoreCalculated;
     public bool gameScene;
-    
+
 
     public int runs;
     public int playerRuns;
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> enemyCards;
 
     public Object[] cardPrefabsinResources;
-    
+
 
     public List<Transform> playerSlots;
     public List<Transform> enemySlots;
@@ -94,12 +95,15 @@ public class GameManager : MonoBehaviour
 
     public GameObject calmTimer;
     public GameObject agroTimer;
+    public GameObject playerPanel;
+    public GameObject enemyPanel;
 
 
     private void Start()
     {
         startTime = 36;
         SpawnCards();
+        
     }
 
 
@@ -108,19 +112,20 @@ public class GameManager : MonoBehaviour
         BackToPos();
         FullD();
         AddButtonF();
+        PanelLayer();
 
         if (mScore < 0 || oppScore < 0)
         {
             mScore = 0;
             oppScore = 0;
         }
-        
+
         if (playerReady && opponentReady)
         {
             readyToCalculate = true;
             SetGameMode();
         }
-        
+
         if (scoreCalculated)
         {
             resetTimer += 1 * Time.deltaTime;
@@ -159,14 +164,14 @@ public class GameManager : MonoBehaviour
 
     public void SpawnCards()
     {
+
+
+        SaveState.state = (SaveState)SaveManager.PlayerLoad(path: SaveManager.Instance.filePath);
+        EnemySaveState.estate = (EnemySaveState)SaveManager.EnemyLoad(path: SaveManager.Instance.efilePath);
         
+        pdeckCardsId = SaveState.state.PlayerDeck;
 
-        SaveManager.Instance.PlayerLoad();
-        SaveManager.Instance.EnemyLoad();
-
-        pdeckCardsId = SaveManager.Instance.State.PlayerDeck;
-
-        oppdeckCardsId = SaveManager.Instance.EState.OpponentDeck;
+        oppdeckCardsId = EnemySaveState.estate.OpponentDeck;
 
         cardPrefabsinResources = Resources.LoadAll("Prefabs", typeof(GameObject));
 
@@ -175,37 +180,37 @@ public class GameManager : MonoBehaviour
 
             for (int j = 0; j < cardPrefabsinResources.Length; j++)
             {
-                
+
                 if (pdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
                 {
-                    GameObject card= Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
+                    GameObject card = Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
                     playerCards.Add(card);
                     foreach (var pcard in playerCards)
                     {
                         pcard.tag = "Player";
                     }
-                    
+
                 }
             }
 
         }
-            for (int i = 0; i < playerCards.Count; i++)
-            {
-                playerCards[i].transform.SetParent(playerSlots[i].transform);
-                playerCards[i].transform.DOLocalMove(Vector3.zero, 0.5f);
-                playerCards[i].transform.DOScale(new Vector3(30f, 30f, 30f), 0.1f);
-            }
+        for (int i = 0; i < playerCards.Count; i++)
+        {
+            playerCards[i].transform.SetParent(playerSlots[i].transform);
+            playerCards[i].transform.DOLocalMove(Vector3.zero, 0.5f);
+            playerCards[i].transform.DOScale(new Vector3(30f, 30f, 30f), 0.1f);
+        }
 
         for (int i = 0; i < oppdeckCardsId.Count; i++)
         {
-            
+
             for (int j = 0; j < cardPrefabsinResources.Length; j++)
             {
                 if (oppdeckCardsId[i] == cardPrefabsinResources[j].GetComponent<CardStats>().playerId)
                 {
                     GameObject card = Instantiate(cardPrefabsinResources[j].GetComponent<CardStats>().gameObject);
-                     enemyCards.Add(card);
-                    foreach(var ecard in enemyCards)
+                    enemyCards.Add(card);
+                    foreach (var ecard in enemyCards)
                     {
                         ecard.tag = "Enemy";
                     }
@@ -245,19 +250,6 @@ public class GameManager : MonoBehaviour
         oppTickMark.SetActive(false);
     }
 
-    // //Panel refrences
-    // public GameObject PlayerPanel;
-    // public GameObject EnemyPanel;
-
-    // public void ClosePlayerPanel()
-    // {
-    //     PlayerPanel.SetActive(false);
-    // }
-    // public void CloseEnemyPanel()
-    // {
-    //     EnemyPanel.SetActive(false);
-    // }
-
     void BackToPos()
     {
         if (!playerCardSelected && !Dragging.drag && playerCardStats != null)
@@ -265,7 +257,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < inHandPcards.Count; i++)
             {
                 Debug.Log("Executing");
-                if (playerCardStats.gameObject == inHandPcards[i]) 
+                if (playerCardStats.gameObject == inHandPcards[i])
                 {
                     playerCardStats.gameObject.transform.DOMove(playerCardPositions[i].position, 0.5f).SetEase(Ease.Linear);
                     playerCardStats = null;
@@ -291,25 +283,30 @@ public class GameManager : MonoBehaviour
 
     void FullD()
     {
-        for (int i = 0; i<playerCards.Count; i++)
+        for (int i = 0; i < playerCards.Count; i++)
         {
-                if (GameManager.instance.inHandPcards.Count > 2)
-                {
-                    playerCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(false);
-                }
-                else
-                    playerCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(true);
+            if (inHandPcards.Count > 2)
+            {
+                playerCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(false);
+            }
+            else
+                playerCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(true);
         }
-        
-        for (int i = 0; i<enemyCards.Count; i++)
+
+        for (int i = 0; i < enemyCards.Count; i++)
         {
-            
-            if (GameManager.instance.inHandOcards.Count > 2)
+
+            if (inHandOcards.Count > 2)
             {
                 enemyCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(false);
             }
             else
                 enemyCards[i].gameObject.GetComponent<CardStats>().AddButton.SetActive(true);
+        }
+
+        if (inHandPcards.Count > 2 && inHandOcards.Count > 2)
+        {
+            timeStarted = true;
         }
 
     }
@@ -318,14 +315,25 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < inHandPcards.Count; i++)
         {
-            if (inHandPcards[i] != null)
+            for (int j = 0; j < playerAddButtons.Length; j++)
             {
-                playerAddButtons[i].SetActive(false);
+                if (inHandPcards[i] == null)
+                {
+                    playerAddButtons[j].SetActive(true);
+                }
+                else
+                    playerAddButtons[j].SetActive(false);
             }
-            else if (inHandPcards[i] == null)
+        }
+
+        for (int i = 0; i < inHandOcards.Count; i++)
+        {
+            if (inHandOcards[i] == null)
             {
-                playerAddButtons[i].SetActive(true);
+                enemyAddButtons[i].SetActive(true);
             }
+            else
+                enemyAddButtons[i].SetActive(false);
         }
     }
 
@@ -344,6 +352,14 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
 
+    public void PanelLayer()
+    {
+        if (!timeStarted)
+        {
+            playerPanel.layer = 0;
+            enemyPanel.layer = 0;
+        }
+        else { playerPanel.layer = 2; enemyPanel.layer = 2; }
+    }
 }

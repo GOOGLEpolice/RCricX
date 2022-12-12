@@ -217,6 +217,7 @@ public class CardStats : MonoBehaviour
                         {
                             gameObject.transform.SetParent(OppDeckEventManager.instance.DeckSlots[i]);
                             gameObject.transform.localPosition = Vector3.zero;
+                            
                         }
                     }
 
@@ -234,6 +235,7 @@ public class CardStats : MonoBehaviour
                         if (GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card != null)
                         {
                             i++;
+                           
                         }
 
                         else if (GameManager.instance.playerCardPositions[i].GetComponent<SlotManager>().card == null)

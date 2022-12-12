@@ -9,6 +9,7 @@ public class OppSlotsManager : MonoBehaviour
     void Start()
     {
         
+        
     }
 
     

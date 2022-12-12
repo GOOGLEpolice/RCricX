@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1025,7 +1025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &321444969
 Transform:
   m_ObjectHideFlags: 0
@@ -1897,7 +1897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savefileName: savedata.CricX
   esavefileName: opponentdata.CricX
-  loadOnStart: 1
+  filePath: 
+  efilePath: 
 --- !u!1 &761893232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,8 +2354,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923426216}
   m_LocalRotation: {x: -0.70710605, y: -0.001060619, z: -0.0010606372, w: 0.70710605}
-  m_LocalPosition: {x: 4.890001, y: 583, z: 2.059986}
-  m_LocalScale: {x: 101.22469, y: 92.493546, z: 104.05523}
+  m_LocalPosition: {x: 5, y: 505, z: 2}
+  m_LocalScale: {x: 101.22469, y: 92.493546, z: 91.0348}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2107518939}
@@ -3448,7 +3449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1359621339}
   - component: {fileID: 1359621340}
-  - component: {fileID: 1359621341}
   m_Layer: 0
   m_Name: Deck Event System opp
   m_TagString: Untagged
@@ -3488,87 +3488,6 @@ MonoBehaviour:
   oppId: 
   deck: []
   deckScene: 0
-  DeckSlots:
-  - {fileID: 2145385815}
-  - {fileID: 2121520057}
-  - {fileID: 79748266}
-  - {fileID: 155502907}
-  - {fileID: 845267998}
-  - {fileID: 852798045}
-  - {fileID: 1381649853}
-  - {fileID: 1350428303}
-  - {fileID: 1324883946}
-  - {fileID: 1698416779}
-  - {fileID: 810606847}
-  SpawnSlots:
-  - {fileID: 1615353583}
-  - {fileID: 1238938726}
-  - {fileID: 684483120}
-  - {fileID: 1610407989}
-  - {fileID: 511352174}
-  - {fileID: 945820065}
-  - {fileID: 1761060893}
-  - {fileID: 126407339}
-  - {fileID: 927873238}
-  - {fileID: 681861837}
-  - {fileID: 936928129}
-  - {fileID: 1725805920}
-  - {fileID: 1531908011}
-  - {fileID: 1228094530}
-  - {fileID: 66105527}
-  - {fileID: 930175468}
-  - {fileID: 1720617994}
-  - {fileID: 1159849229}
-  - {fileID: 606212842}
-  - {fileID: 1393575893}
-  - {fileID: 325459293}
-  - {fileID: 761893233}
-  - {fileID: 1322725958}
-  - {fileID: 1371684491}
-  - {fileID: 1910928672}
-  - {fileID: 1088031108}
-  - {fileID: 841224707}
-  - {fileID: 866952963}
-  - {fileID: 29755775}
-  - {fileID: 1661084101}
-  - {fileID: 2132787920}
-  - {fileID: 2036954659}
-  - {fileID: 1144312393}
-  - {fileID: 1991067014}
-  - {fileID: 1659667356}
-  - {fileID: 931224625}
-  - {fileID: 1698361915}
-  - {fileID: 1261170637}
-  - {fileID: 1479651643}
-  - {fileID: 1093823351}
-  - {fileID: 501639993}
-  - {fileID: 1928084653}
-  - {fileID: 1742723235}
-  - {fileID: 1721193450}
-  - {fileID: 1598428278}
-  - {fileID: 227739308}
-  - {fileID: 2122315480}
-  - {fileID: 1758082113}
-  - {fileID: 1956959353}
-  - {fileID: 1012529364}
-  - {fileID: 356543603}
-  - {fileID: 1281057}
-  - {fileID: 1329659567}
---- !u!114 &1359621341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359621337}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16be28046522381439caad3b38d26a79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerDeck1: []
-  pId: 
-  deck: []
   DeckSlots:
   - {fileID: 2145385815}
   - {fileID: 2121520057}

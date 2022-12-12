@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1749571, g: 0.21886536, b: 0.30115506, a: 1}
+  m_IndirectSpecularColor: {r: 0.17495686, g: 0.21886477, b: 0.3011543, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1495,6 +1495,8 @@ MonoBehaviour:
   oppTickMark: {fileID: 1623887418}
   calmTimer: {fileID: 907926079}
   agroTimer: {fileID: 2051460860}
+  playerPanel: {fileID: 1092160483}
+  enemyPanel: {fileID: 1541188967}
 --- !u!4 &267516453
 Transform:
   m_ObjectHideFlags: 0
@@ -2296,7 +2298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.70000005, y: 0.12438462}
   m_AnchorMax: {x: 0.9184815, y: 0.88176924}
-  m_AnchoredPosition: {x: -9.000061, y: -95.000046}
+  m_AnchoredPosition: {x: -9.000061, y: -95.00006}
   m_SizeDelta: {x: 24.166702, y: 6.2445984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522274274
@@ -3886,7 +3888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092160483}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -9.39, y: -22.4, z: 27.5}
+  m_LocalPosition: {x: -9.39, y: -22.4, z: 30.6}
   m_LocalScale: {x: 3.4439158, y: 1, z: 3.6299055}
   m_ConstrainProportionsScale: 0
   m_Children: []

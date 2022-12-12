@@ -8,16 +8,18 @@ public class ButtManager : MonoBehaviour
 {
     public GameObject setPan;
     public GameObject buttPan;
+    public GameObject infoPan;
     public bool SFX;
     public bool Music;
      public void OnPlay()
     {
-        SceneManager.LoadScene(sceneName: "GameScene");
+        SceneManager.LoadScene(1);
     }
 
-    public void OnInven()
+    public void OnInfo()
     {
-        SceneManager.LoadScene(sceneName: "PlayerDeck");
+        infoPan.SetActive(true);
+        buttPan.SetActive(false);
     }
 
     public void OnQuit()
