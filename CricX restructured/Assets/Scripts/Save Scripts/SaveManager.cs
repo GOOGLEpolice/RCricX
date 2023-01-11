@@ -41,10 +41,7 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
+        
         DontDestroyOnLoad(this.gameObject);
         filePath = Application.persistentDataPath + "/saves/" + savefileName;
         efilePath = Application.persistentDataPath + "/esaves/" + esavefileName;
