@@ -31,8 +31,9 @@ public class SaveTest : MonoBehaviour
 
     public void TouchLoad()
     {
-        SaveManager.PlayerLoad(path: Application.persistentDataPath + "/saves" + SaveManager.Instance.savefileName);
-        SaveManager.EnemyLoad(path: Application.persistentDataPath + "/saves" + SaveManager.Instance.esavefileName);
+        //SaveManager.PlayerLoad(path: Application.persistentDataPath + "/saves" + SaveManager.Instance.savefileName);
+        SaveManager.PlayerLoad(path: SaveManager.Instance.filePath);
+        SaveManager.EnemyLoad(path: Application.persistentDataPath + "/esaves" + SaveManager.Instance.esavefileName);
     }
 
 }

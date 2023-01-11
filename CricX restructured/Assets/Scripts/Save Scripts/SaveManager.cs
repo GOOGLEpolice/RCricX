@@ -39,13 +39,6 @@ public class SaveManager : MonoBehaviour
     [SerializeField] public string efilePath;
     BinaryFormatter formatter;
 
-    
-
-    
-   
-
-    
-
     private void Awake()
     {
         if (instance != null)
@@ -64,9 +57,6 @@ public class SaveManager : MonoBehaviour
 
     public void PlayerSave(object state)
     {
-        
-
-
         if (!Directory.Exists(Application.persistentDataPath + "/saves"))
         {
             Directory.CreateDirectory(Application.persistentDataPath + "/saves");
@@ -77,30 +67,21 @@ public class SaveManager : MonoBehaviour
         FileStream file = File.Create(path);
         formatter.Serialize(file, state);
         file.Close();
-
-        /* var file = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write);
-         formatter.Serialize(file, state);
-         file.Close();*/
     }
 
     public void EnemySave(object estate)
     {
-
-
+        
         if (!Directory.Exists(Application.persistentDataPath + "/esaves"))
         {
             Directory.CreateDirectory(Application.persistentDataPath + "/esaves");
         }
 
-        string path = efilePath;
+        string path = Application.persistentDataPath + "/esaves/" + esavefileName;
 
         FileStream file = File.Create(path);
         formatter.Serialize(file, estate);
         file.Close();
-
-        /*var file = new FileStream(efilePath, FileMode.OpenOrCreate, FileAccess.Write);
-        formatter.Serialize(file, estate);
-        file.Close();*/
     }
 
     public static object PlayerLoad(string path)
@@ -108,7 +89,6 @@ public class SaveManager : MonoBehaviour
        
         if (!File.Exists(path))
         {
-            Debug.Log("file doesnt exists");
             return null;
         }
 
@@ -119,8 +99,7 @@ public class SaveManager : MonoBehaviour
         try
         {
             object save = formatter.Deserialize(file);
-            file.Close();
-            
+            file.Close();            
             return save;
         }
         catch
@@ -128,19 +107,6 @@ public class SaveManager : MonoBehaviour
             file.Close();
             return null;
         }
-
-        /*if (Directory.Exists(Application.persistentDataPath + "/saves"))
-        {
-            var file = new FileStream(savefileName, FileMode.Open, FileAccess.Read);
-            state = (SaveState)formatter.Deserialize(file);
-            file.Close();
-        }
-        else
-        {
-            Debug.Log("No save file found, Creating a new entry!");
-            PlayerSave();
-        }*/
-
     }
 
     public static object EnemyLoad(string path)
@@ -166,19 +132,6 @@ public class SaveManager : MonoBehaviour
             file.Close();
             return null;
         }
-
-        /*if (Directory.Exists(Application.persistentDataPath + "/saves"))
-        {
-            var file = new FileStream(esavefileName, FileMode.Open, FileAccess.Read);
-            estate = (EnemySaveState)formatter.Deserialize(file);
-            file.Close();
-        }
-        else
-        {
-            Debug.Log("No save file found, Creating a new entry!");
-            EnemySave();
-        }*/
-
     }
     
 }

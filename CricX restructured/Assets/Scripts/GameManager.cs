@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
     {
         startTime = 36;
         SpawnCards();
-        
+        SpawnEnemyCards();
     }
 
 
@@ -164,14 +164,10 @@ public class GameManager : MonoBehaviour
 
     public void SpawnCards()
     {
-
-
         SaveState.state = (SaveState)SaveManager.PlayerLoad(path: SaveManager.Instance.filePath);
-        EnemySaveState.estate = (EnemySaveState)SaveManager.EnemyLoad(path: SaveManager.Instance.efilePath);
+        
         
         pdeckCardsId = SaveState.state.PlayerDeck;
-
-        oppdeckCardsId = EnemySaveState.estate.OpponentDeck;
 
         cardPrefabsinResources = Resources.LoadAll("Prefabs", typeof(GameObject));
 
@@ -194,12 +190,25 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        
         for (int i = 0; i < playerCards.Count; i++)
         {
             playerCards[i].transform.SetParent(playerSlots[i].transform);
             playerCards[i].transform.DOLocalMove(Vector3.zero, 0.5f);
             playerCards[i].transform.DOScale(new Vector3(30f, 30f, 30f), 0.1f);
         }
+
+
+       
+    }
+
+    public void SpawnEnemyCards()
+    {
+        EnemySaveState.estate = (EnemySaveState)SaveManager.EnemyLoad(path: SaveManager.Instance.efilePath);
+
+        oppdeckCardsId = EnemySaveState.estate.OpponentDeck;
+
+        cardPrefabsinResources = Resources.LoadAll("Prefabs", typeof(GameObject));
 
         for (int i = 0; i < oppdeckCardsId.Count; i++)
         {
